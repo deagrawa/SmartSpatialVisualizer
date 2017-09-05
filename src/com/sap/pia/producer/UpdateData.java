@@ -47,7 +47,6 @@ public class UpdateData
 
 			propertiesMap= OdataUtility.getPropertiesMap();
 			dataBase= propertiesMap.get("dataBase");
-			appTable=propertiesMap.get("applicationTable");
 			jdbc= new JdbcOperator();
 			metaDataObj= metadata;
 
@@ -147,30 +146,13 @@ public class UpdateData
 			connection= appDataDao.getConnection();
 			Statement st= connection.createStatement();
 
-			if(entitySetName.equalsIgnoreCase(appTable))
-			{
-				viewPrefix=propertiesMap.get("viewPrefix");
-				viewPackageName=propertiesMap.get("viewPackageName");
-				DeleteViews deleteViews= new DeleteViews();
-				deleteViews.delViews(keyValue, viewPrefix, viewPackageName, connection);
-
-				String deleteAppMetaData= "DELETE FROM " + dataBase + "." + "CUSTOMCOLUMNMETADATA" + " WHERE " + keyField + "='" + keyValue + "'";
-				String deleteAppCommonData= "DELETE FROM " + dataBase + "." + "COMMONFACTS" + " WHERE APPLICATIONID" + "='" + keyValue + "'";
-				String deleteAppId= "DELETE FROM " + dataBase + "." + "APPLICATION" + " WHERE " + keyField + "='" + keyValue + "'";
-				String deleteAppTable= "DROP TABLE " + dataBase + "." + "\"UT_" + keyValue + "\"";
-				st.executeUpdate(deleteAppMetaData);
-				st.executeUpdate(deleteAppCommonData);
-				st.executeUpdate(deleteAppId);
-				st.executeUpdate(deleteAppTable);
-				st.close();
-			}
-			else
-			{
+			
+			
 				String sql= "DELETE FROM " + dataBase + "." + entitySetName + " WHERE " + keyField + "='" + keyValue + "'";
 				System.out.println("Query SQL: " + sql);
 				st.executeUpdate(sql);
 				st.close();
-			}
+			
 		}
 		catch(SQLTimeoutException e)
 		{

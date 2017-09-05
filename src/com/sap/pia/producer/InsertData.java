@@ -55,11 +55,11 @@ public class InsertData
 			dataBase= propertiesMap.get("dataBase");
 			jdbc= new JdbcOperator();
 			metaDataObj= metadata;
-			applicationTable= propertiesMap.get("applicationTable");
+			/*applicationTable= propertiesMap.get("applicationTable");
 			errorCustomTableCreation= propertiesMap.get("errorCustomTableCreation");
 			errorCustomDataInsertion= propertiesMap.get("errorCustomDataInsertion");
 			errorApplicationDataInsertion= propertiesMap.get("errorApplicationDataInsertion");
-			insertionError= propertiesMap.get("insertionError");
+			insertionError= propertiesMap.get("insertionError");*/
 		}
 		catch(NamingException e)
 		{
@@ -93,17 +93,6 @@ public class InsertData
 			entityKey= OEntityKey.create(ees.getType().getKeys().get(0));
 			nEntity= OEntities.create(entity.getEntitySet(), entityKey, entity.getProperties(), entity.getLinks());
 
-			if(entitySetName.equalsIgnoreCase("FORMULAMASTER"))
-			{
-				String appID= jdbc.getKeyValueFromEntity(entity, "APPLICATIONID");
-				status= createCustomTable(appID, connection);
-				if(status != HttpServletResponse.SC_OK)
-				{
-					throw new OdataException(OErrors.error(String.valueOf(status), errorCustomTableCreation, errorCustomTableCreation));
-				}
-				return Responses.entity(nEntity);
-			}
-
 			String names= Enumerable.create(jdbc.getNamesFromEntity(entity)).join(",");
 			String values= Enumerable.create(jdbc.getValuesFromEntity(entity)).join(",");
 
@@ -111,42 +100,29 @@ public class InsertData
 			LOGGER.info("Query SQL: " + sql);
 			odataDataDao.runSQL(sql, connection);
 
-			if(entitySetName.equalsIgnoreCase(applicationTable))
-			{
-				String appID= jdbc.getKeyValueFromEntity(entity, "APPLICATIONID");
-				addDefaultCustomData(appID, connection);
-			}
 
 		}
 		catch(SQLTimeoutException e)
 		{
 			LOGGER.error(OdataUtility.getStackTrace(e));
-			setErrorMessage(entitySetName);
-			throw new OdataException(OErrors.error(errorNumber, insertionError, insertionError));
+			
 		}
 		catch(SQLIntegrityConstraintViolationException e)
 		{
 			LOGGER.error(OdataUtility.getStackTrace(e));
-			setErrorMessage(entitySetName);
-			throw new OdataException(OErrors.error(errorNumber, insertionError, insertionError));
 		}
 		catch(NullPointerException e)
 		{
 			LOGGER.error(OdataUtility.getStackTrace(e));
-			setErrorMessage(entitySetName);
-			throw new OdataException(OErrors.error(errorNumber, insertionError, insertionError));
+		
 		}
 		catch(SQLException e)
 		{
 			LOGGER.error(OdataUtility.getStackTrace(e));
-			setErrorMessage(entitySetName);
-			throw new OdataException(OErrors.error(errorNumber, insertionError, insertionError));
 		}
 		catch(ClassNotFoundException e)
 		{
 			LOGGER.error(OdataUtility.getStackTrace(e));
-			setErrorMessage(entitySetName);
-			throw new OdataException(OErrors.error(errorNumber, insertionError, insertionError));
 		}
 		finally
 		{

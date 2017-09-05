@@ -29,7 +29,8 @@ public class OdataDataDao
 	 */
 	public Connection getConnection() throws ClassNotFoundException, SQLException
 	{
-		Connection connection= DriverManager.getConnection("jdbc:sap://10.97.148.80:30015/?autocommit=false","DEVX_25","Test1234");  
+		Class.forName("com.sap.db.jdbc.Driver");
+		Connection connection= DriverManager.getConnection("jdbc:sap://mo-25db01bb8.mo.sap.corp:30015/?autocommit=false","DEVX_25","Test1234");  
 		return connection;
 	}
 
