@@ -48,14 +48,6 @@
     <welcome-file>index.html</welcome-file>
   </welcome-file-list>
   <servlet>
-    <servlet-name>SsoAuthServlet</servlet-name>
-    <servlet-class>com.sap.pia.producer.SsoAuthServlet</servlet-class>
-  </servlet>
-  <servlet-mapping>
-    <servlet-name>SsoAuthServlet</servlet-name>
-    <url-pattern>/SsoAuthServlet/*</url-pattern>
-  </servlet-mapping>
-  <servlet>
     <servlet-name>OdataServlet</servlet-name>
     <servlet-class>com.sun.jersey.spi.container.servlet.ServletContainer
 		</servlet-class>

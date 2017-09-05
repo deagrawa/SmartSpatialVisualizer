@@ -292,7 +292,7 @@
 				<artifactId>maven-war-plugin</artifactId>
 				<version>${maven-war-plugin.version}</version>
 				<configuration>
-					<warName>UsageCloudUI</warName>
+					<warName>SmartVisualizer</warName>
 					<warSourceDirectory>WebContent</warSourceDirectory>
 					<archive>
 						<manifestFile>WebContent/META-INF/MANIFEST.MF</manifestFile>
