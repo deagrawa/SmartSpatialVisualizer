@@ -1,0 +1,44 @@
+<mvc:View xmlns:l="sap.ui.layout" xmlns:core="sap.ui.core"
+	xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m" xmlns:html="http://www.w3.org/1999/xhtml">
+
+	<Panel>
+		<headerToolbar>
+			<Toolbar>
+				<Text text="System Requirements"></Text>
+			</Toolbar>
+		</headerToolbar>
+		<content>
+			<Text
+				text="ut.js file has been built to work with all browsers, but has been certified with below browsers to work consistently."></Text>
+			<html:br></html:br>
+			<Table id="tebletechreq1" insert="false" backgroundDesign="Translucent">
+				<columns>
+					<Column>
+						<Text text="Browser"></Text>
+					</Column>
+					<Column>
+						<Text text="Version"></Text>
+					</Column>
+				</columns>
+				<ColumnListItem>
+					<cells>
+						<Text text="Chrome"></Text>
+						<Text text="38.x.xxx.x or above"></Text>
+					</cells>
+				</ColumnListItem>
+				<ColumnListItem>
+					<cells>
+						<Text text="Firefox"></Text>
+						<Text text="30.0 or above"></Text>
+					</cells>
+				</ColumnListItem>
+				<ColumnListItem>
+					<cells>
+						<Text text="Internet Explorer"></Text>
+						<Text text="10.0 or above"></Text>
+					</cells>
+				</ColumnListItem>
+			</Table>
+		</content>
+	</Panel>
+</mvc:View>

@@ -1,0 +1,56 @@
+<mvc:View xmlns:l="sap.ui.layout" xmlns:mvc="sap.ui.core.mvc"
+	xmlns="sap.m" xmlns:html="http://www.w3.org/1999/xhtml">
+
+	<Panel>
+		<headerToolbar>
+			<Toolbar>
+				<Text text="Registering your Product with SAP Usage Tracking tool"></Text>
+			</Toolbar>
+		</headerToolbar>
+		<content>
+			<l:VerticalLayout>
+				<Text text="Use case" class="boldFontClass"></Text>
+				<html:br></html:br>
+				<Text
+					text="You use this procedure to register your product to the Usage Tracking tracking for data collection purposes."></Text>
+				<html:br></html:br>
+				<Text text="Procedure" class="boldFontClass"></Text>
+				<html:ol>
+				<html:li>
+				<Text text="Launch the Usage Tracking application using  the following URL"></Text>
+				</html:li>
+				<Link text="https://usagecloudodatauixfd09ed1d.neo.ondemand.com/UsageCloudUI/" href="https://usagecloudodatauixfd09ed1d.neo.ondemand.com/UsageCloudUI/" target="_blank"/>
+					<html:li>
+						<Text text="In the landing page, choose Add New Product."></Text>
+					</html:li>
+					<html:li>
+						<Text
+							text="In the Product Onboarding Details pane, provide the product details."></Text>
+					</html:li>
+					<html:li>
+						<Text text="Choose Proceed."></Text>
+					</html:li>
+				</html:ol>
+				<Text text="Note:"></Text>
+				<Text
+					text="By default, the tool allows to collect the basic information. The default data collection involves information given below:"></Text>
+				<html:ol>
+					<html:li>
+						<Text text="Product Name, Version, Patch"></Text>
+					</html:li>
+					<html:li>
+						<Text text="Browser and OS details"></Text>
+					</html:li>
+					<html:li>
+						<Text text="Unique User Identification "></Text>
+					</html:li>
+					<html:li>
+						<Text text="Geo location"></Text>
+					</html:li>
+				</html:ol>
+				<Text
+					text="If you want to collect the additional product info,  like product feature related information or any extra event data, select the Custom Configuration checkbox and choose Proceed to add and model custom details."></Text>
+			</l:VerticalLayout>
+		</content>
+	</Panel>
+</mvc:View>

@@ -1,0 +1,93 @@
+<mvc:View xmlns:l="sap.ui.layout" xmlns:core="sap.ui.core"
+	xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m" xmlns:html="http://www.w3.org/1999/xhtml"
+	controllerName="sap.ui.usage.analytics.documentation.APIFaq">
+	<Panel>
+		<headerToolbar>
+			<Toolbar>
+				<Text text="Frequently Asked Questions (FAQ's)"></Text>
+			</Toolbar>
+		</headerToolbar>
+		<content>
+			<Panel expandable="true" expanded="false">
+				<headerToolbar>
+					<Toolbar>
+						<Text text="1. Is there any rate control policy on network request?" />
+					</Toolbar>
+				</headerToolbar>
+				<content>
+
+					<Text
+						text="Yes, there is a rate control policy on network requests. For example, every event is represented as a flat structure, with a corresponding payload of 512 bytes. Each XMLHttpRequest transaction is restricted to reporting 100 events and one such transaction is allowed every second. In such cases:"></Text>
+					<html:ul>
+						<html:li>
+							<Text
+								text="The system accepts a maximum of 1000 events, beyond which the client SDK starts discarding the events in FIFO fashion. This ensures increased space for new events."></Text>
+						</html:li>
+						<html:li>
+							<Text text="The processing rates of events are limited to 0.5MB/sec"></Text>
+						</html:li>
+					</html:ul>
+
+				</content>
+			</Panel>
+			<Panel expandable="true" expanded="false">
+				<headerToolbar>
+					<Toolbar>
+						<Text
+							text="2. If any exception occurs in client SDK, will it break the contacting application?"></Text>
+					</Toolbar>
+				</headerToolbar>
+				<content>
+					<Text
+						text="No, the Error application in Client SDK fails without affecting the application logic of your application."></Text>
+				</content>
+			</Panel>
+			<Panel expandable="true" expanded="false">
+				<headerToolbar>
+					<Toolbar>
+						<Text
+							text="3. Is it possible to configure browser session ID for client application?"></Text>
+					</Toolbar>
+				</headerToolbar>
+				<content>
+					<Text
+						text="Yes, you can configure browser sessionID by executing the following  snippet:"></Text>
+					<Text
+						text="ut(‘config’,’browsersessionid’,&lt;value of browsersessionid in string format&gt;)"></Text>
+					<Text text="Note:"></Text>
+					<Text
+						text="If you want to configure a browser session ID for your application while executing create calls, then use the following snippet:"></Text>
+					<Text id="jsSnippetTextcode" text="test"></Text>
+				</content>
+			</Panel>
+			<Panel expandable="true" expanded="false">
+				<headerToolbar>
+					<Toolbar>
+						<Text
+							text="4. What other configurations can be done while executing create calls? How can they be done?"></Text>
+					</Toolbar>
+				</headerToolbar>
+				<content>
+					<Text
+						text="You can configure the following while executing create calls:"></Text>
+					<html:ul>
+						<html:li>
+							<Text text="Application tracking"></Text>
+						</html:li>
+						<html:li>
+							<Text text="geoloaction "></Text>
+						</html:li>
+						<html:li>
+							<Text text="browsersessionid"></Text>
+						</html:li>
+					</html:ul>
+					<l:VerticalLayout>
+						<Text text="The following example provides the required snippet:"></Text>
+						<Text id="jsSnippetTextcodeone" text="test"></Text>
+					</l:VerticalLayout>
+				</content>
+			</Panel>
+		</content>
+	</Panel>
+
+</mvc:View>

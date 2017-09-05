@@ -1,0 +1,90 @@
+<core:View xmlns:core="sap.ui.core" xmlns:mvc="sap.ui.core.mvc"
+	xmlns="sap.m" controllerName="sap.ui.usage.analytics.view.CommonStories"
+	xmlns:html="http://www.w3.org/1999/xhtml">
+	<Page title="">
+		<content>
+			<Bar xmlns="sap.m" id="barm1" design="Auto" visible="true">
+				<tooltip></tooltip> <!-- sap.ui.core.TooltipBase -->
+				<dependents></dependents> <!-- sap.ui.core.Control, since 1.19 -->
+				<contentLeft></contentLeft> <!-- sap.ui.core.Control -->
+				<contentMiddle></contentMiddle> <!-- sap.ui.core.Control -->
+				<contentRight>
+
+					<ToggleButton xmlns="sap.m" id="refreshCommonId" type="Default"
+						width="20px" enabled="true" visible="true" icon="sap-icon://refresh"
+						iconFirst="true" pressed="false" class="ltViewer" press="refreshPress">
+						<tooltip></tooltip> <!-- sap.ui.core.TooltipBase -->
+						<dependents></dependents> <!-- sap.ui.core.Control, since 1.19 -->
+					</ToggleButton>
+					<Button xmlns="sap.m" id="addNewSb1" class="ltViewer" type="Default"
+						width="20px" enabled="true" visible="true" icon="sap-icon://bubble-chart"
+						iconFirst="true" press="createNewStoryBoard">
+						<tooltip></tooltip> <!-- sap.ui.core.TooltipBase -->
+						<dependents></dependents> <!-- sap.ui.core.Control, since 1.19 -->
+					</Button>
+					<ToggleButton xmlns="sap.m" id="listsbBtn1" type="Default"
+						width="20px" enabled="true" visible="true" icon="sap-icon://list"
+						iconFirst="true" pressed="true" class="ltViewer" press="showListView">
+						<tooltip></tooltip> <!-- sap.ui.core.TooltipBase -->
+						<dependents></dependents> <!-- sap.ui.core.Control, since 1.19 -->
+					</ToggleButton>
+					<ToggleButton xmlns="sap.m" id="gridsbBtn1" type="Default"
+						width="20px" icon="sap-icon://grid" iconFirst="true" pressed="false"
+						class="ltViewer" press="showGridView">
+						<tooltip></tooltip> <!-- sap.ui.core.TooltipBase -->
+						<dependents></dependents> <!-- sap.ui.core.Control, since 1.19 -->
+					</ToggleButton>
+				</contentRight> <!-- sap.ui.core.Control -->
+			</Bar>
+			<List id="listm1" items="{analyzeData>/CommonStories}" class="masterlist"
+				mode="{device>/listMode}" noDataText="No Stories" select="showStoryBoard"
+				growing="true" growingScrollToLoad="true">
+				<items>
+					<ObjectListItem type="{device>/listItemType}" press="showStoryBoard"
+						title="{analyzeData>ITEM_NAME}" class="masterlistclass">
+					</ObjectListItem>
+				</items>
+			</List>
+
+			<FlexBox xmlns="sap.m" id="tilem1" visible="true" height="90%"
+				width="90%" displayInline="false" direction="Row" fitContainer="true"
+				renderType="Div" items="{analyzeData>/CommonStories}">
+				<tooltip></tooltip> <!-- sap.ui.core.TooltipBase -->
+				<dependents></dependents> <!-- sap.ui.core.Control, since 1.19 -->
+				<items>
+
+					<VBox class="storiesVBox">
+						<items>
+					<StandardTile xmlns="sap.m" removable="false"
+								title="{analyzeData>ITEM_NAME}" info="" icon="./img/sb.png"
+						iconDensityAware="true" press="showStoryBoard">
+						<tooltip></tooltip> <!-- sap.ui.core.TooltipBase -->
+						<dependents></dependents> <!-- sap.ui.core.Control, since 1.19 -->
+					</StandardTile>
+							<Button xmlns="sap.m" text="Share" class="storyShareButtonStyle"
+								width="200px" press=""></Button>
+						</items>
+					</VBox>
+
+
+				</items> <!-- sap.ui.core.Control -->
+			</FlexBox>
+
+
+			<!-- <FlexBox xmlns="sap.m" id="tilem1" visible="false" height="90%" -->
+			<!-- width="90%" displayInline="false" direction="Row" fitContainer="true" -->
+			<!-- renderType="Div" items="{analyzeData>/CommonStories}"> -->
+			<!-- <tooltip></tooltip> sap.ui.core.TooltipBase -->
+			<!-- <dependents></dependents> sap.ui.core.Control, since 1.19 -->
+			<!-- <items> -->
+			<!-- <StandardTile xmlns="sap.m" removable="false" -->
+			<!-- title="{analyzeData>ITEM_NAME}" info="" icon="./img/sb.png" -->
+			<!-- iconDensityAware="true" press="showStoryBoard"> -->
+			<!-- <tooltip></tooltip> sap.ui.core.TooltipBase -->
+			<!-- <dependents></dependents> sap.ui.core.Control, since 1.19 -->
+			<!-- </StandardTile> -->
+			<!-- </items> sap.ui.core.Control -->
+			<!-- </FlexBox> -->
+		</content>
+	</Page>
+</core:View>

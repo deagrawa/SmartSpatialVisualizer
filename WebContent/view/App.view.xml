@@ -1,0 +1,39 @@
+<mvc:View xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m"
+	controllerName="sap.ui.usage.analytics.view.App" displayBlock="true">
+
+	<Bar xmlns="sap.m" id="headerbar" enableFlexBox="false"
+		translucent="false" design="Auto" visible="true">
+		<tooltip></tooltip> <!-- sap.ui.core.TooltipBase -->
+		<dependents></dependents> <!-- sap.ui.core.Control, since 1.19 -->
+		<contentLeft>
+			<Image xmlns="sap.ui.commons" class="sap-logo" src="./image/sap-logo.png">
+			</Image>
+
+			<Text xmlns="sap.m" class="app-title" text="Usage Tracking"
+				textDirection="Inherit" visible="true" wrapping="true" textAlign="Begin"
+				width="200px" maxLines="1">
+				<tooltip></tooltip> <!-- sap.ui.core.TooltipBase -->
+				<dependents></dependents> <!-- sap.ui.core.Control, since 1.19 -->
+			</Text>
+
+
+
+		</contentLeft> <!-- sap.ui.core.Control -->
+		<contentMiddle>
+		</contentMiddle> <!-- sap.ui.core.Control -->
+		<contentRight>
+			<Text xmlns="sap.m" class="user-name" text="" id="userNameTextID"
+				textDirection="Inherit" visible="true" wrapping="true" textAlign="Begin"
+				width="200px" maxLines="1">
+				<tooltip></tooltip> <!-- sap.ui.core.TooltipBase -->
+				<dependents></dependents> <!-- sap.ui.core.Control, since 1.19 -->
+			</Text>
+			<Icon xmlns="sap.ui.core" class="help-icon" src="sap-icon://action-settings"
+				press="handlePressOpenMenu">
+
+			</Icon>
+
+		</contentRight> <!-- sap.ui.core.Control -->
+	</Bar>
+<SplitApp id="idAppControl"/>
+</mvc:View>

@@ -1,0 +1,42 @@
+<mvc:View controllerName="sap.ui.usage.analytics.view.Master"
+	displayBlock="true" xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m">
+	<Page id="page" class="sapUiFioriObjectPagemasterclass" title="{i18n>masterTitle}"
+		showHeader="false">
+		<subHeader>
+			<Bar id="searchBar">
+				<contentMiddle>
+					<SearchField id="searchField" search="onSearch"
+						tooltip="{i18n>masterSearchTooltip}" width="100%" class="mastersearchclass">
+					</SearchField>
+				</contentMiddle>
+			</Bar>
+		</subHeader>
+		<content>
+		
+			<Button xmlns="sap.m" id="addNewBtn" text="Add New Product"
+				type="Transparent" width="100%" enabled="true" visible="true"
+				icon="sap-icon://add" iconFirst="true" activeIcon=""
+				iconDensityAware="true" tap="" class="masteraddbutton" press="onAddProduct">
+		<tooltip></tooltip> <!-- sap.ui.core.TooltipBase -->
+		<dependents></dependents> <!-- sap.ui.core.Control, since 1.19 -->
+</Button>
+			<Button xmlns="sap.m" id="commonStoryBtn" text="Common Stories"
+				type="Transparent" width="100%" enabled="true" visible="true"
+				icon="sap-icon://share" iconFirst="true" activeIcon=""
+				iconDensityAware="true" tap="" class="masteraddbutton" press="onCommonStoriesSelect">
+				<tooltip></tooltip> <!-- sap.ui.core.TooltipBase -->
+				<dependents></dependents> <!-- sap.ui.core.Control, since 1.19 -->
+			</Button>
+			<List id="list" items="{/APPLICATION}" class="masterlist"
+				mode="{device>/listMode}" noDataText="No Products" select="onSelect"
+				growing="true" growingScrollToLoad="true">
+				<items>
+					<ObjectListItem type="{device>/listItemType}" press="onSelect"
+						title="{PRODUCTNAME}" class="masterlistclass">
+					</ObjectListItem>
+				</items>
+			</List>
+		</content>
+
+	</Page>
+</mvc:View>

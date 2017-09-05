@@ -1,0 +1,31 @@
+<mvc:View xmlns:l="sap.ui.layout" xmlns:mvc="sap.ui.core.mvc"
+	xmlns="sap.m" xmlns:html="http://www.w3.org/1999/xhtml">
+
+	<Panel>
+		<headerToolbar>
+			<Toolbar>
+				<Text text="Productive Usage"></Text>
+			</Toolbar>
+		</headerToolbar>
+		<content>
+			<html:br></html:br>
+			<Text
+				text="For the productive usage of the usage tracking the product owner has to raise a JIRA request to get the registration application enabled. JIRA :"></Text>
+			<html:br></html:br>
+			<Link text="Link" target="_blank" href="https://jtrack/browse/usagecloud"></Link>
+			<html:br></html:br>
+			<l:VerticalLayout>
+				<Text text="It is just a 2-step process to enable the usage analytics:"></Text>
+				<html:ol>
+					<html:li>
+						<Text text="Register your application. "></Text>
+					</html:li>
+					<html:li>
+						<Text
+							text="Implementation – use the JS SDK to get implementation enabled for the product."></Text>
+					</html:li>
+				</html:ol>
+			</l:VerticalLayout>
+		</content>
+	</Panel>
+</mvc:View>

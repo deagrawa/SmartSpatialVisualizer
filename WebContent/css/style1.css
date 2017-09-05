@@ -1,0 +1,44 @@
+/* #idMasterView1--detailPage-cont{ */
+/* 	background-color: white!important; */
+/* } */
+
+/* #idMasterView1--masterPage-cont{ */
+/*      background-color: white!important;	 */
+/* } */
+.bangbang {
+	color: #4C56D6 !important;
+	background-color: #4C56D6 !important;
+}
+
+/* #idMasterView1--headerbar-BarLeft{ */
+/* 	background-color:white!important; */
+/* 	opacity:0.8!important; */
+/* } */
+#__image0 {
+	padding-top: 5px !important;
+}
+
+.sapMPanel {
+	overflow: hidden;
+	background-color: white !important;
+}
+
+#__text0 {
+	width: 250px !important;
+	direction: inherit !important;
+	text-align: left !important;
+	font-size: larger !important;
+	color: #000 !important;
+	padding-top: 12px !important;
+	padding-right: 61px !important;
+}
+
+#__item11-titleText-inner {
+	text-align: center !important;
+}
+
+.menuitem {
+	text-indent: 10px !important;
+	padding-top: 10px !important;
+	font-size: 17px !important;
+}

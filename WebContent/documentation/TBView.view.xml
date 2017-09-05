@@ -1,0 +1,18 @@
+<mvc:View xmlns:l="sap.ui.layout" xmlns:core="sap.ui.core"
+	xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m" xmlns:html="http://www.w3.org/1999/xhtml">
+
+	<Panel>
+		<Text text="Usage Tracking Overview" class="boldFontClass"></Text>
+		<html:br></html:br>
+		<l:VerticalLayout width="90%">
+			<l:content>
+				<core:HTML content='&lt;iframe width=&quot;420&quot; height=&quot;315&quot; 
+					src=&quot;https://www.youtube.com/embed/hrdtFnl9d8Y&quot; frameborder=&quot;0&quot; 
+					allowfullscreen&gt;&lt;/iframe&gt;'></core:HTML>
+<!-- 				<core:HTML -->
+<!-- 					content="&lt;embed width=&quot;420&quot; height=&quot;315&quot; src=&quot;http://youtu.be/hrdtFnl9d8Y&quot;&gt;"> -->
+<!-- 				</core:HTML> -->
+			</l:content>
+		</l:VerticalLayout>
+	</Panel>
+</mvc:View>

@@ -1,0 +1,91 @@
+header#idmaster1--myShell-hdr {
+	display: none !important;
+}
+
+.sapUiUfdShellCanvas {
+	top: 0px !important;
+}
+
+img#__image0 {
+	height: 1.6rem;
+	margin-left: 0.5rem;
+	margin-top: .6rem;
+}
+
+span#__text0 {
+	margin-left: 0;
+	margin-top: 1rem;
+}
+
+.app-title {
+	font-size: 1em;
+	margin-top: 0.5em;
+	font-weight: 600 !important;
+	position: relative;
+}
+
+form.sapMSFF {
+	height: 80%;
+}
+
+input#idmasterShellContainer1--idHelpsearch-I {
+	margin-top: -4px;
+}
+
+div#idmasterShellContainer1--idHelpsearch-search {
+	margin-top: -4px;
+}
+
+div#idmasterShellContainer1--idHelpsearch-reset {
+	margin-top: -4px;
+}
+
+span#__text1 {
+	margin-left: 1.5rem;
+}
+
+div#idmasterShellContainer1--idSplitContainer-canvascntnt {
+	background-color: white;
+}
+
+.sapMPanel {
+	overflow: hidden;
+	background-color: rgb(255, 255, 255) !important;
+}
+
+.panelColor {
+	background-color: rgb(255, 255, 255) !important;
+}
+
+aside .sapMPanelBG.sapMPanelContent {
+	height: 0px;
+	display: none;
+	height: 352px;
+	width: 378px;
+}
+
+a#__link0 {
+	margin-left: 2em;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 17px;
+	font-weight: bold;
+	color: gray;
+}
+
+a#__link1 {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 17px;
+	font-weight: bold;
+	color: gray;
+}
+
+a#__link2 {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 17px;
+	font-weight: bold;
+	color: gray;
+}
+
+.boldFontClass{
+	font-weight: bold;
+}

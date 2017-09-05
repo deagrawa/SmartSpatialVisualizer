@@ -1,0 +1,179 @@
+<mvc:View xmlns:l="sap.ui.layout" xmlns:core="sap.ui.core"
+	xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m" xmlns:html="http://www.w3.org/1999/xhtml"
+	controllerName="sap.ui.usage.analytics.documentation.TrakingUsage">
+
+	<Panel>
+		<headerToolbar>
+			<Toolbar>
+				<Text text="Tracking Application Usage"></Text>
+			</Toolbar>
+		</headerToolbar>
+		<content>
+			<Text
+				text="You use the JavaScript SDK to track the use and acceptance of your product by the end users, which helps you to collect data and understand how your product is being used by customers"></Text>
+			<html:br></html:br>
+			<Text
+				text="This section describes the necessary steps that you need to execute to enable tracking of your application."></Text>
+			<html:br></html:br>
+			<l:VerticalLayout>
+<!-- 				<html:ul> -->
+<!-- 					<html:li> -->
+<!-- 						<Text text="Configuring  a JavaScript Client"></Text> -->
+<!-- 					</html:li> -->
+<!-- 					<html:li> -->
+<!-- 						<Text text="Configuring a Non -JavaScript Client"></Text> -->
+<!-- 					</html:li> -->
+<!-- 					<html:li> -->
+<!-- 						<Text text="Creating an Application Instance"></Text> -->
+<!-- 					</html:li> -->
+<!-- 					<html:li> -->
+<!-- 						<Text text="Enabling Application Tracking"></Text> -->
+<!-- 					</html:li> -->
+<!-- 				</html:ul> -->
+			</l:VerticalLayout>
+			<Panel expandable="true" expanded="false">
+				<headerToolbar>
+					<Toolbar>
+						<Text text="1. Configuring a JavaScript Client"></Text>
+					</Toolbar>
+				</headerToolbar>
+				<content>
+					<Text
+						text="You configure JavaScript SDK in your application to track the use and acceptance of your product by the end users."></Text>
+					<html:br></html:br>
+					<Text text="Prerequisite" class="boldFontClass"></Text>
+					<html:br></html:br>
+					<Text
+						text="You have ensured that your client application has HTML5/JS web browser environment for the functioning of JavaScript SDK."></Text>
+					<html:br></html:br>
+					<Text
+						text="To start application tracking using JavaScript SDK, use the following procedure:"></Text>
+					<html:br></html:br>
+					<Text text="Procedure" class="boldFontClass"></Text>
+					<html:br></html:br>
+					<l:VerticalLayout>
+						<Text text="1.Copy the content of utc.js."></Text>
+						<Text text="The following is an example snippet in utc.js:"></Text>
+						<html:br></html:br>
+						<Text id="jsSnippetTextcode" text="test"></Text>
+						<html:br></html:br>
+						<Text
+							text="2.Paste this snippet into the script tag before the closing head tag &lt;head&gt; in your application."></Text>
+					</l:VerticalLayout>
+					<html:br></html:br>
+					<Text text="Step Result:"></Text>
+					<Text
+						text="The client side snippet asynchronously loads the script with SDK's core functionality by retrieving ut.js over http request and does not affect your application performance."></Text>
+					<html:br></html:br>
+					<Text text="Note:"></Text>
+					<Text
+						text="You can find the script with the client functionality in the following repository path, (/com.sap.pia.ut/com.sap.pia.usagecloud.clientsdk.)"></Text>
+				</content>
+			</Panel>
+			<Panel expandable="true" expanded="false">
+				<headerToolbar>
+					<Toolbar>
+						<Text text="2. Configuring a Non-JavaScript Client"></Text>
+					</Toolbar>
+				</headerToolbar>
+				<content>
+					<l:VerticalLayout>
+						<Text
+							text="The Usage Tracking tool provides a JavaScript SDK to set up client systems. For setting up an application that does not have a JavaScript base, use any of the below approaches to convert the JavaScript SDK to other languages. "></Text>
+
+						<html:ul>
+							<html:li>
+								<Text
+									text="Exclude the inbuilt JavaScript SDK from the Usage Tracking tool and send payload information to the Usage Tracking server by making HTTP calls at identified interface points."></Text>
+							</html:li>
+							<html:li>
+								<Text
+									text="In this case, you can follow any of the known approaches to send http calls to the central cloud and to access the public APIs of Usage Tracking, which transfers payload information to the respective database."></Text>
+							</html:li>
+							<html:li>
+								<Text
+									text="Use third-party frameworks; this helps client applications that are based on native languages like C/C++ or JAVA/.Net to consume JavaScript in the code lines."></Text>
+							</html:li>
+						</html:ul>
+					</l:VerticalLayout>
+				</content>
+			</Panel>
+			<Panel expandable="true" expanded="false">
+				<headerToolbar>
+					<Toolbar>
+						<Text text="3. Creating an Application Instance"></Text>
+					</Toolbar>
+				</headerToolbar>
+				<content>
+					<Text
+						text="You execute create call in your application to initialize your application on the Usage Tracking tool."></Text>
+					<Text
+						text="You can use the following snippet to execute the create command in your application:"></Text>
+					<html:br></html:br>
+					<l:VerticalLayout>
+						<Text id="jsSnippetTextcodeone" text="test"></Text>
+					</l:VerticalLayout>
+					<html:br></html:br>
+					<l:VerticalLayout>
+						<Text text="Note: "></Text>
+						<html:ul>
+							<html:li>
+								<Text
+									text="Except for the installation ID, all the fields in the above code are mandatory"></Text>
+							</html:li>
+							<html:li>
+								<Text
+									text="You execute ut(usage tracking) with the create command and convert the  var(instance) to JSON format while  providing an argument for the create command, as shown below:"></Text>
+							</html:li>
+							<Text text="ut('create',JSON.stringify(instance));"></Text>
+						</html:ul>
+					</l:VerticalLayout>
+				</content>
+			</Panel>
+			<Panel expandable="true" expanded="false">
+				<headerToolbar>
+					<Toolbar>
+						<Text text="4. Enabling Application Tracking"></Text>
+					</Toolbar>
+				</headerToolbar>
+				<content>
+					<l:VerticalLayout>
+						<Text
+							text="By default, the client SDK disables application tracking. You must enable application tracking to collect the required information. The table below explains how to enable application tracking:"></Text>
+						<html:br></html:br>
+						<Table id="tebletechreq1" insert="false" backgroundDesign="Translucent">
+							<columns>
+								<Column>
+									<Text text="Action"></Text>
+								</Column>
+								<Column>
+									<Text text="Code"></Text>
+								</Column>
+								<Column>
+									<Text text="Description"></Text>
+								</Column>
+							</columns>
+							<ColumnListItem>
+								<cells>
+									<Text
+										text="If you want enable application tracking, then use the code in the code column"></Text>
+									<Text text="ut('config','tracking','on');"></Text>
+									<Text id="jsSnippetTextcodetwo" text="test"></Text>
+								</cells>
+							</ColumnListItem>
+						</Table>
+						<html:br></html:br>
+						<Text
+							text="For more information on config calls see, Setting up Privacy and Personal Information."></Text>
+						<html:br></html:br>
+						<Text text="Note:"></Text>
+						<Text
+							text="If you want to enable application tracking without executing the config calls, then use the following snippet:"></Text>
+						<html:br></html:br>
+						<Text id="jsSnippetTextcodethree" text="test"></Text>
+					</l:VerticalLayout>
+				</content>
+			</Panel>
+		</content>
+	</Panel>
+</mvc:View>

@@ -1,0 +1,130 @@
+<mvc:View xmlns:l="sap.ui.layout" xmlns:mvc="sap.ui.core.mvc"
+	xmlns="sap.m" xmlns:html="http://www.w3.org/1999/xhtml">
+	<Panel expandable="true" expanded="false">
+		<headerToolbar>
+			<Toolbar>
+				<Text text="Understand Your Customers Better Through Usage Tracking!" />
+			</Toolbar>
+		</headerToolbar>
+		<content>
+			<l:VerticalLayout>
+				<Text
+					text="SAP Usage Tracking tool powered by SAP Lumira technology provides useful visual insights to understand your customers better. With an automated usage tracking mechanism, you can determine how customers use your products or services and make informed decisions on how to improve their value. " />
+				<Text text="It is not just about knowing your customers! "></Text>
+
+				<Text
+					text="Your product development teams can use SAP Usage Tracking to know more about their product usage and adoption statistics, and also understand their product’s perception in the market.  They can make easy and quick decisions on how to improve customer satisfaction levels, derive an optimal product planning process, develop optimal marketing strategies, and much more."></Text>
+			</l:VerticalLayout>
+		</content>
+	</Panel>
+	<Panel expandable="true" expanded="false">
+		<headerToolbar>
+			<Toolbar>
+				<Text text="Why Usage Tracking Tool" />
+			</Toolbar>
+		</headerToolbar>
+		<content>
+			<Text text="Improve customer satisfaction: " class="boldFontClass"></Text>
+			<Text
+				text=" Use product adoption and usage details to identify any gaps and improve customer satisfaction levels."></Text>
+			<html:br></html:br>
+			<Text text="Increase revenues: " class="boldFontClass"></Text>
+			<Text text=" Increase revenues by adopting usage-based pricing. "></Text>
+			<html:br></html:br>
+			<Text text="Make quick informed decisions: " class="boldFontClass"></Text>
+			<Text
+				text=" Improve the product development cycle; easily identify the product migration strategies; quickly identify selling/non-selling product areas, and much more."></Text>
+			<html:br></html:br>
+			<Text text="Identify focus areas: " class="boldFontClass"></Text>
+			<Text
+				text=" Use the product usage details to identify areas of business processes that need more focus and improvements."></Text>
+		</content>
+	</Panel>
+	<Panel expandable="true" expanded="false">
+		<headerToolbar>
+			<Toolbar>
+				<Text text="Who Can Use the Tool" />
+			</Toolbar>
+		</headerToolbar>
+		<content>
+			<Text
+				text="As a product owner and senior leadership member, you can learn more about:"></Text>
+			<html:ul>
+				<html:li>
+					<Text
+						text="Which are the most popular modules and features that customers use in your products?"></Text>
+				</html:li>
+				<html:li>
+					<Text text="What features should you consider for further enhancement?"></Text>
+				</html:li>
+				<html:li>
+					<Text
+						text="What are the users’ requirements and how do they use your software?"></Text>
+				</html:li>
+				<html:li>
+					<Text text="How is a new release or support pack adopted?"></Text>
+				</html:li>
+				<html:li>
+					<Text text="And much more…"></Text>
+				</html:li>
+			</html:ul>
+			<Text text="As a marketing professional, you can learn more about:"></Text>
+			<html:ul>
+				<html:li>
+					<Text text="How customers perceive your product in the market"></Text>
+				</html:li>
+				<html:li>
+					<Text text="How many new licenses are added over a period of time"></Text>
+				</html:li>
+				<html:li>
+					<Text text="Actual product usage versus solid licenses"></Text>
+				</html:li>
+				<html:li>
+					<Text text="Which release base the customers are working with"></Text>
+				</html:li>
+				<html:li>
+					<Text text="What is the passive customer base in any given region"></Text>
+				</html:li>
+				<html:li>
+					<Text text="And much more…"></Text>
+				</html:li>
+			</html:ul>
+		</content>
+	</Panel>
+	<Panel expandable="true" expanded="false">
+		<headerToolbar>
+			<Toolbar>
+				<Text text="How to Get Started" />
+			</Toolbar>
+		</headerToolbar>
+		<content>
+			<Text
+				text="It is easy!  Only 2 steps are required to start Usage Tracking."></Text>
+			<html:br />
+			<Text text="Step 1: " class="boldFontClass"></Text>
+			<Text text="Register your application for the Usage Tracking tool."></Text>
+			<html:br></html:br>
+			<Text text="Step 2: " class="boldFontClass"></Text>
+			<Text
+				text="Add code snippets for the information that you want to track and collect."></Text>
+			<html:br></html:br>
+			<Text
+				text="You can find the sample code snippets in the document section."></Text>
+		</content>
+	</Panel>
+	<Panel expandable="true" expanded="false">
+		<headerToolbar>
+			<Toolbar>
+				<Text text="How to Get Additional Support" />
+			</Toolbar>
+		</headerToolbar>
+		<content>
+			<l:VerticalLayout>
+				<Text text="We offer Implementation support!"></Text>
+				<html:br></html:br>
+				<Text
+					text="The Usage Tracking Tool supports you with necessary Javascript clients to track any information you need, and also collects statistics that are of interest."></Text>
+			</l:VerticalLayout>
+		</content>
+	</Panel>
+</mvc:View>

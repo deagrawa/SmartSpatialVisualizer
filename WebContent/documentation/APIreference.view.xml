@@ -1,0 +1,28 @@
+<mvc:View xmlns:l="sap.ui.layout" xmlns:core="sap.ui.core"
+	xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m" xmlns:html="http://www.w3.org/1999/xhtml">
+
+	<Panel>
+		<headerToolbar>
+			<Toolbar>
+				<Text text="Introduction to Usage Tracking SDK"></Text>
+			</Toolbar>
+		</headerToolbar>
+		<content>
+			<Text
+				text="SAP Usage Tracking provides the prebuilt methods for JavaScript SDK, which you can reuse based on your requirement. In addition, you can use it for:"></Text>
+			<l:VerticalLayout>
+				<html:ul>
+					<html:li>
+						<Text
+							text="Integrating your client application, which use web browser environment, with the Usage Tracking tool."></Text>
+					</html:li>
+					<html:li>
+						<Text
+							text="Enabling your client application with usage tracking capabilities."></Text>
+					</html:li>
+				</html:ul>
+			</l:VerticalLayout>
+		</content>
+	</Panel>
+
+</mvc:View>

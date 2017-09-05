@@ -1,0 +1,38 @@
+<core:View xmlns:core="sap.ui.core" xmlns:mvc="sap.ui.core.mvc"
+	xmlns="sap.m" controllerName="sap.ui.usage.analytics.view.informationview"
+	xmlns:html="http://www.w3.org/1999/xhtml">
+	<Page title="Product Registered Successfully " id="informationpage">
+		<content>
+
+			<Bar xmlns="sap.m" enableFlexBox="false" translucent="false"
+				design="Auto" id="infobar" visible="true">
+				<contentLeft>
+					<Text xmlns="sap.m" class="app-title" text="Product Name :"
+						textDirection="Inherit" visible="true" wrapping="true" textAlign="Begin"
+						width="130px" maxLines="1">
+					</Text>
+					<Text xmlns="sap.m" class="app-title" text="{newProduct>/PRODUCTNAME}"
+						textDirection="Inherit" visible="true" wrapping="true" textAlign="Begin"
+						width="300px" maxLines="1">
+					</Text>
+				</contentLeft>
+				<contentRight>
+					<Text xmlns="sap.m" text="Product ID :" textDirection="Inherit"
+						visible="true" wrapping="true" textAlign="Begin" width="100px"
+						maxLines="1">
+					</Text>
+					<Text xmlns="sap.m" class="app-title" text="{newProduct>/APPLICATIONID}"
+						textDirection="Inherit" visible="true" wrapping="true" textAlign="Begin"
+						width="300px" maxLines="1">
+					</Text>
+				</contentRight>
+			</Bar>
+
+
+			<Image xmlns="sap.m" busy="false" busyIndicatorDelay="1000"
+				visible="true" src="image/infoUT.png" width="" height="" decorative="true"
+				alt="" useMap="" densityAware="true" activeSrc="" tap="" press="">
+			</Image>
+		</content>
+	</Page>
+</core:View>

@@ -1,0 +1,180 @@
+<mvc:View xmlns:l="sap.ui.layout" xmlns:mvc="sap.ui.core.mvc"
+	xmlns="sap.m" xmlns:html="http://www.w3.org/1999/xhtml">
+	<Panel>
+		<headerToolbar>
+			<Toolbar>
+				<Text text="Trouble Shooting Tips"></Text>
+			</Toolbar>
+		</headerToolbar>
+		<content>
+			<Text text="Frequently asked Questions (FAQ’s)"></Text>
+			<html:br></html:br>
+			<l:VerticalLayout>
+				<Panel expandable="true" expanded="false">
+					<headerToolbar>
+						<Toolbar>
+							<Text
+								text="1. What is the default option, if I do not choose the custom configuration?" />
+						</Toolbar>
+					</headerToolbar>
+					<content>
+						<l:VerticalLayout>
+							<Text
+								text="You can register your application with default configuration. In this case, use the following database tables:"></Text>
+							<html:br></html:br>
+							<Text text="com.sap.pia.usagecloud.APPLICATION"></Text>
+							<Text text="This table stores the product registration details."></Text>
+							<Image src="image/ts1.png" width="50%"></Image>
+							<html:br></html:br>
+							<Text text="com.sap.pia.usagecloud.COMMONFACTS"></Text>
+							<Text
+								text="This table stores the Usage Tracking details for the registered product."></Text>
+							<Image src="image/ts2.png" width="50%"></Image>
+						</l:VerticalLayout>
+					</content>
+				</Panel>
+
+				<Panel expandable="true" expanded="false">
+					<headerToolbar>
+						<Toolbar>
+							<Text text="2. How do I access the database table in HCP?" />
+						</Toolbar>
+					</headerToolbar>
+					<content>
+						<l:VerticalLayout>
+							<Text text=""></Text>
+							<Text
+								text="You can access the contents of database table from HanaXS using the following procedure."></Text>
+							<html:br></html:br>
+							<Text text="Procedure" class="boldFontClass"></Text>
+							<html:ol>
+								<html:li>
+									<Text text="Log on to HanaXS using the following URL: "></Text>
+								</html:li>
+								<Link text="Link" target="_blank"
+									href="https://usagetrackerxfd09ed1d.neo.ondemand.com/sap/hana/xs/ide/catalog"></Link>
+								<html:li>
+									<Text
+										text="Provide your username (I number) and password (The first time password is Init1234)."></Text>
+								</html:li>
+								<html:li>
+									<Text text="In the left pane, choose New SQL Editor."></Text>
+								</html:li>
+								<html:li>
+									<Text
+										text="Enter the SQL commands to view the contents in the table."></Text>
+								</html:li>
+							</html:ol>
+							<Text
+								text="For example, Enter the following SQL command, Select * from SAP_PIA_USAGECLOUD.&lt;Table_Name&gt; to view the contents of the table."></Text>
+						</l:VerticalLayout>
+					</content>
+				</Panel>
+				<Panel expandable="true" expanded="false">
+					<headerToolbar>
+						<Toolbar>
+							<Text
+								text="3. Which are the relevant database tables for the application I registered?" />
+						</Toolbar>
+					</headerToolbar>
+					<content>
+						<l:VerticalLayout>
+							<Text
+								text="A. If you have registered the application with default configuration, then use following database tables:"></Text>
+							<html:ul>
+								<html:li>
+									<Text
+										text="com.sap.pia.usagecloud.APPLICATION: This table stores the application registration details."></Text>
+								</html:li>
+								<html:li>
+									<Text
+										text="com.sap.pia.usagecloud.COMMONFACTS: This table stores the Usage Tracking details for the registered application."></Text>
+								</html:li>
+							</html:ul>
+							<Text
+								text="B.	If you have registered the application with custom configuration, then use the following database tables:"></Text>
+							<html:ul>
+								<html:li>
+									<Text
+										text="com.sap.pia.usagecloud.APPLICATION: This table stores the application registration details."></Text>
+								</html:li>
+								<html:li>
+									<Text
+										text="com.sap.pia.usagecloud.COMMONFACTS: This table stores the Usage Tracking details for the registered application."></Text>
+								</html:li>
+								<html:li>
+									<Text
+										text="com.sap.pia.usagecloud.UT_&lt;Application ID&gt;: This table stores the relevant details of custom configuration for the registered application."></Text>
+								</html:li>
+							</html:ul>
+						</l:VerticalLayout>
+					</content>
+				</Panel>
+				<Panel expandable="true" expanded="false">
+					<headerToolbar>
+						<Toolbar>
+							<Text
+								text="4. What are attribute views that belongs to the application I registered?" />
+						</Toolbar>
+					</headerToolbar>
+					<content>
+						<l:VerticalLayout>
+							<Text text=""></Text>
+							<Text
+								text="The attributes that you provide as part of custom configuration, during application registration is stored in the following view:"></Text>
+							<Text text="com.sap.pia.usagecloud.AT_&lt;ApplicationName&gt;"></Text>
+						</l:VerticalLayout>
+					</content>
+				</Panel>
+				<Panel expandable="true" expanded="false">
+					<headerToolbar>
+						<Toolbar>
+							<Text
+								text="5. How can I enable my colleagues to access the database table and Lumira visualizations?" />
+						</Toolbar>
+					</headerToolbar>
+					<content>
+						<l:VerticalLayout>
+							<html:br></html:br>
+							<Text
+								text="You can provide the database table and Lumira visualization access to your peer user by using the following procedure:"></Text>
+							<Text text="Procedure"></Text>
+							<html:ol>
+								<html:li>
+									<Text text="Log on to HanaXS using the following URL: "></Text>
+								</html:li>
+								<Link text="Link" target="_blank"
+									href="https://usagetrackerxfd09ed1d.neo.ondemand.com/sap/hana/xs/ide/security"></Link>
+								<html:li>
+									<Text
+										text="Provide you username(I number) and password(The first time password is Init1234)"></Text>
+								</html:li>
+								<html:li>
+									<Text text="In the right pane, Expand Users section."></Text>
+								</html:li>
+								<html:li>
+									<Text text="Select a relevant user."></Text>
+								</html:li>
+								<html:li>
+									<Text text="Choose Object Privileges."></Text>
+								</html:li>
+								<html:li>
+									<Text text="Choose the + icon to add an SQL object."></Text>
+								</html:li>
+								<html:li>
+									<Text text="Enter SAP_PIA_USAGECLOUD."></Text>
+								</html:li>
+								<html:li>
+									<Text text="Select ALL to grant the privileges to the peer user."></Text>
+								</html:li>
+								<html:li>
+									<Text text="Choose Save."></Text>
+								</html:li>
+							</html:ol>
+						</l:VerticalLayout>
+					</content>
+				</Panel>
+			</l:VerticalLayout>
+		</content>
+	</Panel>
+</mvc:View>

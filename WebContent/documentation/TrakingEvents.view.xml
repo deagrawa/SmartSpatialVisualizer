@@ -1,0 +1,222 @@
+<mvc:View xmlns:l="sap.ui.layout" xmlns:core="sap.ui.core"
+	xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m" xmlns:html="http://www.w3.org/1999/xhtml"
+	controllerName="sap.ui.usage.analytics.documentation.TrakingEvents">
+
+
+	<Panel>
+		<headerToolbar>
+			<Toolbar>
+				<Text text="Tracking Events"></Text>
+			</Toolbar>
+		</headerToolbar>
+		<content>
+			<Text
+				text="Event tracking allows you to measure how users interact with the content of your tool. For example, you might want to measure how many times a user presses a button."></Text>
+			<Text
+				text="Events are user interactions with the content that you can track independently from a web page or a screen load. "></Text>
+			<Text
+				text="Events are a flexible way to collect data about interactions specific to your application."></Text>
+			<Panel expandable="true" expanded="false">
+				<headerToolbar>
+					<Toolbar>
+						<Text text="1. Tracking Events for custom Keys"></Text>
+					</Toolbar>
+				</headerToolbar>
+				<content>
+					<Text text="Prerequisites" class="boldFontClass"></Text>
+					<html:br></html:br>
+					<Text
+						text="The product owner has defined the custom keys that the client SDK needs to track."></Text>
+					<html:br></html:br>
+					<Text
+						text="Custom keys are name-value pair tags that you can insert in your tracking code to refine your tracking. With custom keys, you can define additional segments other than the ones already provided by the Usage Tracking Tool. 
+		For example, if your tool offers users the ability to login, you can use a custom key to obtain the session level for user login status."></Text>
+					<html:br></html:br>
+					<Text
+						text="After you execute the client side snippet, use the send API for sending data to the analytics backend system."></Text>
+					<html:br></html:br>
+					<Table id="teble1" insert="false" backgroundDesign="Translucent">
+						<columns>
+							<Column>
+								<Text text="Example"></Text>
+							</Column>
+							<Column>
+								<Text text="Code"></Text>
+							</Column>
+						</columns>
+						<ColumnListItem>
+							<cells>
+								<Text
+									text="The following snippet illustrates how you can send a custom key for tracking the string 'example string 1' in ‘customKey1’ property of the payload:"></Text>
+								<Text
+									text="ut(‘send’,’customkey’, ‘customKey1’,’example string 1’);
+								'send','customkey' are the keywords.
+								'customkey1' is the keyname.
+								'Example string1' is the keyvalue."></Text>
+							</cells>
+						</ColumnListItem>
+						<ColumnListItem>
+							<cells>
+								<Text
+									text="The following snippet illustrates how you can send multiple custom keys for tracking events:"></Text>
+								<Text id="jsSnippetTextcodeTEone" text="test"></Text>
+							</cells>
+						</ColumnListItem>
+					</Table>
+					<html:br></html:br>
+					<Text text="Note:"></Text>
+					<html:br></html:br>
+					<Text
+						text=" If you execute ut ('send') without customkeys, then common properties of an event, along with timestamp is sent in the payload."></Text>
+				</content>
+			</Panel>
+			<Panel expandable="true" expanded="false">
+				<headerToolbar>
+					<Toolbar>
+						<Text text="2. Sending Customkeys Without Keynames"></Text>
+					</Toolbar>
+				</headerToolbar>
+				<content>
+					<Text
+						text="You can send customkeys without keynames to reduce repetitiveness of sending the keynames and ensure that only the keyvalues are sufficient for data collection purpose. You can map these keyvalues to corresponding keynames in the payload."></Text>
+					<html:br></html:br>
+					<l:VerticalLayout>
+						<html:ul>
+							<html:li>
+								<Text
+									text="Use the following snippet to  send a group of customkeys without keynames:ut('config','keyorder','[&lt;list of keynames&gt;]');"></Text>
+							</html:li>
+							<Text
+								text="For example, ut('config','keyorder','['key1', ' key2', 'key3', 'key 4', 'key5', 'key6']');"></Text>
+							<html:li>
+								<Text
+									text="Use the following code snippet to send the keyvalues of the keynames:ut('send','keyorder','[&lt;list of keyvalues&gt;]');"></Text>
+							</html:li>
+							<Text
+								text="For example,  ut('send','keyorder','['val1', 'val2', 'val3', 'val4', 'val5', 'val6']');"></Text>
+						</html:ul>
+						<html:br></html:br>
+						<Text text="Note:"></Text>
+						<Text
+							text="JSON.stringify is used to stringify (Inserting double quotes around the fragments) an array. You use the following snippet to send an array after stringifying it as a 3rd argument in send and config calls:"></Text>
+						<html:ul>
+							<html:li>
+								<Text
+									text="Var arraykeynames=['key1', 'key2', 'key3', 'key 4', 'key5', 'key6']"></Text>
+							</html:li>
+							<Text text="ut('config','keyorder',JSON.stringify(arrayKeynames));"></Text>
+							<html:li>
+								<Text
+									text="Var arraykeyvalues=['val1', 'val2', 'val3', 'val4', 'val5', 'val6']');"></Text>
+							</html:li>
+							<Text text="ut('send','keyorder',JSON.stringify(arrayKeyvalus));"></Text>
+						</html:ul>
+					</l:VerticalLayout>
+				</content>
+			</Panel>
+			<Panel expandable="true" expanded="false">
+				<headerToolbar>
+					<Toolbar>
+						<Text text="3. Creating Alias for Multiple Keynames"></Text>
+					</Toolbar>
+				</headerToolbar>
+				<content>
+					<Text
+						text="You create alias for keynames and merge different keynames performing the same action, in database. Hence, you can ensure that database space is saved from redundant keyname actions."></Text>
+					<html:br></html:br>
+					<Text
+						text="You can create an alias for keynames by executing the following snippet:"></Text>
+					<html:br></html:br>
+					<Text id="jsSnippetTextcodeMAN" text="test"></Text>
+					<html:br></html:br>
+					<Text text="Result:"></Text>
+					<Text
+						text="After executing the snippet, the keynames present in the arrays is mapped to alias value of the original keyname."></Text>
+					<html:br></html:br>
+					<Text text="Note:"></Text>
+					<Text
+						text="If you want to create alias of keynames instantly without executing the config calls, then use the following snippet:"></Text>
+					<html:br></html:br>
+					<l:VerticalLayout>
+						<Text id="jsSnippetTextcodeCS" text="test"></Text>
+					</l:VerticalLayout>
+				</content>
+			</Panel>
+			<Panel expandable="true" expanded="false">
+				<headerToolbar>
+					<Toolbar>
+						<Text text="4. Sending Recordgroupid for Customkeys"></Text>
+					</Toolbar>
+				</headerToolbar>
+				<content>
+					<Text
+						text="You can group similar events under single recordgroupid. You can use recordgroupid to analyze statistics of the events."></Text>
+					<html:br></html:br>
+					<Text
+						text="You can send recordgroupid for customkeys by executing the following send calls:"></Text>
+					<html:br></html:br>
+					<Table id="table4" insert="false" backgroundDesign="Translucent">
+						<columns>
+							<Column>
+								<Text text="Action"></Text>
+							</Column>
+							<Column>
+								<Text text="Code"></Text>
+							</Column>
+						</columns>
+						<ColumnListItem>
+							<cells>
+								<Text
+									text="If you want to track recordgroupid for single custom key, then use the following snippet:"></Text>
+								<Text
+									text="ut(‘send’,’rgid’,’customkey’,’key’,’value’)
+								'send','rgid','customkey' are the keywords.
+								'key' is the keyname.
+								'value' is the keyvalue."></Text>
+							</cells>
+						</ColumnListItem>
+						<ColumnListItem>
+							<cells>
+								<Text
+									text="If you want to send recordgroupid for mulitple custom keys, then use the following snippet: "></Text>
+								<Text id="jsSnippetTextcodeTEtwo" text="test"></Text>
+							</cells>
+						</ColumnListItem>
+					</Table>
+				</content>
+			</Panel>
+			<Panel expandable="true" expanded="false">
+				<headerToolbar>
+					<Toolbar>
+						<Text text="5. Tracking Document Object Model Events"></Text>
+					</Toolbar>
+				</headerToolbar>
+				<content>
+					<Text
+						text="The Document Object Model (DOM) is a programming API for HTML and XML documents. It defines the logical structure of documents and the way a document is accessed and manipulated. With the Document Object Model, programmers can create and build documents, navigate their structure, and add, modify, or delete elements and content."></Text>
+					<html:br></html:br>
+					<Text
+						text="The following is a sample pattern of how data is collected and sent for DOM events. "></Text>
+					<html:br></html:br>
+					<l:VerticalLayout>
+						<html:ul>
+							<html:li>
+								<Text text="• The document body contains:"></Text>
+							</html:li>
+							<Text
+								text="&lt;button type='button' name='alarm' id='alarmbutton'&gt;Alarm&lt;/button&gt;"></Text>
+							<html:li>
+								<Text
+									text="Example of a snippet that helps you handle the click event for the above ‘button’ element :"></Text>
+							</html:li>
+							<Text id="jsSnippetTextcodelst" text="test"></Text>
+							<html:br />
+							<Text
+								text="document.getElementById(alarmbutton).addEventListener('click', notifyAlarm);"></Text>
+						</html:ul>
+					</l:VerticalLayout>
+				</content>
+			</Panel>
+		</content>
+	</Panel>
+</mvc:View>

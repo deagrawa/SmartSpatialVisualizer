@@ -1,0 +1,81 @@
+<mvc:View xmlns:mvc="sap.ui.core.mvc" xmlns:l="sap.ui.layout"
+	xmlns:f="sap.ui.layout.form" xmlns:c="sap.ui.core" xmlns="sap.m"
+	controllerName="sap.ui.usage.analytics.view.AddProduct">
+	<Page class="sapUiFioriObjectaddproductPage" title="Add New Product"
+		showHeader="false">
+		<l:Grid defaultSpan="L12 M12 S12" width="auto">
+			<l:content>
+				<f:SimpleForm id="idAddProductForm" minWidth="800"
+					maxContainerCols="2" editable="true" layout="ResponsiveGridLayout"
+					title="Product Onboarding Details" labelSpanL="3" labelSpanM="4"
+					emptySpanL="3" emptySpanM="2" columnsL="1" columnsM="1" class="editableForm">
+					<f:content>
+						<!-- Basic info -->
+
+						<Label text="Product Name" class="addproductlabelclass" ></Label>
+						<Input value="{newProduct>/Detail/productname}" class="addproductinputclass"
+							tooltip=" Enter the Application/Product Name for which tracking needs to be enabled." maxLength="50"></Input>
+						<Label text="Product ID" enabled="newProduct>/Detail/applicationidEnabled"
+							class="addproductlabelclass" tooltip=" Use ProductID GUID in your application." ></Label>
+						<Input class="addproductinputclass" value="{newProduct>/Detail/applicationid}"
+							enabled="{newProduct>/Detail/applicationidEnabled}" maxLength="50"  ></Input>
+						<Label text="Product Portfolio" class="addproductlabelclass" ></Label>
+						<Input class="addproductinputclass" value="{newProduct>/Detail/portfoliolevel1}"
+							tooltip=" Enter the Portfolio/Line of Business where Application resides Example: PI//BI//BOE. " maxLength="50">
+							<layoutData>
+								<l:GridData span="M2" />
+							</layoutData>
+						</Input>
+						<Input class="addproductinputclass" value="{newProduct>/Detail/portfoliolevel2}" maxLength="50">
+							<layoutData>
+								<l:GridData span="M2" />
+							</layoutData>
+						</Input>
+						<Input class="addproductinputclass" value="{newProduct>/Detail/portfoliolevel3}"  maxLength="50">
+							<layoutData>
+								<l:GridData span="M2" />
+							</layoutData>
+						</Input>
+						
+
+
+						<!-- <Label text="" /> <Text xmlns="sap.m" id="exampleid" class="exampleclass" 
+							text="Example: PI//BI//BOE" textDirection="Inherit" visible="true" wrapping="true" 
+							textAlign="Begin" width="" maxLines="1" enabled="false"> </Text> -->
+						<Label text="Administrator " class="addproductlabelclass" ></Label>
+						<Input class="addproductinputclass" value="{newProduct>/Detail/responsible}"
+							tooltip=" Enter user-id/I-No to whom the Administration rights need to be provided. " maxLength="50" ></Input>
+						<Label text="Administrator  (Substitute)" class="addproductlabelclass" ></Label>
+						<Input class="addproductinputclass" value="{newProduct>/Detail/responsible_s}"
+							tooltip=" Enter user-id/I-No who can substitute the Administrator." maxLength="50" ></Input>
+
+
+						<!-- <Label text="Default Configuration" /> -->
+						<!-- <CheckBox selected="{newProduct>/Detail/DefaultConfigFlag}" enabled="{newProduct>/Detail/DefaultConfigEnabled}" 
+							/> -->
+						<Label text=" " class="addproductcustomlabelclass" ></Label>
+						<CheckBox class="cc-check" selected="{newProduct>/Detail/CustomConfigFlag}"
+							text="Custom Configuration"
+							tooltip="Enable custom configurations to specify aditional configurations besides Product High level tracking information " ></CheckBox>
+
+					</f:content>
+				</f:SimpleForm>
+				<!-- <Bar xmlns="sap.m" id="kio3" enableFlexBox="false" translucent="false"
+					design="Auto" visible="true"> <tooltip></tooltip> sap.ui.core.TooltipBase 
+					<dependents></dependents> sap.ui.core.Control, since 1.19 <contentLeft> </contentLeft> 
+					sap.ui.core.Control <contentMiddle> -->
+
+				<!-- </contentMiddle> sap.ui.core.Control <contentRight> </contentRight> 
+					sap.ui.core.Control </Bar> -->
+
+
+				<!-- <Button text="{i18n>addProductButtonCancel}" press="onCancel"/> -->
+			</l:content>
+		</l:Grid>
+		<Button text="Clear All" type="Accept" press="onClear" class="cancelButton" ></Button>
+		<Button text="Proceed" type="Emphasized" press="onSave" class="proceedButton" ></Button>
+		<!-- <Button text="Proceed" type="Accept" press="onSave" class="proceedButton" 
+			/> -->
+
+	</Page>
+</mvc:View>

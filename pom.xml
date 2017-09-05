@@ -1,0 +1,332 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<groupId>com.sap.invent.SmartSpatialVisualizer</groupId>
+	<artifactId>com.sap.invent.SmartSpatialVisualizer</artifactId>
+	<version>0.0.1-SNAPSHOT</version>
+	<packaging>war</packaging>
+	<properties>
+		<!-- POM For PIA usage tracking project -->
+		<!-- POM would be used for building war package -->
+		<!-- PLUGIN VERSIONS -->
+		<java.target.version>1.8</java.target.version>
+		<maven-deploy-plugin.version>2.4</maven-deploy-plugin.version>
+		<maven-war-plugin.version>2.2</maven-war-plugin.version>
+		<maven-compiler-plugin.version>2.3.2</maven-compiler-plugin.version>
+		<maven-ejb-plugin.version>2.3</maven-ejb-plugin.version>
+		<maven-ear-plugin.version>2.8</maven-ear-plugin.version>
+		<maven-antrun-plugin.version>1.7</maven-antrun-plugin.version>
+		<buildnumber-maven-plugin.version>1.0-beta-3</buildnumber-maven-plugin.version>
+		<jslint4java-maven-plugin.version>2.0.1</jslint4java-maven-plugin.version>
+		<maven-resources-plugin.version>2.6</maven-resources-plugin.version>
+		<local-libs.version>1.0-SNAPSHOT</local-libs.version>
+		<sapui5.version>1.22.4</sapui5.version>
+
+		<!-- MULTIPLE USED -->
+		<org.apache.chemistry.opencmis.version>0.11.0-sap-01</org.apache.chemistry.opencmis.version>
+		<javax.servlet.version>2.5</javax.servlet.version>
+		<javax.persistence.version>1.0</javax.persistence.version>
+		<com.sap.tc.logging.version>0.7.2</com.sap.tc.logging.version>
+		<commons-beanutils.version>1.8.0</commons-beanutils.version>
+		<org.codehaus.jettison.version>1.3.2</org.codehaus.jettison.version>
+		<log4j.version>1.2.17</log4j.version>
+		<org.slf4j.version>1.7.5</org.slf4j.version>
+		<org.json.version>2.0-NEXUS-3758</org.json.version>
+	</properties>
+
+	<dependencies>
+		<dependency>
+			<groupId>javax.servlet</groupId>
+			<artifactId>servlet-api</artifactId>
+			<version>2.5</version>
+			<scope>provided</scope>
+		</dependency>
+		<dependency>
+			<groupId>org.slf4j</groupId>
+			<artifactId>slf4j-log4j12</artifactId>
+			<version>1.7.7</version>
+		</dependency>
+
+
+		
+
+		<!-- SDK MODELER DEPENDENCIES END -->
+
+		<!-- <dependency> -->
+		<!-- <groupId>com.sap.core.distro.jpaas</groupId> -->
+		<!-- <artifactId>com.sap.core.distro.jpaas.zip</artifactId> -->
+		<!-- <version>2.48.7</version> -->
+		<!-- <type>pom</type> -->
+		<!-- </dependency> -->
+
+	
+		<!-- SAP UI5 dependency -->
+		<dependency>
+			<groupId>com.sun.jersey.ri</groupId>
+			<artifactId>jax-rs-ri</artifactId>
+			<version>1.9.1</version>
+			<type>zip</type>
+		</dependency>
+
+		<dependency>
+			<groupId>org.json</groupId>
+			<artifactId>org.json</artifactId>
+		</dependency>
+
+		<dependency>
+			<groupId>com.sap.portal.ui5</groupId>
+			<artifactId>portal-ui5-ext</artifactId>
+			<version>1.23.0</version>
+		</dependency>
+
+		<dependency>
+			<groupId>com.sap.ui5</groupId>
+			<artifactId>resource</artifactId>
+			<version>${sapui5.version}</version>
+		</dependency>
+
+		<dependency>
+			<groupId>com.sap.ui5</groupId>
+			<artifactId>core</artifactId>
+			<version>${sapui5.version}</version>
+		</dependency>
+
+		<dependency>
+			<groupId>com.sap.ui5</groupId>
+			<artifactId>ux3</artifactId>
+			<version>${sapui5.version}</version>
+		</dependency>
+
+		<dependency>
+			<groupId>com.sap.ui5</groupId>
+			<artifactId>vbm</artifactId>
+			<version>1.22.0</version>
+		</dependency>
+
+		<dependency>
+			<groupId>com.sap.ui5</groupId>
+			<artifactId>commons</artifactId>
+			<version>${sapui5.version}</version>
+		</dependency>
+
+		<dependency>
+			<groupId>com.sap.ui5</groupId>
+			<artifactId>comp</artifactId>
+			<version>${sapui5.version}</version>
+		</dependency>
+
+		<dependency>
+			<groupId>com.sap.ui5</groupId>
+			<artifactId>mobile</artifactId>
+			<version>${sapui5.version}</version>
+		</dependency>
+
+		<dependency>
+			<groupId>com.sap.ui5</groupId>
+			<artifactId>table</artifactId>
+			<version>${sapui5.version}</version>
+		</dependency>
+
+		<dependency>
+			<groupId>com.sap.ui5</groupId>
+			<artifactId>richtexteditor</artifactId>
+			<version>${sapui5.version}</version>
+		</dependency>
+
+		<dependency>
+			<groupId>com.sap.ui5</groupId>
+			<artifactId>themelib_sap_goldreflection</artifactId>
+			<version>${sapui5.version}</version>
+		</dependency>
+
+		<dependency>
+			<groupId>com.sap.ui5</groupId>
+			<artifactId>themelib_sap_platinum</artifactId>
+			<version>${sapui5.version}</version>
+		</dependency>
+
+		<dependency>
+			<groupId>com.sap.ui5</groupId>
+			<artifactId>viz</artifactId>
+			<version>${sapui5.version}</version>
+		</dependency>
+
+		<dependency>
+			<groupId>com.sap.ui5</groupId>
+			<artifactId>layout</artifactId>
+			<version>${sapui5.version}</version>
+		</dependency>
+
+		<dependency>
+			<groupId>com.sap.ui5</groupId>
+			<artifactId>themelib_sap_bluecrystal</artifactId>
+			<version>${sapui5.version}</version>
+		</dependency>
+
+		<dependency>
+			<groupId>com.sap.ui5</groupId>
+			<artifactId>unified</artifactId>
+			<version>${sapui5.version}</version>
+		</dependency>
+
+		<dependency>
+			<groupId>com.sap.ui5</groupId>
+			<artifactId>mobile</artifactId>
+			<version>${sapui5.version}</version>
+		</dependency>
+
+		<dependency>
+			<groupId>com.sap.ui5</groupId>
+			<artifactId>mobile-ext</artifactId>
+			<version>${sapui5.version}</version>
+		</dependency>
+
+		<dependency>
+			<groupId>com.sap.ui5</groupId>
+			<artifactId>makit</artifactId>
+			<version>${sapui5.version}</version>
+		</dependency>
+
+		<dependency>
+			<groupId>com.sap.ushell</groupId>
+			<artifactId>ushell-lib</artifactId>
+			<version>${sapui5.version}</version>
+		</dependency>
+
+		<dependency>
+			<groupId>com.sap.collaboration</groupId>
+			<artifactId>collaboration-commons</artifactId>
+			<version>1.22.0</version>
+		</dependency>
+
+		<dependency>
+			<groupId>com.sap.ca</groupId>
+			<artifactId>ui</artifactId>
+			<version>1.22.1</version>
+		</dependency>
+
+		<dependency>
+			<groupId>com.sap.ca</groupId>
+			<artifactId>scfld.md</artifactId>
+			<version>1.23.0</version>
+		</dependency>
+
+		<dependency>
+			<groupId>com.sap.smartbusiness</groupId>
+			<artifactId>suite.smartbusiness</artifactId>
+			<version>1.24.1</version>
+		</dependency>
+
+
+		<dependency>
+			<groupId>com.sap.apf</groupId>
+			<artifactId>apf-lib</artifactId>
+			<version>1.22.1</version>
+		</dependency>
+
+		<dependency>
+			<groupId>com.sap.suite</groupId>
+			<artifactId>suite-ui-commons</artifactId>
+			<version>1.22.0</version>
+		</dependency>
+
+		<dependency>
+			<groupId>org.odata4j</groupId>
+			<artifactId>odata4j-core</artifactId>
+			<version>0.7.0-sap-06</version>
+		</dependency>
+
+		<dependency>
+			<groupId>org.odata4j</groupId>
+			<artifactId>odata4j-jersey</artifactId>
+			<version>0.7.0-sap-03</version>
+		</dependency>
+
+		<!-- Dependencies for Unit tests START -->
+
+		<dependency>
+			<groupId>org.easymock</groupId>
+			<artifactId>easymock</artifactId>
+			<version>3.2</version>
+		</dependency>
+
+		<dependency>
+			<groupId>org.junit</groupId>
+			<artifactId>org.junit</artifactId>
+			<version>4.8.2</version>
+		</dependency>
+
+		<dependency>
+			<groupId>org.powermock</groupId>
+			<artifactId>com.springsource.org.powermock.easymock</artifactId>
+			<version>1.3.7</version>
+		</dependency>
+
+
+
+		<!-- Dependencies for Unit tests END -->
+
+
+	</dependencies>
+	<build>
+		<sourceDirectory>src</sourceDirectory>
+		<resources>
+			<resource>
+				<directory>src</directory>
+				<includes>
+					<include>**/*</include>
+				</includes>
+				<!-- excludes> <exclude>**/*.java</exclude> </excludes -->
+			</resource>
+		</resources>
+		<plugins>
+			<plugin>
+				<artifactId>maven-compiler-plugin</artifactId>
+				<version>${maven-compiler-plugin.version}</version>
+				<configuration>
+					<source>${java.target.version}</source>
+					<target>${java.target.version}</target>
+				</configuration>
+			</plugin>
+			<plugin>
+				<artifactId>maven-war-plugin</artifactId>
+				<version>${maven-war-plugin.version}</version>
+				<configuration>
+					<warName>UsageCloudUI</warName>
+					<warSourceDirectory>WebContent</warSourceDirectory>
+					<archive>
+						<manifestFile>WebContent/META-INF/MANIFEST.MF</manifestFile>
+					</archive>
+				</configuration>
+			</plugin>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-deploy-plugin</artifactId>
+				<version>${maven-deploy-plugin.version}</version>
+				<configuration>
+					<skip>true</skip>
+				</configuration>
+			</plugin>
+		</plugins>
+	</build>
+	<name>SmartSpatialVisualizer</name>
+	<dependencyManagement>
+		<dependencies>
+			<dependency>
+				<groupId>org.json</groupId>
+				<artifactId>org.json</artifactId>
+				<version>2.0-NEXUS-3758</version>
+			</dependency>
+			<dependency>
+				<groupId>com.sap.ndb.studio</groupId>
+				<artifactId>com.sap.ndb.studio</artifactId>
+				<version>2.0.0</version>
+			</dependency>
+			<dependency>
+				<groupId>com.sap.db.jdbc</groupId>
+				<artifactId>ngdbc</artifactId>
+				<version>1.90.3</version>
+			</dependency>
+		</dependencies>
+	</dependencyManagement>
+</project>

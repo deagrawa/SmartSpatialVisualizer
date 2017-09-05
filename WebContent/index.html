@@ -1,0 +1,80 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta charset="UTF-8">
+
+<title>Usage Tracking Registration</title>
+
+<script id="sap-ui-bootstrap"
+	src="resources/sap-ui-cachebuster/sap-ui-core.js"
+	data-sap-ui-resourceroots='{"sap.ui.usage.analytics": "./"}'
+	data-sap-ui-libs="sap.m,sap.ui.ux3,sap.ui.commons"
+	data-sap-ui-theme="sap_bluecrystal"
+	data-sap-ui-xx-bindingSyntax="complex" data-sap-ui-preload="async">
+	
+</script>
+
+<link rel="stylesheet" type="text/css" href="css/style.css">
+
+<script>
+	//	var view = sap.ui.view({id:"viShell", viewName:"sap.ui.usage.analytics.view.NavBar", type:sap.ui.core.mvc.ViewType.JS});
+		//view.placeAt("navBarId");
+			sap.ui.getCore().attachInit(function() {
+				new sap.m.Shell({
+					app: new sap.ui.core.ComponentContainer({
+						name : "sap.ui.usage.analytics"
+					})
+				}).placeAt("content");
+			});
+		</script>
+		
+<script>
+	(function(e, d, t, p, h, n, l) {
+		e['UsageTrackingObject'] = h;
+		var obj = {};
+		var objGlobal = {};
+		objGlobal["type"] = "window";
+		e[h] = e[h]
+				|| function() {
+					(e[h].q = e[h].q || []).push(arguments);
+					if (window.event) {
+						obj["type"] = window.event.type;
+						obj["subClass"] = window.event.toString().substring(8, window.event.toString().length - 1);
+						obj["tagName"] = window.event.target ? window.event.target.tagName
+								: window.event.srcElement.tagName;
+						obj["className"] = window.event.target ? window.event.target.className
+								: window.event.srcElement.className;
+						(e[h].eventsq = e[h].eventsq || []).push(obj);
+					} else
+						(e[h].eventsq = e[h].eventsq || []).push(objGlobal);
+				}, e[h].l = 1 * new Date();
+
+		if (typeof (e[h].set) == 'undefined') {
+			loadjs();
+		}
+
+		function loadjs() {
+			n = d.createElement(t);
+			n.async = 1;
+			var u = /*(("https:" == d.location.protocol) ? "https" : "http") +*/p;
+			n.src = u;
+			l = d.getElementsByTagName(t)[0];
+			l.parentNode.insertBefore(n, l);
+		}
+	})(window, document, 'script', 'js/ut.js', 'ut');
+
+sap.ui.getCore().sendUsageTracking = function(jsonString){
+	if(parent.ut != undefined)
+		parent.ut('send','customkey',jsonString);
+	
+}
+</script>
+</head>
+
+<body class="sapUiBody" />
+<!-- <div id="navBarId"></div> -->
+<div id="content"></div>
+
+</html>

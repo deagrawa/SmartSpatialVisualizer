@@ -1,0 +1,334 @@
+<mvc:View controllerName="sap.ui.usage.analytics.view.Detail"
+	id="detailView" xmlns:mvc="sap.ui.core.mvc" xmlns:core="sap.ui.core"
+	xmlns:l="sap.ui.layout" xmlns:f="sap.ui.layout.form" xmlns="sap.m">
+	<!-- <ScrollContainer height="100%" width="100%" horizontal="true" -->
+	<!-- vertical="true"> -->
+
+	<Page enableScrolling="true">
+		<content>
+
+			<IconTabBar id='iconTabBarId' select="onTabBarSelect"
+				showSelection="true" selectedKey="summaryKey">
+				<items>
+					<IconTabFilter text="Summary" key="summaryKey">
+
+					</IconTabFilter>
+
+
+
+					<!-- </IconTabFilter> -->
+
+					<IconTabFilter xmlns="sap.m" id="analyzetab" text="Analysis"
+						key="analysisKey" enabled="true" visible="true" design="Vertical">
+
+						<content style="width:100%;height:100%;">
+							<Bar xmlns="sap.m" id="barm" design="Auto" visible="true">
+								<tooltip></tooltip> <!-- sap.ui.core.TooltipBase -->
+								<dependents></dependents> <!-- sap.ui.core.Control, since 1.19 -->
+								<contentLeft></contentLeft> <!-- sap.ui.core.Control -->
+								<contentMiddle></contentMiddle> <!-- sap.ui.core.Control -->
+								<contentRight>
+									<ToggleButton xmlns="sap.m" id="refreshId" type="Default"
+										width="2.5em" enabled="true" visible="true" icon="sap-icon://refresh"
+										iconFirst="true" pressed="false" class="refreshIconAnalysisClass"
+										tooltip="Refresh story" press="onRefreshButtonPress">
+										<tooltip></tooltip> <!-- sap.ui.core.TooltipBase -->
+										<dependents></dependents> <!-- sap.ui.core.Control, since 1.19 -->
+									</ToggleButton>
+									<!-- <Icon xmlns="sap.ui.core" id="refreshId" tooltip="Refresh story" 
+										visible="true" src="sap-icon://refresh" color="#666" hoverColor="" activeColor="" 
+										width="2.5em" decorative="true" press="onRefreshButtonPress " class="refreshIconAnalysisClass"> 
+										</Icon> -->
+
+									<Button xmlns="sap.m" id="addNewSb" class="ltViewer"
+										type="Default" width="2.5rem" enabled="true" visible="true"
+										icon="sap-icon://bubble-chart" iconFirst="true" press="createNewStoryBoard">
+										<tooltip></tooltip> <!-- sap.ui.core.TooltipBase -->
+										<dependents></dependents> <!-- sap.ui.core.Control, since 1.19 -->
+									</Button>
+									<ToggleButton xmlns="sap.m" id="listsbBtn" type="Default"
+										width="2.5rem" enabled="true" visible="true" icon="sap-icon://list"
+										iconFirst="true" pressed="true" class="ltViewer" press="showListView">
+										<tooltip></tooltip> <!-- sap.ui.core.TooltipBase -->
+										<dependents></dependents> <!-- sap.ui.core.Control, since 1.19 -->
+									</ToggleButton>
+									<ToggleButton xmlns="sap.m" id="gridsbBtn" type="Default"
+										width="2.5rem" icon="sap-icon://grid" iconFirst="true"
+										pressed="false" class="ltViewer" press="showGridView">
+										<tooltip></tooltip> <!-- sap.ui.core.TooltipBase -->
+										<dependents></dependents> <!-- sap.ui.core.Control, since 1.19 -->
+									</ToggleButton>
+								</contentRight> <!-- sap.ui.core.Control -->
+							</Bar>
+
+							<List id="listm" items="{analyzeData>/customStories}" class="masterlist"
+								mode="{device>/listMode}" noDataText="No Stories" select="showStoryBoard"
+								growing="true" growingScrollToLoad="true">
+								<items>
+									<ObjectListItem type="{device>/listItemType}"
+										press="showStoryBoard" title="{analyzeData>ITEM_NAME}" class="masterlistclass">
+									</ObjectListItem>
+								</items>
+
+
+							</List>
+
+							<FlexBox xmlns="sap.m" id="tilem" visible="true" height="90%"
+								width="90%" displayInline="false" direction="Row" fitContainer="true"
+								renderType="Div" items="{analyzeData>/customStories}">
+								<tooltip></tooltip> <!-- sap.ui.core.TooltipBase -->
+								<dependents></dependents> <!-- sap.ui.core.Control, since 1.19 -->
+								<items>
+
+									<VBox class="storiesVBox">
+										<items>
+									<StandardTile xmlns="sap.m" removable="false"
+												title="{analyzeData>ITEM_NAME}" info="" icon="./img/sb.png"
+										iconDensityAware="true" press="showStoryBoard">
+										<tooltip></tooltip> <!-- sap.ui.core.TooltipBase -->
+										<dependents></dependents> <!-- sap.ui.core.Control, since 1.19 -->
+									</StandardTile>
+											<Button xmlns="sap.m" text="Share" class="storyShareButtonStyle"
+												width="200px" press=""></Button>
+										</items>
+									</VBox>
+
+
+								</items> <!-- sap.ui.core.Control -->
+							</FlexBox>
+
+<!-- 							<FlexBox xmlns="sap.m" id="tilem" visible="false" height="90%" -->
+<!-- 								width="90%" displayInline="false" direction="Row" fitContainer="true" -->
+<!-- 								renderType="Div" items="{analyzeData>/customStories}"> -->
+<!-- 								<tooltip></tooltip> sap.ui.core.TooltipBase -->
+<!-- 								<dependents></dependents> sap.ui.core.Control, since 1.19 -->
+<!-- 								<items> -->
+<!-- 									<StandardTile xmlns="sap.m" removable="false" -->
+<!-- 										title="{analyzeData>ITEM_NAME}" info="" icon="./img/sb.png" -->
+<!-- 										iconDensityAware="true" press="showStoryBoard"> -->
+<!-- 										<tooltip></tooltip> sap.ui.core.TooltipBase -->
+<!-- 										<dependents></dependents> sap.ui.core.Control, since 1.19 -->
+<!-- 									</StandardTile> -->
+
+<!-- 								</items> sap.ui.core.Control -->
+<!-- 							</FlexBox> -->
+
+							<!-- <TileContainer xmlns="sap.m" width="100%" height="100%" tiles="{/APPLICATION}" 
+								> <tiles> <StandardTile title="{PRODUCTNAME}" /> </tiles> </TileContainer> -->
+
+						</content>
+
+					</IconTabFilter>
+				</items>
+				<content>
+
+					<!-- <ScrollContainer xmlns="sap.m" busy="false" height="auto" horizontal="false" 
+						vertical="true" focusable="false"> <content> -->
+					<!-- <Page showNavButton="true" navButtonPress="onNavBack" enableScrolling="true" 
+						id="UsgaeDPage" showHeader="true" class="sapUiFioriObjectPageUTdetailPage"> -->
+
+					<VBox>
+						<!-- <content> -->
+						<items>
+							<Toolbar class='detailiconstoolbarclass'>
+								<Label xmlns="sap.m" id="HVDSYYDS" design="Standard"
+									text="Registration Summary" visible="true" textAlign="Begin"
+									textDirection="Inherit" required="false" class="productnameclass">
+								</Label>
+								<ToolbarSpacer />
+
+								<!-- <Icon xmlns="sap.ui.core" src="sap-icon://decline" size="1.3em" 
+									color="#666" hoverColor="" activeColor="" width="1.5em" height="1.5em" backgroundColor="" 
+									hoverBackgroundColor="" activeBackgroundColor="" visible="true" decorative="true" 
+									press="" tooltip="Cancel Edit"> </Icon> -->
+								<!-- <Icon xmlns="sap.ui.core" id="editbuttonid" src="sap-icon://edit" 
+									size="1.3em" color="#666" hoverColor="" activeColor="" width="1.5em" height="1.5em" 
+									backgroundColor="" hoverBackgroundColor="" activeBackgroundColor="" visible="true" 
+									decorative="true" press="onEdit" tooltip="Edit"> </Icon> -->
+
+								<Icon xmlns="sap.ui.core" src="sap-icon://delete" size="1.3em"
+									color="#666" hoverColor="" activeColor="" width="1.5em" height="1.5em"
+									backgroundColor="" hoverBackgroundColor=""
+									activeBackgroundColor="" visible="true" decorative="true"
+									press="onProductDeleteBtn" tooltip="Delete">
+								</Icon>
+
+
+
+								<Switch xmlns="sap.m" id="switchid" visible="true"
+									enabled="true" tooltip="Monitoring Enable/Disable" type="Default"
+									change="onProductMonitoringEnable">
+									<tooltip></tooltip> <!-- sap.ui.core.TooltipBase -->
+									<dependents></dependents> <!-- sap.ui.core.Control, since 1.19 -->
+								</Switch>
+							</Toolbar>
+							<l:Grid defaultSpan="L12 M12 S12" vSpacing="0" width="100%">
+								<l:content>
+									<f:SimpleForm id="idjhha" minWidth="800"
+										maxContainerCols="2" editable="true" layout="ResponsiveGridLayout"
+										labelMinWidth="150" title="" labelSpanL="3" labelSpanM="4"
+										emptySpanL="4" emptySpanM="4" columnsL="1" columnsM="1"
+										class="editableForm detailEditForm">
+										<f:content>
+
+											<Label text="Name of Product :" class="detailViewLabel"
+												id="productnameDetail"></Label>
+											<Input editable="false" id="productNameDetailId" value="{productData>/PRODUCTNAME}"
+												class="textfeildclass"></Input>
+											<Label text="Product ID :" class="detailViewLabel" id="productidDetail"></Label>
+											<Input value="{productData>/APPLICATIONID}" editable="false"
+												id="detailProductId" class="textfeildclass"></Input>
+											<Label text="Product Portfolio :" class="detailViewLabel"
+												id="productportfolioDetail"></Label>
+											<Input class="textfeildclass" editable="false"
+												value="{productData>/PORTFOLIOLEVEL1}//{productData>/PORTFOLIOLEVEL2}//{productData>/PORTFOLIOLEVEL3}"></Input>
+
+											<!-- <Input class="addproductinputclass" editable="false" id="productPortfolioDetailId1" 
+												value="{PORTFOLIOLEVEL1}"> <layoutData> <l:GridData span="M2" /> </layoutData> 
+												</Input> <Input class="addproductinputclass" editable="false" id="productPortfolioDetailId2" 
+												value="{PORTFOLIOLEVEL2}"> <layoutData> <l:GridData span="M2" /> </layoutData> 
+												</Input> <Input class="addproductinputclass" editable="false" id="productPortfolioDetailId3" 
+												value="{PORTFOLIOLEVEL3}"> <layoutData> <l:GridData span="M2" /> </layoutData> 
+												</Input> -->
+
+											<Label text="Administrator  :" class="detailViewLabel"
+												id="productadminDetail"></Label>
+											<Input editable="false" id="productAdminstartorDetailId"
+												value=" {productData>/RESPONSIBLE}" class="textfeildclass"></Input>
+
+											<Label text="Administrator(Substitute) :" class="detailViewLabel"
+												id="productadminsubstDetail"></Label>
+											<Input editable="false" id="productAdminSDetailId"
+												value=" {productData>/RESPONSIBLE_S}" class="textfeildclass"></Input>
+
+											<Label text="Date Created : " class="detailViewLabel"
+												id="productdateDetail"></Label>
+											<Input editable="false" id="productDateDetailId" class="textfeildclass"
+												value="{path:'productData>/CREATEDDATE', formatter: 'sap.ui.usage.analytics.util.Formatter.Date'}"></Input>
+
+											<Label text="Information Views Status  :" class="detailViewLabel"
+												id="productinfoDetail"></Label>
+											<Input editable="false" value=" {productData>/IVIEWSTATUS}"
+												class="textfeildclass"></Input>
+
+											<Icon xmlns="sap.ui.core" id="refreshAnalysisId"
+												visible="true" src="sap-icon://refresh" size="1.3em" color="#666"
+												hoverColor="" activeColor="" width="1.5em" height="1.5em"
+												backgroundColor="" hoverBackgroundColor=""
+												activeBackgroundColor="" decorative="true" press="OnRegenerateView">
+											</Icon>
+
+
+
+											<Label text="Last Modified  :" class="detailViewLabel"
+												id="productLastModifiedDetail"></Label>
+											<Input editable="false" class="textfeildclass"
+												value="{path:'productData>/LASTMODIFIEDDATE', formatter: 'sap.ui.usage.analytics.util.Formatter.Date'}"></Input>
+										</f:content>
+									</f:SimpleForm>
+									<!-- <Button text="{i18n>addProductButtonCancel}" press="onCancel"/> -->
+								</l:content>
+							</l:Grid>
+
+
+
+							<Table width="98%" class="detailPageTable" id="customConfigurationList"
+								items="{customData>/results}" selectionMode="sap.ui.table.SelectionMode.Single"
+								navigationMode="sap.ui.table.NavigationMode.Paginator">
+								<headerToolbar>
+									<Toolbar class="detailtoolbarclass">
+										<Icon xmlns="sap.ui.core" src="sap-icon://database" size="2em"
+											hoverColor="" activeColor="" width="" height=""
+											backgroundColor="" hoverBackgroundColor=""
+											activeBackgroundColor="" visible="true" decorative="true"
+											press="">
+											<tooltip></tooltip>
+											<dependents></dependents>
+										</Icon>
+										<Label text="{i18n>Added Configurations}" class="addedconfigurationclass"></Label>
+										<ToolbarSpacer />
+
+									</Toolbar>
+								</headerToolbar>
+								<columns>
+									<Column>
+										<header>
+											<Label text="Configuration Name" class="detailtablelabelclass"></Label>
+										</header>
+									</Column>
+									<Column minScreenWidth="Tablet" demandPopin="true"
+										hAlign="Left">
+										<header>
+											<Label text="Data Type" class="detailtablelabelclass"></Label>
+										</header>
+									</Column>
+									<Column minScreenWidth="Tablet" demandPopin="true"
+										hAlign="Left" width="30%">
+										<header>
+											<Label text="Label" class="detailtablelabelclass"></Label>
+										</header>
+									</Column>
+									<!-- <Column minScreenWidth="Tablet" demandPopin="true" hAlign="Right"> 
+										<header> <Label text="" /> </header> </Column> <Column demandPopin="true" 
+										hAlign="Center"> <header> <Label text="" /> </header> </Column> <Column demandPopin="true" 
+										hAlign="Center"> <header> <Label text="" /> </header> </Column> -->
+								</columns>
+								<ColumnListItem type="Active" press="OnRowChanged">
+									<cells>
+										<ObjectIdentifier title=""
+											text="{customData>CUSTOMKEYNAME}" class="detailtablelabelclass"></ObjectIdentifier>
+										<Text text="{customData>CUSTOMKEYDATATYPEID}" class="detailtablelabelclass"></Text>
+										<Text text="{customData>CUSTOMKEYDISPLAYLABEL}" class="detailtablelabelclass"></Text>
+										<Icon xmlns="sap.ui.core" id="detaildeleteicon" src="sap-icon://delete"
+											size="1em" color="#ccc" hoverColor="" activeColor="" width=""
+											height="" backgroundColor="" hoverBackgroundColor=""
+											activeBackgroundColor="" visible="true" decorative="true"
+											press="onDeletePress">
+											<tooltip></tooltip> <!-- sap.ui.core.TooltipBase -->
+											<dependents></dependents> <!-- sap.ui.core.Control, since 1.19 -->
+										</Icon>
+										<Icon xmlns="sap.ui.core" id="detailediticon" src="sap-icon://edit"
+											size="1em" color="" hoverColor="#ccc" activeColor="" width=""
+											height="" backgroundColor="" hoverBackgroundColor=""
+											activeBackgroundColor="" visible="true" decorative="true"
+											press="onEditPress">
+											<tooltip></tooltip> <!-- sap.ui.core.TooltipBase -->
+											<dependents></dependents> <!-- sap.ui.core.Control, since 1.19 -->
+										</Icon>
+
+										<!-- <Text text="{ path:'DeliveryDate', formatter:'app.sap.bi.cmc.monitoring.util.formatter.Date' 
+											}"/> -->
+
+									</cells>
+								</ColumnListItem>
+
+							</Table>
+
+							<Text xmlns="sap.m" class="detailPagehierarchylabel" design="Standard"
+								text=" Added Hierarchies" width="98%">
+							</Text>
+
+							<List id="detailheirarchylistid" class="detailheirarchylist"
+								mode="{device>/listMode}" select="onSelect" growing="true"
+								growingScrollToLoad="true" enable="true" editable="false"
+								items="{/CUSTOMCOLUMNMETADATA}">
+								<items>
+									<ObjectListItem type="{device>/listItemType}"
+										press="onSelect" class="detaillistitemclass" title="{HIERARCHYNAME} "
+										description="Levels : {HIERARCHYLEVEL}">
+									</ObjectListItem>
+								</items>
+							</List>
+						</items>
+					</VBox>
+
+					<!-- </content> -->
+
+					<!-- </Page> -->
+					<!-- </content> -->
+					<!-- </ScrollContainer> -->
+				</content>
+			</IconTabBar>
+		</content>
+	</Page>
+</mvc:View>

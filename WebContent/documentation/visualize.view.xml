@@ -1,0 +1,101 @@
+<mvc:View xmlns:l="sap.ui.layout" xmlns:core="sap.ui.core"
+	xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m" xmlns:html="http://www.w3.org/1999/xhtml">
+
+	<Panel>
+		<l:VerticalLayout>
+			<Text
+				text="SAP Lumira helps you plot information by using a variety of different charts, including bar charts, line charts, and so on. However, you might want to create your own charts .The SAP Lumira helps you to develop your own charts and integrates it with SAP Lumira.The Usage Tracking tool displays the collected data with the help of SAP Lumira dashboard."></Text>
+			<html:br></html:br>
+			<Text text="Context" class="boldFontClass" />
+
+			<Text
+				text="Usage Tracking tool organizes the collected data as measures and dimensions. They are listed below:"></Text>
+			<html:br></html:br>
+			<Table>
+				<columns>
+					<Column>
+						<Text text="Measures and Dimensions"></Text>
+					</Column>
+					<Column>
+						<Text text="Descriptions"></Text>
+					</Column>
+				</columns>
+				<ColumnListItem>
+					<cells>
+						<Text text="System measures"></Text>
+						<Text
+							text="These are the default measures that system provides to organize your search result. For example, sequence no, tag name class, eventsubclass etc"></Text>
+					</cells>
+				</ColumnListItem>
+				<ColumnListItem>
+					<cells>
+						<Text text="System dimensions"></Text>
+						<Text
+							text="These are the default dimensions that system provides to organize your search result. For example, applicationid, browsername, browserversion, city etc."></Text>
+					</cells>
+				</ColumnListItem>
+				<ColumnListItem>
+					<cells>
+						<Text text="Custom measures and dimensions"></Text>
+						<Text
+							text="These are the measures and dimensions that you create in order to organize your search results. For example, parent action, detail1, etc.      "></Text>
+					</cells>
+				</ColumnListItem>
+			</Table>
+			<html:br></html:br>
+			<Text
+				text="You use this procedure to visualize the collected data in Lumira dashboard. "></Text>
+			<html:br></html:br>
+			<Text text="Procedure" class="boldFontClass"></Text>
+			<html:ol>
+				<html:li>
+					<Text text="Choose Analysis tab &gt; Click Here for Lumira Server."></Text>
+				</html:li>
+				<Text
+					text="Note: SAP Lumira Server authorizes you using SSO credentials."></Text>
+				<html:li>
+					<Text
+						text="Choose the data set for which you want to visualize the charts."></Text>
+				</html:li>
+				<Text
+					text="Data set is set of columns, hierarchies and filters used to create a chart."></Text>
+				<html:li>
+					<Text text="Select a chart from the list of charts."></Text>
+				</html:li>
+				<Text
+					text="You can change a chart type any time if you prefer another chart for visualization."></Text>
+				<html:li>
+					<Text
+						text="Create storyboard using the following custom configuration details:"></Text>
+				</html:li>
+				<html:ol type="a">
+					<html:li>
+						<Text text="Click a measure and drag it onto the chart body."></Text>
+					</html:li>
+					<html:li>
+						<Text text="Click a dimension and drag it onto the chart body."></Text>
+					</html:li>
+					<html:li>
+						<Text text="Add measures and dimensions as required."></Text>
+					</html:li>
+				</html:ol>
+				<html:li>
+					<Text
+						text=" If you want to create multiple charts in a storyboard, then choose the&lt;+&gt;icon."></Text>
+				</html:li>
+				<Text
+					text="Step Result: The storyboard generates a unique ID for different charts."></Text>
+				<html:li>
+					<Text text="Copy the unique Id from the URL."></Text>
+				</html:li>
+				<html:li>
+					<Text
+						text="In the Usage Tracking page, paste the unique ID in the text field."></Text>
+				</html:li>
+				<html:li>
+					<Text text="Choose Generate View, to visualize the collected data. "></Text>
+				</html:li>
+			</html:ol>
+		</l:VerticalLayout>
+	</Panel>
+</mvc:View>

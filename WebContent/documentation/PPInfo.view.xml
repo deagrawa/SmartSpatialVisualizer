@@ -1,0 +1,258 @@
+<mvc:View xmlns:l="sap.ui.layout" xmlns:core="sap.ui.core"
+	xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m" xmlns:html="http://www.w3.org/1999/xhtml"
+	controllerName="sap.ui.usage.analytics.documentation.PPInfo">
+	<Panel expandable="true" expanded="false">
+		<headerToolbar>
+			<Toolbar>
+				<Text text="1. Setting up Privacy and Personal Information"></Text>
+			</Toolbar>
+		</headerToolbar>
+		<content>
+			<Text
+				text="As a product owner, you can set the custom keys as private or public. Based on these settings you can use config calls to enable tracking support for your application."></Text>
+			<html:br></html:br>
+			<Text
+				text="For example, privacy settings for following custom keys and html tags are indicted in parenthesis:"></Text>
+			<html:br></html:br>
+			<l:VerticalLayout>
+				<Text text="• CustomKeyPub (Public)"></Text>
+				<Text text="• CustomKeyPriv (Private)"></Text>
+				<Text text="• TagInfo (Public)"></Text>
+				<Text text="• ClassInfo (Public)"></Text>
+			</l:VerticalLayout>
+			<html:br></html:br>
+			<Text
+				text=" By Default the client SDK disables the tracking of custom keys and automatic collection of non-personal information. You can enable it using the following ‘config’ calls"></Text>
+			<html:br></html:br>
+			<Table id="table2" insert="false" backgroundDesign="Translucent">
+				<columns>
+					<Column>
+						<Text text="Action"></Text>
+					</Column>
+					<Column>
+						<Text text="Code"></Text>
+					</Column>
+					<Column>
+						<Text text="Description"></Text>
+					</Column>
+				</columns>
+				<ColumnListItem>
+					<cells>
+						<Text
+							text="If you want to enable application tracking, then use the code in the code column."></Text>
+						<Text text="ut ('config','tracking','on');."></Text>
+						<Text id="jsSnippetTextcodecolone" text="test"></Text>
+					</cells>
+				</ColumnListItem>
+				<ColumnListItem>
+					<cells>
+						<Text
+							text="If you want to disable application tracking, then use the code in the code column:"></Text>
+						<Text text="ut('config','tracking','off');."></Text>
+						<Text
+							text="Now, the Usage Tracking tool disables tracking for your application."></Text>
+					</cells>
+				</ColumnListItem>
+				<ColumnListItem>
+					<cells>
+						<Text
+							text="If you want to enable tracking of non- personal information your application, then use the code in the code column:"></Text>
+						<Text text="ut('config','tracking','non-personal');."></Text>
+						<Text id="jsSnippetTextcodecoltwo" text="test"></Text>
+					</cells>
+				</ColumnListItem>
+			</Table>
+			<html:br></html:br>
+			<Text text="Result: "></Text>
+			<Text
+				text="When the client SDK enables application tracking, the following event information is sent in the property of the payload."></Text>
+			<html:br></html:br>
+			<Table id="table3" insert="false" backgroundDesign="Translucent">
+				<columns>
+					<Column>
+						<Text text="Key Name"></Text>
+					</Column>
+					<Column>
+						<Text text="Description"></Text>
+					</Column>
+				</columns>
+				<ColumnListItem>
+					<cells>
+						<Text text="href"></Text>
+						<Text text="URL of the document."></Text>
+					</cells>
+				</ColumnListItem>
+				<ColumnListItem>
+					<cells>
+						<Text text="Title"></Text>
+						<Text text="Title of the document."></Text>
+					</cells>
+				</ColumnListItem>
+				<ColumnListItem>
+					<cells>
+						<Text text="Referrer"></Text>
+						<Text text="Referrer URL to the current document in window."></Text>
+					</cells>
+				</ColumnListItem>
+				<ColumnListItem>
+					<cells>
+						<Text text="Host"></Text>
+						<Text text="Host name for the document."></Text>
+					</cells>
+				</ColumnListItem>
+				<ColumnListItem>
+					<cells>
+						<Text text="Path"></Text>
+						<Text text="Path of the document."></Text>
+					</cells>
+				</ColumnListItem>
+				<ColumnListItem>
+					<cells>
+						<Text text="Protocol"></Text>
+						<Text text="Protocol over which document is loaded."></Text>
+					</cells>
+				</ColumnListItem>
+				<ColumnListItem>
+					<cells>
+						<Text text="TagName"></Text>
+						<Text
+							text="Tag name of the element, which triggered the event listener. (calling in turn ‘ut’ APIs)"></Text>
+					</cells>
+				</ColumnListItem>
+				<ColumnListItem>
+					<cells>
+						<Text text="Class"></Text>
+						<Text text="Value of the ‘class’ attribute on the element."></Text>
+					</cells>
+				</ColumnListItem>
+				<ColumnListItem>
+					<cells>
+						<Text text="EventType"></Text>
+						<Text text="Event type of the event occurring on the element."></Text>
+					</cells>
+				</ColumnListItem>
+				<ColumnListItem>
+					<cells>
+						<Text text="Event subclass"></Text>
+						<Text text="Event subclass"></Text>
+					</cells>
+				</ColumnListItem>
+			</Table>
+			<html:br></html:br>
+			<l:VerticalLayout>
+				<Text text="Note:"></Text>
+				<html:ul>
+					<html:li>
+						<Text
+							text="If you do not want the following event information to be sent in the payload, then you need to execute the following snippet:"></Text>
+					</html:li>
+					<Text text="ut(‘config’,’eventinfo’,’off’)"></Text>
+					<Table>
+						<columns>
+							<Column>
+								<Text text="Key Name"></Text>
+							</Column>
+							<Column>
+								<Text text="Description"></Text>
+							</Column>
+						</columns>
+						<ColumnListItem>
+							<cells>
+								<Text text="Tagname"></Text>
+								<Text
+									text="Tag name of the element, which triggered the event listener. "></Text>
+							</cells>
+						</ColumnListItem>
+						<ColumnListItem>
+							<cells>
+								<Text text="Class"></Text>
+								<Text text="Value of the class attribute on the element. "></Text>
+							</cells>
+						</ColumnListItem>
+						<ColumnListItem>
+							<cells>
+								<Text text="EventType"></Text>
+								<Text text="EventType of an event occurring on the element. "></Text>
+							</cells>
+						</ColumnListItem>
+						<ColumnListItem>
+							<cells>
+								<Text text="Event subclass"></Text>
+								<Text text="Event subclass "></Text>
+							</cells>
+						</ColumnListItem>
+					</Table>
+					<html:li>
+						<Text
+							text="If you want to start sending the above event  information in the payload, then execute the following code:"></Text>
+					</html:li>
+					<Text text="ut(‘config’,’eventinfo’,’on’)"></Text>
+					<html:li>
+						<Text
+							text="Automatic collection of personal information is deprecated."></Text>
+					</html:li>
+					<html:li>
+						<Text
+							text="If required the client application’s logic may ask for the user’s preference using modal dialogues. Further, there is possibility of user’s preferences getting overridden by the organization wide settings, for such a scenario, you can register the following notification listener to get the message toasts from SDK."></Text>
+					</html:li>
+					<Text id="jsSnippetTextcodelst" text="test"></Text>
+					<Text text="ut(‘onnotification’,notify);"></Text>
+				</html:ul>
+			</l:VerticalLayout>
+		</content>
+	</Panel>
+	<Panel expandable="true" expanded="false">
+		<headerToolbar>
+			<Toolbar>
+				<Text text="2. Tracking of Geolocation"></Text>
+			</Toolbar>
+		</headerToolbar>
+		<content>
+			<html:br></html:br>
+			<Text
+				text="Tracking of geolocation provides your location to web applications .For privacy reasons, you need to report location information."></Text>
+			<html:br></html:br>
+			<Text
+				text="By Default the client SDK disables the tracking of geolocation for your application. You can enable it using the following config calls:"></Text>
+			<html:br></html:br>
+			<Table id="table5" insert="false" backgroundDesign="Translucent">
+				<columns>
+					<Column>
+						<Text text="Action"></Text>
+					</Column>
+					<Column>
+						<Text text="Code"></Text>
+					</Column>
+				</columns>
+				<ColumnListItem>
+					<cells>
+						<Text
+							text="If you want to enable tracking of geolocation for your application, then use the following snippet: Note: After you enable tracking of geolocation for your application, you must change the browser settings, for tracking of geolocation in your application."></Text>
+						<Text text="ut(‘config’,’geolocation’,’on’)"></Text>
+					</cells>
+				</ColumnListItem>
+				<ColumnListItem>
+					<cells>
+						<Text
+							text="If you want to enable tracking of geolocation  for your application instantly without executing the config calls, then use the following snippet:"></Text>
+						<Text id="jsSnippetTextcode" text="test"></Text>
+					</cells>
+				</ColumnListItem>
+				<ColumnListItem>
+					<cells>
+						<Text
+							text="If you want to disable tracking of geolocation for your application, then use the following snippet:"></Text>
+						<Text text="ut(‘config’,’geolocation’,’off’)"></Text>
+					</cells>
+				</ColumnListItem>
+				<ColumnListItem>
+					<cells>
+						<Text
+							text="If you want to disable tracking of geolocation  for your application instantly without executing the config calls, then use the following snippet:"></Text>
+						<Text id="jsSnippetTextcodeone" text="test"></Text>
+					</cells>
+				</ColumnListItem>
+			</Table>
+		</content>
+	</Panel>
+</mvc:View>

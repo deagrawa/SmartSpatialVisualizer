@@ -1,0 +1,77 @@
+<mvc:View xmlns:l="sap.ui.layout" xmlns:mvc="sap.ui.core.mvc"
+	xmlns="sap.m" xmlns:html="http://www.w3.org/1999/xhtml">
+
+	<Panel>
+		<headerToolbar>
+			<Toolbar>
+				<Text text="Adding Custom Configurations "></Text>
+			</Toolbar>
+		</headerToolbar>
+		<content>
+			<l:VerticalLayout>
+				<Text text="Use case" class="boldFontClass"></Text>
+				<Text
+					text="You use this procedure to create and define configurations/data to be used during data collection of your registered product. You define these configurations by providing the required parameters (attributes, measures and so on) and enable them to fetch data."></Text>
+				<html:br></html:br>
+				<Text text="Procedure" class="boldFontClass"></Text>
+				<html:ol>
+					<html:li>
+						<Text text="In the landing page, choose Add New Product."></Text>
+					</html:li>
+					<html:li>
+						<Text
+							text="In the Product Onboarding Details pane, provide the product details."></Text>
+					</html:li>
+					<html:li>
+						<Text text="Select Custom Configuration "></Text>
+					</html:li>
+					<html:li>
+						<Text text="Choose Proceed."></Text>
+					</html:li>
+					<html:ol type="a">
+						<html:li>
+							<Text
+								text="In Add Configuration pane, enter the Column Name (Example: Softwarelicense)."></Text>
+						</html:li>
+						<Text
+							text="You need to create minimum of two columns to add hierarchies so that you can model the view." />
+						<html:li>
+							<Text text="From the Data Type dropdown list, select a data type."></Text>
+						</html:li>
+						<html:li>
+							<Text
+								text="(Optional) To display alias name for the column in analysis page, enter that name in Label text field. (Example: Software license for XYZ product)"></Text>
+						</html:li>
+						<Text text="By default columns are of the type attribute." />
+						<html:li>
+							<Text
+								text="If you want to determine column based on measure, then select from the predefined Aggrigation Types."></Text>
+						</html:li>
+						<html:li>
+							<Text
+								text="If you want to determine the column value based on a formula, then provide the required formula in the Define Formula (optional) field."></Text>
+						</html:li>
+						<Text
+							text="For example, if you want to determine the revenue generated for the software licensing column, you can use the formula, software licensing*40."></Text>
+						<html:li>
+							<Text text="Choose ADD."></Text>
+						</html:li>
+						<html:li>
+							<Text
+								text="If you want to edit the column, then choose the edit icon and make the changes." />
+						</html:li>
+						<html:li>
+							<Text text="Choose Update" />
+						</html:li>
+						<html:li>
+							<Text text="Choose Proceed."></Text>
+						</html:li>
+					</html:ol>
+				</html:ol>
+				<Text
+					text="Note: Currently validations are not enabled in formulas. So columns with formulas need to be evaluated by the user itself."></Text>
+				<html:br></html:br>
+			</l:VerticalLayout>
+		</content>
+	</Panel>
+</mvc:View>

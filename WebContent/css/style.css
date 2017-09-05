@@ -1,0 +1,1792 @@
+/* #__xmlview3--productnameDetail,#__xmlview3--productidDetail,#__xmlview3--productportfolioDetail,#__xmlview3--productadminDetail,#__xmlview3--productadminsubstDetail,
+#__xmlview3--productdateDetail,#__xmlview3--productinfoDetail,#__xmlview3--productLastModifiedDetail{
+	text-align:left!important;
+}
+ */
+@font-face {
+	font-family: bentonsanslight;
+	src: url('../fonts/BENTONSANS-LIGHT.OTF');
+}
+
+.sapUIBody {
+	font-family: bentonsanslight !important;
+}
+
+.sapMText {
+	font-weight: 400 !important;
+}
+
+fspan#__xmlview1--addNewBtn-content {
+	text-align: left;
+	margin-left: 10px;
+}
+
+.sapMBtnTransparent {
+	/* background: #009de0; */
+	color: rgb(73, 67, 67);
+	font-size: 16px;
+	height: 50px;
+	color: #333333;
+	font-size: 1.125rem;
+	padding-left: 36px;
+	font-weight: normal;
+	line-height: 1.5rem;
+	padding: 2px;
+}
+
+.sapMText.sapMObjLTitle {
+	color: #333333;
+	font-size: 1.125rem;
+	padding-left: 36px;
+	font-weight: normal;
+	line-height: 1.5rem;
+}
+
+span#__xmlview1--addNewBtn-img {
+	color: #fff;
+}
+
+button#__xmlview1--addNewBtn {
+	border-bottom: 1px solid #e5e5e5;
+	height: 2.5rem;
+	padding-bottom: 1.2rem;
+}
+
+.addButtonBackgroundClass {
+	background: lightblue;
+}
+
+.sapUiForm .sapUiFormTitle {
+	border-width: 0.0625rem;
+	font-family: Arial, Helvetica, sans-serif;
+	font-weight: normal;
+	font-size: 30px;
+	color: #333333;
+}
+
+sapUiFormResGrid>div {
+	padding: 1rem;
+	box-sizing: border-box;
+}
+
+.sapMLabel {
+	font-size: 20px !important;
+	font-family: bentonsanslight !important;
+	font-weight: normal !important;
+	font-size: 0.9rem !important;
+	font-weight: 600 !important;
+	color: #000000 !important;
+}
+
+.sapUiFormResGrid>div {
+	background-color: transparent !important;
+	padding: 1rem;
+	-moz-box-sizing: padding-box;
+	box-sizing: border-box;
+}
+
+.rejectbutton {
+	width: 150px;
+	position: relative;
+	left: 620px;
+}
+
+.sapUiFioriObjectPagepconfigure .donebutton {
+	position: relative !important;
+	left: 37% !important;
+	width: 11em !important;
+	top: 0rem !important;
+}
+
+.sapUiFioriObjectPagepconfigure .clearButton {
+	position: relative !important;
+	left: 36% !important;
+	width: 11em !important;
+	top: 0rem !important;
+}
+
+.sapMBar {
+	height: 3rem;
+	line-height: 3rem;
+	color: #666666;
+	background-color: transparent;
+	text-shadow: 0 0.0625rem 0 rgba(255, 255, 255, 0.5);
+	-webkit-box-shadow: inset 0 -0.0625em #dddddd;
+	box-shadow: inset 0 -0.0625em #dddddd;
+}
+
+.datatypebarsize {
+	width: 250px !important;
+}
+
+.sap-desktop .sapUiLoSplitterH.sapUiLoSplitter>.sapUiLoSplitterBar,
+	.sap-desktop .sapUiLoSplitterH>.sapUiLoSplitterOverlay>.sapUiLoSplitterOverlayBar,
+	.sap-desktop .sapUiLoSplitterH .sapUiLoSplitterBarIcon {
+	width: 6px;
+	display: none;
+}
+
+.proceedButton div.sapMBtnInner.sapMBtnAccept {
+	background-color: #1E90FF;
+	width:11em !important
+}
+
+.sapUiFioriObjectaddproductPage .cancelButton {
+	width: 11em !important;
+	position: relative !important;
+	left: 44% !important;;
+}
+
+.cancelButton div.sapMBtnInner.sapMBtnAccept {
+    BORDER: 1px solid #ddd !important;
+    background: #888 !important;
+    color: #fff !important;
+    width: 11em !important;
+}
+
+.AddedConfi {
+	font-size: 30px !important;
+}
+
+.sapUiFormEdit .sapMText {
+	padding-bottom: 0rem !important;
+	padding-top: 0.7125rem !important;
+}
+
+.navigation {
+	width: 100% !important;
+	height: 55px !important;
+	background-color: #000000 !important;
+	position: relative !important;
+}
+
+.sapUiUx3NavBarItem {
+	color: #DDCBCB !important;
+	font-size: 23px !important;
+	position: relative !important;
+	left: 1000px !important;
+	top: 2px !important;
+}
+
+#navBarId {
+	height: 5% !important;
+}
+
+div#__field0 {
+	padding-top: 0px;
+}
+
+div#__field1 {
+	padding-top: 0px;
+}
+
+.sapUiFioriObjectPagepconfigure .dimension {
+	margin: 0;
+	padding: 0 !important;
+	background: white;
+	height: 100%;
+	width: 98% !important;
+	margin-left: 2%;
+}
+
+.textcss {
+	font-size: 20px !important;
+}
+
+.formg {
+	float: left;
+}
+
+.sapUiRespGridSpanL10.sapUiRespGridSpanM10.sapUiRespGridSpanS12 {
+	width: 226px;
+	float: right;
+	position: relative;
+	top: -34px;
+}
+
+.formg label {
+	padding-left: 30px;
+}
+
+.formg .sapUiFormResGridLbl.sapUiRespGridBreak.sapUiRespGridSpanL4.sapUiRespGridSpanM4.sapUiRespGridSpanS12
+	{
+	width: auto;
+	display: block;
+	float: left;
+}
+
+.formg .sapMInput .sapMInputBase {
+	float: left;
+}
+
+.sapUiRespGridSpanL6.sapUiRespGridSpanM6.sapUiRespGridSpanS12 {
+	width: 200px;
+}
+
+label#__label16 {
+	padding-right: 65px;
+}
+
+label#__label18 {
+	padding-right: 67px;
+}
+
+label#__label17 {
+	padding-right: 62px;
+}
+
+span#__xmlview1--addNewBtn-img {
+	color: #A29999;
+}
+
+.masterlist {
+	text-align: left !important;
+}
+
+.sapUiFioriObjectPagepconfigure .addbtton {
+	position: relative !important;
+	left: 71% !important;
+	width: 11EM !important;
+	color: #A9A9A9 !important;
+	margin-left: .7em !important;
+}
+
+.addbtton div#__xmlview2--addbtn-inner {
+	background-color: #606972 !important;
+}
+
+.detailclearButton {
+	width: 150px !important;
+	position: relative !important;
+	left: 250px !important;
+}
+
+.heirarchyclearButton {
+	width: 150px !important;
+	position: relative !important;
+	left: 250px !important;
+}
+
+.sapUiRespGridMedia-Std-Tablet.sapUiRespGridHSpace0>.sapUiRespGridSpanM3
+	{
+	width: "25%";
+}
+
+.sapUiRespGridMedia-Std-Tablet.sapUiRespGridHSpace0>.sapUiRespGridSpanM5
+	{
+	/* 	height: "35px" !important; */
+	
+}
+
+.sapUiForm.sapUiFormEdit .sapMLabel {
+	text-align: left !important;
+	font-size: 1.1em;
+}
+
+.sapUiFioriObjectPageUTheirarchy .heirarchyclearButton {
+	display: block !important;
+	width: 120px !important;
+	float: left !important;
+	left: 8.8rem !important;
+	/* left: 9rem !important; */
+}
+
+.sapUiFioriObjectPageUTdetailPage .detailclearButton {
+	display: block !important;
+	width: 120px !important;
+	float: left !important;
+}
+
+.sapUiFioriObjectPageUTheirarchy .dvaddbutton {
+	display: block !important;
+	width: 120px !important;
+	position: relative;
+	/* top: -3rem !important; */
+	left: -7rem !important;
+	/* border-bottom: 1px solid; */
+	border-width: -5px;
+}
+
+div#__xmlview2--dcAddbtn-inner {
+	background-color: #696969;
+}
+
+.sapUiFioriObjectPageUTdetailPage .detaildvaddbutton {
+	display: block !important;
+	width: 120px !important;
+	position: relative;
+}
+
+.formg>div:nth-child(2) {
+	width: 170px !important;
+	display: inline-block;
+	float: left !important;
+}
+
+.formg>div:nth-child(3) {
+	width: 170px !important;
+	display: inline-block;
+	float: left !important;
+	margin-left: 60px;
+}
+
+.sapUiFioriObjectPageUTheirarchy .heirarchylist {
+	width: 440px !important;
+	position: realtive !important;
+	float: right !important;
+	bottom: 20px !important;
+	height: 250px !important;
+	background-color: white !important;
+}
+
+.sapUiFioriObjectPageUTheirarchy .heirarchypanelclasss {
+	background-color: transparent !important;
+	overflow: hidden;
+	width: 90% !important;
+}
+
+.sapUiFioriObjectPageUTheirarchy .heirarchygridclass {
+	background-color: transparent !important;
+}
+
+.sapUiFioriObjectPageUTheirarchy .donebutton {
+	float: right !important;
+	position: relative !important;
+	width: 130px !important;
+	left: 39.7rem !important;
+}
+
+.sapUiFioriObjectPageUTdetailPage .detailheirarchypanelclasss {
+	background-color: transparent !important;
+}
+
+.sapUiFioriObjectPageUTdetailPage .detailheirarchygridclass {
+	height: 100px !important;
+}
+
+.sapUiFioriObjectPageUTdetailPage .detaildonebutton {
+	float: right !important;
+	top: 250px !important;
+	position: relative !important;
+}
+
+.hierarchytextclass {
+	/* font-size: 20px !important; */
+	
+}
+
+div#__splitter1 {
+	left: 4px;
+}
+
+.sapUiFioriObjectPagepconfigure .formulatextarea {
+	padding-left: 5px !important;
+	left: 5px !important;
+	height: 2rem;
+	padding-top: 0px !important;
+	width: 99% !important;
+	margin-bottom: 0.9rem;
+	
+}
+
+.sapUiFioriObjectPagepconfigure .productconfitableclass {
+	padding-left: 5px !important;
+	width: 99% !important;
+}
+
+.sapUiFioriObjectPage {
+	font-family: BentonSansLight !important;
+}
+
+.sapUiFioriObjectPageUTdetailPage .hierarchytextclass {
+	background-color: #DCDCDC !important;
+	font-size: 15px !important;
+	padding-top: 10px !important;
+	height: 25px !important;
+}
+
+.sapUiFioriObjectPageUTdetailPage .dhierarchylistclass {
+	padding-top: 0px !important;
+	height: 250px !important;
+	background-color: white !important;
+}
+
+.productEditBtn {
+	float: right;
+	position: absolute;
+	text-align: left;
+	left: 91%;
+	/* border-left: 2px solid #666; */
+	padding-top: 8px;
+	margin-top: 30px;
+	line-height: 1em;
+	font-size: 1.5em;
+	top: 2% !important;
+}
+
+/*-------------- Details Page Styling--------- */
+.sapMTB {
+	height: 2rem !important;
+}
+
+.sapUiFioriObjectPageUTdetailPage .detailheirarchylist {
+	position: relative !important;
+	background-color: white !important;
+	width: 99% !important;
+	height: auto !important;
+}
+
+.detailPageLabel {
+	padding-right: 13px;
+}
+/**---------------------------------------------/
+
+/* Configuration Page Styling */
+.configureLabel {
+	font-size: 1rem !important;
+}
+
+.sapMSwtOn
+
+
+
+
+:not
+ 
+ 
+
+
+ 
+
+
+
+
+
+
+(
+.sapMSwtAcceptReject
+ 
+ 
+
+
+ 
+
+
+
+
+
+
+)
+{
+background
+
+
+
+
+:
+ 
+ 
+
+
+ 
+
+
+
+
+
+
+#80C732
+
+
+	
+
+
+
+
+
+
+
+;
+border-color
+
+	
+
+
+:
+ 
+ 
+
+
+ 
+
+
+
+
+
+
+#3BBF53
+
+
+
+
+
+
+
+
+
+
+;
+}
+.sapUiFioriObjectPageUTdetailPage .switchclass {
+	position: relative !important;
+	left: 60% !important;
+	bottom: -4.3rem !important;
+}
+
+.sapUiFioriObjectPagepconfigure {
+	margin-left: 1% !important;
+	margin-right: 1% !important;
+	width: 98% !important;
+}
+
+.sapUiFioriObjectPageUTheirarchy .heirarchytableclass {
+	height: 150px !important;
+	background-color: white !important;
+}
+
+.sapUiFioriObjectPageUTheirarchy .hierarchylabelclass {
+	padding-top: 0px !important;
+}
+
+.dpan {
+	float: right;
+	position: relative;
+	left: 10px;
+	top: 41px !important;
+	background: none;
+}
+
+.dpan .sapMPanelBG.sapMPanelContent {
+	background: transparent !important;
+}
+
+.sapMPanelBG.sapMPanelContent {
+	background-color: transparent;
+}
+
+.sapUiFioriObjectPageUTheirarchy  .addedhierarchylistclass {
+	background-color: white !important;
+	width: 83% !important;
+	position: relative !important;
+	left: 0% !important;
+}
+
+.sapUiFioriObjectPageUTheirarchy  .addedhierarchylistclass ul {
+	height: 250px !important;
+	overflow: auto !important;
+}
+
+.sapUiFioriObjectPageUTheirarchy .addedhierarchypanelclass {
+	background-color: transparent !important;
+}
+
+.sapUiRespGridMedia-Std-Phone.sapUiFormResGridCont>.sapUiFormResGridLbl:not
+	 (.sapUiRespGridSpanS12 )>.sapMLabel, .sapUiRespGridMedia-Std-Tablet.sapUiFormResGridCont>.sapUiFormResGridLbl:not
+	 (.sapUiRespGridSpanM12 )>.sapMLabel, .sapUiRespGridMedia-Std-Desktop.sapUiFormResGridCont>.sapUiFormResGridLbl:not
+	 (.sapUiRespGridSpanL12 )>.sapMLabel {
+	text-align: left !important;
+	float: none;
+}
+
+.textAlign {
+	text-align: left !important;
+	float: none;
+}
+
+.sapUiRespGridMedia-Std-Phone.sapUiFormResGridCont>.sapUiFormResGridLbl:not
+	 (.sapUiRespGridSpanS12 )>.sapMLabel.addproductlabelclass,
+	.sapUiRespGridMedia-Std-Tablet.sapUiFormResGridCont>.sapUiFormResGridLbl:not
+	 (.sapUiRespGridSpanM12 )>.sapMLabel.addproductlabelclass,
+	.sapUiRespGridMedia-Std-Desktop.sapUiFormResGridCont>.sapUiFormResGridLbl:not
+	 (.sapUiRespGridSpanL12 )>.sapMLabel.addproductlabelclass {
+	text-align: end !important;
+	float: none;
+	position: relative;
+	right: 0rem;
+}
+
+.sapUiFioriObjectPageUTheirarchy .heirarchyclearButton1 {
+	width: 130px !important;
+	left: 39rem !important;
+	position: relative !important;
+}
+
+.sapUiFioriObjectPageUTheirarchy {
+	margin-left: 1% !important;
+	margin-right: 1% !important;
+	width: 98% !important;
+}
+
+.sapMSFI[type='search'] {
+	font-family: bentonsanslight !important;
+	font-weight: 600 !important;
+}
+
+.sapUiFioriObjectPagemasterclass .masteraddbutton .sapMBtnContent {
+	font-family: bentonsanslight !important;
+	font-weight: 800 !important;
+	text-align: left !important;
+	/* padding-right: 1rem !important; */
+	position: relative !important;
+	left: 0.2rem !important;
+}
+
+span#__xmlview1--addNewBtn-img {
+	/* position: relative; */
+	left: 1px !important;
+	font-size: 1.35em;
+	padding-top: 2px;
+	top: -4px !important;
+}
+
+.sapMBtnContent {
+	line-height: 2rem;
+	font-family: bentonsanslight !important;
+	font-weight: 900 !important;
+}
+
+.sapUiFioriObjectPagemasterclass .masterlistclass {
+	font-family: bentonsanslight !important;
+	font-weight: 800 !important;
+}
+
+.sapUiFioriObjectaddproductPage .addproductlabelclass {
+	font-family: bentonsanslight !important;
+	font-weight: 800 !important;
+	font-size: 0.9rem !important;
+	color: #000000 !important;
+}
+
+.sapMInputBaseInner {
+	height: 2rem !important;
+	margin-top: 0.5rem;
+	font-family: bentonsanslight !important;
+	font-weight: 800 !important;
+	font-size: 1rem !important;
+}
+
+.sapUiFioriObjectaddproductPage .exampleclass {
+	color: #A9A9A9 !important;
+	font-family: bentonsanslight !important;
+	font-weight: 800 !important;
+	font-size: 1rem !important;
+	padding-top: 2px;
+}
+
+.cancelButton .sapMBtnContent, .proceedButton .sapMBtnContent {
+	font-size: 0.85rem;
+	font-weight: 800;
+	color: #fff !important;
+}
+
+.sapMBtnInner {
+	height: 2.2rem !important;
+	min-width: 2.500rem !important;
+	margin: 0 !important;
+	padding: 0 !important;
+	border: 0px !important;
+	vertical-align: top !important;
+	border-radius: 0.2rem !important;
+	color: #333333 !important;
+}
+
+.sapUiForm .sapMLabel:after {
+	content: '' !important;
+}
+
+.sapUiFioriObjectaddproductPage .sapUiForm .sapUiFormTitle {
+	border-width: 0.0625rem;
+	font-weight: 600;
+	font-size: 1.5rem !important;
+	margin-top: 0.7rem !important;
+	color: #060606 !important;
+	text-shadow: none !important;
+	border-bottom: none !important;
+}
+
+.addproductcustomlabelclass {
+	font-family: bentonsanslight !important;
+	font-weight: 800 !important;
+	font-size: 1rem !important;
+	color: #000000 !important;
+}
+
+.cc-check label {
+	position: relative;
+	right: 18px;
+	font-family: bentonsanslight;
+	font-weight: bold;
+	font-size: 1rem !important;
+	color: #000000 !important;
+}
+
+.cc-check {
+	position: relative;
+	top: 12px;
+	left: 3px;
+}
+
+.editableForm sapUiRespGridSpanL5.apUiRespGridSpanM6.sapUiRespGridSpanS12
+	{
+	position: relative;
+	left: -86px;
+}
+
+.editableForm .sapUiFormResGridLbl ~ div.sapUiRespGridSpanL5.sapUiRespGridSpanM6.sapUiRespGridSpanS12,
+	.sapUiFormResGridLbl ~ div.sapUiRespGridSpanM2 {
+	position: relative;
+	left: 1rem;
+}
+
+.sapUiFioriObjectPagepconfigure .sapUiForm .sapUiFormTitle {
+	border-width: 0.0625rem;
+	font-family: bentonsanslight !important;
+	font-weight: 600 !important;
+	font-size: 1.3rem !important;
+	margin-top: 0.7rem !important;
+	color: #060606 !important;
+	left: 28px;
+	top: -9px;
+	position: relative;
+	text-shadow: none !important;
+	border-bottom: none !important;
+}
+
+.sapUiFioriObjectPagepconfigure .textfeildclass {
+	font-family: bentonsanslight !important;
+	font-weight: 800 !important;
+}
+
+.sapUiFioriObjectPagepconfigure .configurelabelclass {
+	font-family: bentonsanslight !important;
+	font-weight: 800 !important;
+	color: #000000 !important;
+	font-size: 0.9rem !important;
+}
+
+.sapUiFioriObjectPagepconfigure .AddedConfigLabel {
+	/* font-family:bentonsanslight !important; */
+	font-weight: 600 !important;
+	color: #000000 !important;
+	font-size: 1.2rem !important;
+	padding-left: .4em !important;
+	padding-top: .2em !important;
+}
+
+.sapUiFioriObjectPagepconfigure .configuretoolbar {
+	border-bottom: none !important;
+	padding-left: 0.3rem !important;
+}
+
+.sapUiFioriObjectPagepconfigure .namedatatypebarclass {
+	border-bottom: none !important;
+}
+
+.sapUiFioriObjectPagepconfigure .configurebarlabel {
+	position: relative;
+	left: 3px;
+}
+
+.sapUiFioriObjectPagepconfigure .configureradiobutton {
+	padding-top: 0px !important;
+}
+
+.sapMIBar-CTX .sapMLabel {
+	color: #000000 !important;
+	font-family: bentonsanslight !important;
+	font-size: 0.99rem !important;
+	font-weight: 800 !important;
+	line-height: 3.5 !important;
+	position: relative;
+}
+
+.sapUiFioriObjectPagepconfigure .formulalabelclass {
+	color: #000000 !important;
+	font-family: bentonsanslight !important;
+	font-size: 0.9rem !important;
+	font-weight: 800 !important;
+	position: relative;
+	top: 6px;
+	left: 0.6rem !important;
+}
+
+.sapUiFioriObjectPagepconfigure .texts {
+	color: #225F91 !important;
+	/* font-family: bentonsanslight !important; */
+	font-size: 0.9rem !important;
+	font-weight: 600 !important;
+	background-color: #F7F3F0 !important;
+	width: 98% !important;
+	height: 1.5rem !important;
+	margin-left: 2% !important;
+}
+
+.sapMTextArea>.sapMTextAreaInner {
+	line-height: 2 !important;
+	height: 3rem !important;
+	width: 100% !important;
+	padding: 0px !important;
+}
+
+.sapUiFioriObjectPagepconfigure .configureobjectlistitemclass {
+	font-family: bentonsanslight !important;
+	font-weight: 600 !important;
+	color: #000000 !important;
+	font-size: 0.5rem !important;
+}
+
+.sapUiFioriObjectPagepconfigure .sapUiFormResGridLbl {
+	position: relative;
+	/* top: -30px; */
+	padding-top: 0.2rem !important;
+}
+
+.sapUiFioriObjectPagepconfigure .sapUiRespGridSpanL5.sapUiRespGridSpanM5.sapUiRespGridSpanS12
+	{
+	height: 1.8rem;
+	position: relative;
+	top: -0.75rem;
+}
+
+.sapUiFioriObjectPagepconfigure h5 ~ div {
+	padding-top: 0.21rem !important;
+}
+
+.sapUiFioriObjectPagepconfigure .editableForm {
+	position: relative;
+	/* height: 206px; */
+	left: -16px;
+	border-bottom: 1px solid #ccc;
+}
+
+.sysaddtoolbar {
+	border-bottom: none !important;
+	position: relative !important;
+	/* padding-bottom: 0rem !important; */
+	top: -1rem !important;
+	left: 7rem !important;
+}
+
+.sapUiFioriObjectPageUTheirarchy .sapUiForm .sapUiFormTitle {
+	border-width: 0.0625rem;
+	font-family: bentonsanslight !important;
+	font-weight: 600 !important;
+	font-size: 1.3rem !important;
+	margin-top: 0.7rem !important;
+	color: #060606 !important;
+	text-shadow: none !important;
+	border-bottom: none !important;
+	position: relative;
+	left: 27px;
+}
+
+.sapUiFioriObjectPageUTheirarchy .AddedConfi {
+	/* font-family:bentonsanslight !important; */
+	font-weight: 600 !important;
+	color: #000000 !important;
+	font-size: 1.2rem !important;
+}
+
+.sapUiFioriObjectPageUTheirarchy .addedconfigurationclass {
+	font-family: bentonsanslight !important;
+	font-weight: bolder !important;
+	color: #000000 !important;
+	font-size: 0.9rem !important;
+	padding-top: 0.79rem !important;
+}
+
+.sapUiFioriObjectPageUTheirarchy .hierarchytextclass {
+	 font-family: bentonsanslight !important; 
+	font-weight: bolder !important;
+	color: #000000 !important;
+	font-size: 0.9rem !important;
+}
+
+.sapUiFioriObjectPageUTheirarchy .textfeildclass {
+	font-family: bentonsanslight !important;
+	font-weight: 800 !important;
+}
+
+.sapUiFioriObjectPageUTheirarchy .hierarchylabelclass1 {
+	font-family: bentonsanslight !important;
+	font-weight: 800 !important;
+	color: #000000 !important;
+	font-size: 0.8rem !important;
+}
+
+.sapUiFioriObjectPageUTheirarchy .hierarchylabelclass {
+	font-family: bentonsanslight !important;
+	color: #000000 !important;
+	font-size: 0.9rem !important;
+	font-weight: 600 !important;
+	line-height: 2 !important;
+	width: 90% !important;
+}
+
+.sapUiFioriObjectPageUTheirarchy .hierarchyclasstoolbar {
+	border-bottom: none !important;
+}
+
+.sapMListTbl {
+	padding-top: 0.9rem !important;
+	font-size: 0.875rem;
+}
+
+.sapUiFioriObjectPageUTheirarchy .hierarchiestoolbarclass {
+	border-bottom: none !important;
+}
+
+.sapUiFioriObjectPageUTheirarchy .addedhierarchytoolbarclass {
+	border-bottom: none !important;
+}
+
+.sapUiFioriObjectPageUTheirarchy .editableForm {
+	position: relative;
+	left: -16px;
+	border-bottom: 1px solid #ccc;
+}
+
+.sapUiFioriObjectPageUTheirarchy .sapUiRespGridSpanL12.sapUiRespGridSpanM12.sapUiRespGridSpanS12
+	{
+	/* height: 235px; */
+	position: relative;
+	top: -7.75px;
+}
+
+.sapUiFioriObjectPageUTheirarchy .sapUiRespGridSpanL6.sapUiRespGridSpanM6.sapUiRespGridSpanS6
+	{
+	position: relative !important;
+	top: -14px !important;
+}
+
+.sapUiFioriObjectPageUTheirarchy  .hierarchylevelinputclass {
+	position: relative !important;
+	top: -0.5rem !important;
+	width: 100% !important;
+}
+
+.sapMListTblCell {
+	padding: 0.4rem .4rem;
+	vertical-align: top;
+	font-size: 0.875rem;
+}
+
+.sapMComboBoxBaseArrow {
+	width: 2.5rem !important;
+	height: 1.95rem !important;
+	right: 0.0625rem !important;
+	padding-top: 0rem;
+	line-height: 2rem !important;
+}
+
+.sapUiFioriObjectPageUTheirarchy .hierarchycombolass {
+	position: relative !important;
+	top: -0.5rem !important;
+}
+
+.sapUiFioriObjectPageUTheirarchy .sapUiFormResGridCont {
+	position: relative !important;
+	top: -1rem !important;
+}
+
+.sapUiFioriObjectPageUTheirarchy .hierarchysplitterclass {
+	padding-top: 1rem !important;
+
+	/* border-style: outset; */
+}
+
+.sapUiFioriObjectPageUTheirarchy .sapUiRespGrid.sapUiRespGridVSpace1>div
+	{
+	margin-bottom: 0rem !important;
+}
+
+.sapUiFioriObjectPageUTheirarchy.sapMPanelBG.sapMPanelContent {
+	margin-top: 1rem;
+}
+
+.sapUiFioriObjectPageUTheirarchy .addedhierarchylistlabelclass {
+	font-family: bentonsanslight !important;
+	font-weight: 800 !important;
+	color: #4F4BA6 !important;
+	font-size: 0.8rem !important;
+	background-color: #F7F3F0 !important;
+	height: 1.5rem !important;
+	width: 83% !important;
+	position: relative !important;
+	left: 0% !important;
+}
+
+.sapUiFioriObjectPageUTheirarchy .ftable {
+	padding-top: 1rem !important;
+}
+
+.sapUiFioriObjectPageUTheirarchy .hierarchysysaddtoolbarclass {
+	border-bottom: none !important;
+}
+
+.sapUiFioriObjectPageUTheirarchy .addbtton {
+	position: relative !important;
+	left: 58% !important;
+	width: 13% !important;
+	color: #A9A9A9 !important;
+}
+
+.sapUiFioriObjectPageUTheirarchy .clearButton {
+	position: relative !important;
+	left: 85% !important;
+	width: 13% !important;
+}
+
+.sapUiFioriObjectPageUTdetailPage .productnameclass {
+	position: relative !important;
+	text-align: left !important;
+	font-family: bentonsanslight !important;
+	font-weight: 800 !important;
+	color: #000000 !important;
+	font-size: 1.7rem !important;
+}
+
+.sapUiFioriObjectPageUTdetailPage .detaillabelclass {
+	text-align: left !important;
+	width: 17rem;
+	font-family: bentonsanslight !important;
+	font-weight: 600;
+	color: #000000 !important;
+	font-size: 0.9rem !important;
+	/* width: 100% !important; */
+	padding-bottom: 0px !important;
+}
+
+.sapUiFioriObjectPageUTdetailPage .textfeildclass {
+	font-family: bentonsanslight !important;
+	font-weight: 800 !important;
+	font-size: 0.88rem !important;
+}
+
+.sapUiFioriObjectPageUTdetailPage .createdtextclass {
+	font-family: bentonsanslight !important;
+	font-weight: 800 !important;
+	color: #000000 !important;
+	font-size: 0.9rem !important;
+	position: relative;
+	bottom: 4.9rem !important;
+	left: 53% !important;
+}
+
+.sapUiFioriObjectPageUTdetailPage .modifiedtextclass {
+	font-family: bentonsanslight !important;
+	font-weight: 800 !important;
+	color: #000000 !important;
+	font-size: 0.9rem !important;
+	position: relative !important;
+	bottom: 2.85rem !important;
+	left: 26.4% !important;
+}
+
+.sapUiFioriObjectPageUTdetailPage {
+	margin-left: 1% !important;
+	margin-right: 1% !important;
+	width: 98% !important;
+	overflow: auto !important;
+}
+
+.sapUiFioriObjectPageUTdetailPage .modifiedtextfeildclass {
+	font-family: bentonsanslight !important;
+	font-weight: 800 !important;
+	color: #000000 !important;
+	font-size: 0.9rem !important;
+	position: relative !important;
+	bottom: 3rem !important;
+	left: 34.2% !important;
+}
+
+.sapUiFioriObjectPageUTdetailPage .cretaedtextfeildclass {
+	font-family: bentonsanslight !important;
+	font-weight: 800 !important;
+	color: #000000 !important;
+	font-size: 0.9rem !important;
+	position: relative !important;
+	bottom: 5.0rem !important;
+	left: 61% !important;
+}
+
+.sapUiFioriObjectPageUTdetailPage .addedconfigurationclass {
+	font-family: bentonsanslight !important;
+	font-weight: 800 !important;
+	color: #000000 !important;
+	font-size: 1.2rem !important;
+}
+
+.sapUiFioriObjectPageUTdetailPage .detailtablelabelclass {
+	font-family: bentonsanslight !important;
+	font-weight: 800 !important;
+	color: #000000 !important;
+	font-size: 0.9rem !important;
+}
+
+.sapUiFioriObjectPageUTdetailPage .detailtoolbarclass {
+	border-bottom: none !important;
+	padding-left: 3px !important;
+	position: relative !important;
+	bottom: -0.3rem !important;
+}
+
+.sapUiFioriObjectPageUTdetailPage .detailPagehierarchylabel {
+	font-family: bentonsanslight !important;
+	font-weight: 800 !important;
+	color: #4F4BA6 !important;
+	font-size: 0.9rem !important;
+	position: relative;
+	bottom: 0rem !important;
+	/* margin-left: 1% !important; */
+	background-color: #F7F3F0 !important;
+	margin-right: 1% !important;
+	height: 29px !important;
+	line-height: 2 !important;
+	width: 99% !important;
+}
+
+.sapUiFioriObjectPageUTdetailPage .detaillistitemclass {
+	font-family: bentonsanslight !important;
+	font-weight: 800 !important;
+	color: #000000 !important;
+	font-size: 0.9rem !important;
+}
+
+.sapUiFioriObjectPageUTdetailPage .detailPageTable {
+	padding-bottom: 2rem !important;
+	width: 100% !important;
+	position: relative !important;
+	bottom: -0.8rem !important;
+}
+
+.sapUiFioriObjectPageUTdetailPage .monitoringlabelclass {
+	font-family: bentonsanslight !important;
+	font-weight: 800 !important;
+	color: #000000 !important;
+	font-size: 0.9rem !important;
+	position: relative !important;
+	left: 65% !important;
+	top: 1rem !important;
+}
+
+.sapUiFioriObjectPageUTdetailPage .newdatecreatedclass {
+	font-family: bentonsanslight !important;
+	font-weight: 800 !important;
+	color: #000000 !important;
+	font-size: 0.9rem !important;
+	position: relative !important;
+	left: 156% !important;
+}
+
+.sapUiFioriObjectPageUTdetailPage .newdatecreatedtextclass {
+	position: relative !important;
+	left: 94% !important;
+}
+
+.sapUiFioriObjectPageUTdetailPage .newlastmodifiedlabelclass {
+	position: relative !important;
+	left: 182% !important;
+}
+
+.sapUiFioriObjectPageUTdetailPage .newlastmodifiedtextclass {
+	position: relative !important;
+	left: 108% !important;
+}
+
+.sapMObjectIdentifierText {
+	/* margin-top: 0.5rem; */
+	color: #000000;
+	font-size: 0.9rem !important;
+}
+
+.sapUiFioriObjectPageUTheirarchy .hierarchypageclearbutton {
+	position: relative !important;
+	left: 31% !important;
+	width: 11em !important;
+}
+
+.sapUiFioriObjectPageUTheirarchy .hierarchypagedonebutton {
+	position: relative !important;
+	left: 32% !important;
+	width: 11em !important;
+}
+
+.sapUiFioriObjectPageUTheirarchy.textfeildclassportfolio {
+	font-family: bentonsanslight !important;
+	font-weight: 800 !important;
+}
+
+.sapUiFioriObjectPagepconfigure .configurebarlabelname {
+	position: relative !important;
+	font-size: 0.9rem !important;
+	line-height: 3 !important;
+	left: 15%;
+}
+
+.sapUiFioriObjectPagepconfigure .namebarsize {
+	position: relative !important;
+	width: 93% !important;
+	left: 7%;
+}
+
+.sapUiFioriObjectPagepconfigure .configurebarlabeldatatype {
+	position: relative !important;
+	left: 63% !important;
+	font-size: 0.9rem !important;
+	line-height: 3 !important;
+}
+
+.sapUiFioriObjectPagepconfigure .datatypecombobox {
+	position: relative !important;
+	width: 76% !important;
+	left: 22% !important;
+}
+
+.sapUiFioriObjectPagepconfigure .configurebarlabelsort {
+	position: relative !important;
+	left: 5% !important;
+}
+
+.sapUiFioriObjectPagepconfigure .sortinputclass {
+	position: relative !important;
+	width: 78% !important;
+	left: 3% !important;
+}
+
+.proceedButton {
+	position: relative;
+	left: 45% !important;
+	width: 11em !important;
+}
+
+.sapUiFioriObjectPagepconfigure .radioattributeclass {
+	position: relative !important;
+	font-size: 0.9rem !important;
+	font-family: bentonsanslight !important;
+	top: 5px !important;
+	left: 1.5rem !important;
+	width: 65% !important;
+}
+
+.sapUiFioriObjectPagepconfigure .radiomeasureclass {
+	position: relative !important;
+	font-size: 0.9rem !important;
+	font-family: bentonsanslight !important;
+	top: 0rem;
+	left: 1.6rem;
+}
+
+.sapUiFioriObjectPagepconfigure .radioattriclass {
+	position: relative !important;
+	font-size: 0.9rem !important;
+	font-family: bentonsanslight !important;
+	top: 0rem !important;
+	left: 5.5rem !important;
+}
+
+.sapUiFioriObjectPagepconfigure  .aggregationcomboboxclass {
+	font-size: 0.9rem !important;
+	font-family: bentonsanslight !important;
+	position: relative !important;
+	width: 74% !important;
+	left: 7.9rem !important;
+	bottom: 0.1rem !important;
+}
+
+.sapUiFioriObjectPagepconfigure  .aggregationtypelabel {
+	font-size: 0.9rem !important;
+	font-weight: 600;
+	color: #000000;
+	font-family: bentonsanslight !important;
+	position: relative !important;
+	top: 1rem !important;
+	left: 7rem;
+}
+
+.sapUiFioriObjectPageUTdetailPage .sapMPageScroll.sapMPageScrollEnabled>div:not
+	 (:first-child ), .sapMPageScroll.sapMPageScrollEnabled>label,
+	.sapMPageScroll.sapMPageScrollEnabled>label ~ div {
+	margin-left: 1%;
+	width: 98% !important;
+	padding-right: 1% !important;
+}
+
+.sapUiFioriObjectPagepconfigure .sapMLIB.sapMObjLItem {
+	padding: 0.5rem ! important;
+}
+
+.sapUiFioriObjectPagepconfigure .definitionclass {
+	position: relative !important;
+	left: 3.5%;
+	top: 0.3rem;
+	/* font-family: bentonsanslight; */
+}
+
+.sapUiRespGridMedia-Std-Phone.sapUiFormResGridCont>.sapUiFormResGridLbl:not
+	(.sapUiRespGridSpanS12 )>.sapMLabel, .sapUiRespGridMedia-Std-Tablet.sapUiFormResGridCont>.sapUiFormResGridLbl:not
+	(.sapUiRespGridSpanM12 )>.sapMLabel, .sapUiRespGridMedia-Std-Desktop.sapUiFormResGridCont>.sapUiFormResGridLbl:not
+	(.sapUiRespGridSpanL12 )>.sapMLabel {
+	text-align: left !important;
+	float: none;
+}
+
+.sapUiFioriObjectPagepconfigure .formulapanelclass {
+	position: relative !important;
+}
+
+.sapUiFioriObjectPageUTheirarchy .inputfeildclass {
+	font-family: bentonsanslight !important;
+	font-weight: 800 !important;
+	color: #000000 !important;
+	font-size: 0.8rem !important;
+	position: relative !important;
+	height: 1rem !important;
+}
+
+.sapMPageHeader {
+	height: 0px !important;
+}
+
+section#__xmlview3--UsgaeDPage-cont {
+	position: relative !important;
+	top: 0rem !important;
+}
+
+.sapUiFioriObjectPageUTdetailPage .monitoringDclass {
+	position: relative !important;
+	left: 67% !important;
+}
+
+.sapUiFioriObjectPageUTheirarchy .hierarchycombolevelclass {
+	position: relative !important;
+	top: -0.5rem !important;
+	width: 96% !important;
+}
+
+.sapUiFioriObjectPagepconfigure .horizontallayoutclass {
+	width: 100% !important;
+}
+
+.sapUiFioriObjectPageUTheirarchy  .hierarchylevelinputclass .sapMInputBaseInner
+	{
+	height: 2.5rem !important;
+	
+	margin-top: 0.5rem !important;
+	font-family: bentonsanslight !important;
+	font-weight: 800 !important;
+	font-size: 1rem !important;
+}
+
+.sapUiFioriObjectPageUTheirarchy  .hierarchycombolevelclass .sapMInputBaseInner
+	{
+	height: 2.5rem !important;
+	margin-top: 0.5rem !important;
+	font-family: bentonsanslight !important;
+	font-weight: 800 !important;
+	font-size: 1rem !important;
+}
+
+.sapUiFioriObjectPagepconfigure .labelconfigureclass {
+	position: relative !important;
+	left: 73% !important;
+	line-height: 3 !important;
+}
+
+.sapUiFioriObjectPagepconfigure .labelinputclass {
+	position: relative !important;
+	left: 2rem !important;
+}
+
+.messageboxclass .sapMBtnContent {
+	color: white !important;
+}
+
+.sapUiFioriObjectPagepconfigure .aggrclass {
+	position: relative !important;
+	top: 1rem !important;
+	left: 7% !important;
+}
+
+.sapUiFioriObjectPagepconfigure .distinctcountclass {
+	position: relative !important;
+	left: 23% !important;
+}
+
+.sapUiFioriObjectPagepconfigure .countclass {
+	position: relative !important;
+	left: 25% !important;
+}
+
+.sapUiFioriObjectPagepconfigure .sumclass {
+	position: relative !important;
+	left: 71% !important;
+}
+
+.sapUiFioriObjectPagepconfigure .minclass {
+	position: relative !important;
+	left: 5rem !important;
+}
+
+.sapUiFioriObjectPagepconfigure .maxclass {
+	position: relative !important;
+	left: 6rem !important;
+}
+
+.refreshbutton {
+	position: relative !important
+}
+
+.sapUiFioriObjectPageUTdetailPage .detailiconstoolbarclass {
+	height: 5rem !important;
+	border-bottom: none !important;
+}
+
+.sapUiFioriObjectPagepconfigure header {
+	background-color:transparent !important;
+	height:3rem !important;
+}
+
+.sapUiFioriObjectPageUTheirarchy header {
+background-color:transparent !important;
+	height:3rem !important;	
+}
+
+button#__xmlview3--abortBtn {
+	position: relative !important;
+	left: 71% !important;
+	width: 11EM !important;
+	color: #A9A9A9 !important;
+	margin-left: .7em !important;
+}
+
+/*new ui css changes - Sai */
+.sapMShellCentralBox {
+	width: 100% !important;
+	left: 0% !important;
+	margin: 0px !important;
+}
+
+.sap-logo {
+	margin-top: 14px;
+	position: relative;
+	left: 12px;
+	height: 25px;
+}
+
+.app-title {
+	font-size: 1em;
+	margin-top: 19px;
+	font-weight: 600 !important;
+	position: relative;
+	left: 15px;
+}
+
+.sign-out-text {
+	width: 80px !important;
+	text-align: right !important;
+	margin-right: 10px;
+	padding-right: 16px;
+	cursor: pointer;
+}
+
+.user-name {
+	text-align: right !important;
+	padding-right: 15px;
+	font-weight: 500 !important;
+	font-size: 0.9em;
+}
+
+.help-icon {
+	cursor: pointer !important;
+	font-size: 1em;
+}
+
+.sapMTextLineClamp {
+	display: -webkit-box;
+	-webkit-box-orient: vertical;
+	font-size: 0.87em;
+	font-weight: 500;
+	font-family: Arial;
+}
+
+@media screen and (max-width: 850px) and (min-width: 300px) {
+	#__container1--Grid>div:nth-child(6) {
+		width: 14% !important;
+	}
+	#__container1--Grid>div:nth-child(7) {
+		width: 15% !important;
+	}
+	#__container1--Grid>div:nth-child(8) {
+		width: 14% !important;
+	}
+}
+
+@media screen and (min-width: 1350px) {
+	.sapUiRespGridMedia-Std-Desktop.sapUiRespGridHSpace0>.sapUiRespGridSpanL3
+		{
+		width: 13.9% !important;
+	}
+}
+
+#__xmlview0--idAppControl-Detail .sapMPageWithHeader>section {
+	top: 0em !important;
+}
+
+div#__bar0--header-head.sapMITBHead {
+	margin: 0 !important;
+	background: #f2f2f2;
+}
+
+.sap-desktop .sapMIBar.sapMHeader-CTX:before {
+	border-top: 0px !important;
+}
+
+div#__bar0--header-head {
+	padding-left: 40%;
+}
+
+/* div#__xmlview3--UsgaeDPage-scroll {
+	padding-top: 10px;
+} */
+
+/* label#__xmlview3--HVDSYYDS {
+	font-size: 1.2em !important;
+} */
+
+div#__xmlview3--switchid-switch {
+	height: 1.4rem;
+}
+
+.sapMSwtInner {
+	
+}
+
+div#__xmlview3--switchid-handle {
+	width: 1rem;
+	height: 1rem;
+}
+
+.sapMSwtText>span {
+	position: relative;
+	top: -4px;
+}
+
+.sapMSwtText>span {
+	position: relative;
+	top: -4px;
+}
+
+button#__xmlview3--SAGGD {
+	width: 20px;
+	height: 45px;
+}
+
+span#__icon1 {
+	width: 20px !important;
+	font-size: 1.35em !important;
+	
+	position: relative;
+	top: 2px;
+}
+
+span#__icon2 {
+	font-size: 1.35em !important;
+	position: relative;
+	top: 2px;
+	left: 5px;
+}
+
+h5#__xmlview2--idAddProductForm--Form--title {
+	font-size: 1.4em !important;
+	font-weight: 800 !important;
+	font-family: bentonsanslight;
+}
+
+.sapMLIB.sapMObjLItem {
+	padding: 0.3rem !important;
+}
+
+div#__xmlview0--idAppControl {
+	background: #f3f3f3;
+}
+
+
+.cancelButton div.sapMBtnInner.sapMBtnAccept:hover {
+    background: #666 !important;
+}
+.cancelButton div.sapMBtnInner.sapMBtnAccept:hover {
+    background: #666 !important;
+}
+
+.sapUiFioriObjectPagepconfigure .clearButton div {
+    background: #888;
+    color: #fff !important;
+    font-family: arial;
+    font-size: 1em;
+    font-weight: 400;
+    width: 11em !important;
+}
+
+.sapUiFioriObjectPagepconfigure .clearButton div span {
+    font-family: arial !important;
+    font-weight: 500 !important;
+    font-size: 1em;
+}
+
+.sapUiFioriObjectPagepconfigure .clearButton:hover div, .sapUiFioriObjectPagepconfigure .clearButton div:hover {
+    background: #666;
+}
+
+.sapUiFioriObjectPagepconfigure .donebutton div {
+    color: #fff !important;
+}
+
+.sapUiFioriObjectPagepconfigure .donebutton div span {
+    font-family: arial !important;
+    font-weight: 500 !important;
+    font-size: 1em;
+}
+
+.sapUiFioriObjectPagepconfigure .addbtton span {
+    color: #fff !important;
+    font-size: 1em !important;
+    font-family: arial !important;
+    font-weight: 500 !important;
+}
+
+.revertButton span ,.hierarchypageclearbutton span  { 
+    background: #888;
+    color: white !important;
+    font-family: arial !important;
+    font-weight: 500 !important;
+}
+
+.revertButton div:hover, .revertButton:hover div,
+	.hierarchypageclearbutton div:hover, .hierarchypageclearbutton:hover div
+	{
+    background: #666 !IMPORTANT;
+    color: white !important;
+}
+
+.hierarchypagedonebutton span{
+    color: white !important;
+    font-family: arial !important;
+    font-weight: 500 !important;  
+}
+
+div#__xmlview1--list-before.disableProductClass {
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	background: rgba(233, 233, 233, 0.68);
+}
+
+All buttons style can be combined
+.sapUiFioriObjectPageUTheirarchy .dvaddbutton SPAN {
+    COLOR: #fff;
+}
+
+.sapUiFioriObjectPageUTheirarchy .heirarchyclearButton div {
+    background: #888;
+    color: #fff !important;
+}
+
+.sapUiFioriObjectPageUTheirarchy .heirarchyclearButton div:hover,
+	.sapUiFioriObjectPageUTheirarchy .heirarchyclearButton:hover div {
+    background: #666;
+}
+
+.sapUiFioriObjectPageUTheirarchy .heirarchyclearButton span {
+    color: #fff;
+    font-size: 1em !important;
+    font-weight: 500 !important;
+    font-family: arial !important;
+}
+
+#__shell0-logo {
+	display:none !important;
+	visibility:hidden !important;
+}
+
+.ltViewer {
+margin-right: 22px !important;
+position: relative;
+left: -26px;
+}
+
+#__page1-cont .sapMITBContent{
+	background: #f2f2f2 !important;
+}
+
+.sapMStdTileIconDiv img{
+	height:8rem !important;
+	width:10rem !important;
+}
+
+#__container3 {
+background: #fff;
+}
+
+.masteraddbutton {
+background: #f3f3f3 !important;
+}
+#__image1{
+width: 99%!important;
+}
+.sapMBarRight, .sapMBarRight>.sapMBarChild:last-child {
+margin-right: 10px!important;
+}
+#__container2--Grid > div:nth-child(6){
+	position:static!important;
+}
+span#__text2 {
+    position: relative !important;
+    left:  1rem !important;
+    font-size: 1.1rem !important;
+}
+/* div#__xmlview3--productInfoDetailId {
+    position: relative !important;
+    left: -1rem !important;
+} */
+.sapUiFioriObjectPagepconfigure .searchfeildclass
+{
+	margin-left:1% !important;
+	
+}
+
+.refreshIconAnalysisClass
+{
+	position :relative !important;
+	font-size: 1.475rem !important;
+left: -0.9rem !important;
+}
+
+
+
+
+.detailViewLabel{
+	
+}
+
+.textfeildclass{
+	
+width: 350px!important;
+padding-left: 10px!important;
+padding-top: 9px!important;
+}
+
+/* #__xmlview3--editbuttonid{
+      padding-top:2px!important;
+} */
+/* /*end of changes*/ 

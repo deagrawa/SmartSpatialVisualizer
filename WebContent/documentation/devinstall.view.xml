@@ -1,0 +1,28 @@
+<mvc:View xmlns:l="sap.ui.layout" xmlns:mvc="sap.ui.core.mvc"
+	xmlns="sap.m" xmlns:html="http://www.w3.org/1999/xhtml">
+
+
+	<Panel>
+		<headerToolbar>
+			<Toolbar>
+				<Text text="Overview"></Text>
+			</Toolbar>
+		</headerToolbar>
+		<content>
+			<Text
+				text="SAP Usage Tracking allows you to track the use and acceptance of your product by the end users. This tool helps you to collect data and understand how your product is being used by customers."></Text>
+			<html:br></html:br>
+			<Text
+				text="Just a 2-step process is required to enable the Usage Tracking tool:"></Text>
+			<html:ol>
+				<html:li>
+					<Text text="Register your application."></Text>
+				</html:li>
+				<html:li>
+					<Text
+						text="Implementation – use the JS SDK to get the implementation enabled for the product in order to use it for analyzing the collected data and displaying it on the Lumira dashboard. "></Text>
+				</html:li>
+			</html:ol>
+		</content>
+	</Panel>
+</mvc:View>

@@ -1,0 +1,383 @@
+<core:View xmlns:core="sap.ui.core" xmlns:mvc="sap.ui.core.mvc"
+	xmlns:l="sap.ui.layout" xmlns:f="sap.ui.layout.form" xmlns="sap.m"
+	controllerName="sap.ui.usage.analytics.view.productconfigure"
+	xmlns:html="http://www.w3.org/1999/xhtml">
+	<Page showNavButton="true" navButtonPress="onNavBack" id="configureid"
+		class="sapUiFioriObjectPagepconfigure" showHeader="true">
+		<content>
+			<!-- <headerContent> <Icon xmlns="sap.ui.core" class="productBackBtn" 
+				src="sap-icon://nav-back" size="1.5em" color="#666" hoverColor="" activeColor="" 
+				width="1.5em" height="1.5em" backgroundColor="" hoverBackgroundColor="" activeBackgroundColor="" 
+				visible="true" decorative="true" press="onNavBack"> </Icon> </headerContent> -->
+
+
+			<l:Grid defaultSpan="L12 M12 S12" width="auto">
+				<l:content>
+					<f:SimpleForm id="idjhha1" minWidth="800"
+						maxContainerCols="2" editable="true" layout="ResponsiveGridLayout"
+						title="Create Custom Configurations" labelSpanL="3" labelSpanM="3"
+						emptySpanL="4" emptySpanM="4" columnsL="1" columnsM="1" class="editableForm">
+						<f:content>
+							<!-- Basic info -->
+							<Label text="Name of  Product" class="configurelabelclass"
+								id="productLabelId" ></Label>
+							<Text text=": {productData>/Detail/PRODUCTNAME}" class="textfeildclass"
+								id="productNameTextId" ></Text>
+
+							<Label text="Product ID" class="configurelabelclass" id="productidlabelid" ></Label>
+							<Text text=" : {productData>/Detail/APPLICATIONID}" class="textfeildclass"
+								id="productIdTextId" ></Text>
+
+							<!-- <Label text="Product Portfolio" class="configurelabelclass" /> 
+								<Text text=" : {productData>/Detail/PORTFOLIOLEVEL1}//{productData>/Detail/portfoliolevel2}//{productData>/Detail/portfoliolevel3}" 
+								class="textfeildclass" /> <Label text="Administrator" class="configurelabelclass" 
+								/> <Text text=": {productData>/Detail/RESPONSIBLE}" class="textfeildclass" 
+								/> <Label text="Administrator(Substitute)" class="configurelabelclass" /> 
+								<Text text=": {productData>/Detail/RESPONSIBLE_S}" class="textfeildclass" 
+								/> -->
+						</f:content>
+					</f:SimpleForm>
+					<!-- <Button text="{i18n>addProductButtonCancel}" press="onCancel"/> -->
+				</l:content>
+			</l:Grid>
+			<Toolbar class="configuretoolbar">
+				<Icon xmlns="sap.ui.core" src="sap-icon://database" size="2em"
+					hoverColor="" activeColor="" width="" height="" backgroundColor=""
+					hoverBackgroundColor="" activeBackgroundColor="" visible="true"
+					decorative="true" press=""
+					tooltip="Define the Custom Data/Configurations which you would like to collect">
+					<tooltip></tooltip> <!-- sap.ui.core.TooltipBase -->
+					<dependents></dependents> <!-- sap.ui.core.Control, since 1.19 -->
+				</Icon>
+
+				<Label text="{i18n>Add Configurations}" class="AddedConfigLabel"
+					tooltip="Define the Custom Data/Configurations which you would like to collect" ></Label>
+				<ToolbarSpacer />
+
+			</Toolbar>
+
+			<!-- <Bar xmlns="sap.m" id="kio" enableFlexBox="false" translucent="false" 
+				design="Auto" visible="true" class="namedatatypebarclass" width="100%"> <contentLeft> -->
+			<l:HorizontalLayout class="horizontallayoutclass">
+
+				<Label text="Name:" class="configurebarlabelname" tooltip="Enter Configuration" ></Label>
+
+				<Input value="{formulaData>/CustomKeyName}" class="namebarsize"
+					tooltip="Enter Configuration" ></Input>
+				<!-- <Label text="Data Type:" class="configurebarlabel" /> <ComboBox 
+					xmlns="sap.m" id="cBoxId" width="25%" items="{path:'masterData>/DataType'}" 
+					value="{formulaData>/CustomKeyDataTypeID}"> <core:Item key="{path:'masterData>DATATYPEID'}" 
+					text="{path:'masterData>DATATYPEID'}"></core:Item> </ComboBox> <Label text="Sort:" 
+					class="configurebarlabel" /> <Input value="{formulaData>/CustomKeyDisplayOrder}" 
+					width="25%" /> -->
+				<!-- </contentLeft> <contentMiddle> -->
+				<Label text="Data Type:" class="configurebarlabeldatatype"
+					tooltip="Select Data type" ></Label>
+
+				<ComboBox xmlns="sap.m" id="cBoxId" class="datatypecombobox"
+					tooltip="Select Data type" items="{path:'/COLUMNMETADATADATATYPES'}"
+					value="{formulaData>/CustomKeyDataTypeID}" selectionChange="onDataTypeSelect">
+					<core:Item key="{path:'DATATYPEID'}" text="{path:'DATATYPEID'}"></core:Item>
+				</ComboBox>
+				<Label xmlns="sap.m" id="labelid" design="Standard" text="Label"
+					visible="true" textAlign="Begin" textDirection="Inherit"
+					class="labelconfigureclass">
+
+				</Label>
+				<Input value="{formulaData>/CustomKeyDisplayLabel}" tooltip="Enter Configuration"
+					class="labelinputclass" ></Input>
+
+
+			</l:HorizontalLayout>
+
+			<!-- <RadioButton groupName="GroupA" text="Attribute" selected="true" 
+				id="attributeRadioBtnId" class="radioattributeclass" select="radioattributeevent" 
+				tooltip="Is Attribute?" /> <l:HorizontalLayout class="horizontallayoutclass"> 
+				<RadioButton id="measureradioid" groupName="GroupA" text="Measure" selected="false" 
+				select="radiomeasureevent" class="radiomeasureclass" tooltip="Is Measure?" 
+				/> <RadioButton text="Aggregate" groupName="Groupb" selected="false" enabled="false" 
+				class="radioattriclass" select="radio2change"/> <Label text="Aggregation 
+				Types" class="aggregationtypelabel" tooltip="Choose Aggregation function/Type" 
+				/> <ComboBox xmlns="sap.m" id="aggregationcomboid" value="{formulaData>/DefaultAggregation}" 
+				items="{AggData>/Detail}" tooltip="Choose Aggregation function/Type" enabled="false" 
+				visible="true" valueState="None" editable="true" change="" class="aggregationcomboboxclass"> 
+				<core:Item key="{path:'AggData>AggType'}" text="{path:'AggData>AggType'}"></core:Item> 
+				</ComboBox> </l:HorizontalLayout> -->
+
+			<l:HorizontalLayout>
+				<Label xmlns="sap.m" id="aggregationtypeid" design="Standard"
+					text="Aggregation types:" visible="true" textAlign="Begin"
+					textDirection="Inherit" width="" class="aggrclass" required="false"
+					labelFor="">
+					<tooltip></tooltip> <!-- sap.ui.core.TooltipBase -->
+					<dependents></dependents> <!-- sap.ui.core.Control, since 1.19 -->
+				</Label>
+				<CheckBox xmlns="sap.m" id="countid" selected="false"
+					visible="true" enabled="true" text="COUNT" textDirection="Inherit"
+					width="" class="countclass" activeHandling="true" select="">
+					<tooltip></tooltip> <!-- sap.ui.core.TooltipBase -->
+					<dependents></dependents> <!-- sap.ui.core.Control, since 1.19 -->
+				</CheckBox>
+				<CheckBox xmlns="sap.m" id="distinctcountid" selected="false"
+					visible="true" enabled="true" text=" DISTINCT COUNT" textDirection="Inherit"
+					width="" class="distinctcountclass" activeHandling="true" select="">
+					<tooltip></tooltip> <!-- sap.ui.core.TooltipBase -->
+					<dependents></dependents> <!-- sap.ui.core.Control, since 1.19 -->
+				</CheckBox>
+				<CheckBox xmlns="sap.m" id="sumid" selected="false"
+					visible="true" enabled="true" text="SUM" textDirection="Inherit"
+					width="" class="sumclass" activeHandling="true" select="">
+					<tooltip></tooltip> <!-- sap.ui.core.TooltipBase -->
+					<dependents></dependents> <!-- sap.ui.core.Control, since 1.19 -->
+				</CheckBox>
+				<CheckBox xmlns="sap.m" id="minid" selected="false"
+					visible="true" enabled="true" class="minclass" text="MIN"
+					textDirection="Inherit" width="" activeHandling="true" select="">
+					<tooltip></tooltip> <!-- sap.ui.core.TooltipBase -->
+					<dependents></dependents> <!-- sap.ui.core.Control, since 1.19 -->
+				</CheckBox>
+				<CheckBox xmlns="sap.m" id="maxid" selected="false"
+					visible="true" enabled="true" class="maxclass" text="MAX"
+					textDirection="Inherit" width="" activeHandling="true" select="">
+					<tooltip></tooltip> <!-- sap.ui.core.TooltipBase -->
+					<dependents></dependents> <!-- sap.ui.core.Control, since 1.19 -->
+				</CheckBox>
+			</l:HorizontalLayout> <!-- <CheckBox xmlns="sap.m" id="formulacheckbox" selected="false" visible="true" 
+				enabled="true" name="" text="Is Formula" textDirection="Inherit" width="" 
+				activeHandling="true" select="formulacheck" class="formulacheckbox"> <tooltip></tooltip> 
+				sap.ui.core.TooltipBase <dependents></dependents> sap.ui.core.Control, since 
+				1.19 </CheckBox> </l:HorizontalLayout> -->
+
+			<Panel xmlns="sap.m" id="formulapanelid" visible="true"
+				headerText=" Define Formula(Optional)" width="100%" height="auto"
+				expandable="true" expanded="false" expand="" class="formulapanelclass">
+				<tooltip>
+<!-- 					<RichTooltip xmlns="sap.ui.commons" id="id" -->
+<!-- 						text="Feature in implementation" openDuration="200" closeDuration="200" -->
+<!-- 						myPosition="begin top" atPosition="begin bottom" offset="10 3" -->
+<!-- 						collision="flip" openDelay="500" closeDelay="100" title="" -->
+<!-- 						imageSrc="" valueStateText="" imageAltText="" closed=""> -->
+<!-- 						<tooltip></tooltip> sap.ui.core.TooltipBase -->
+<!-- 						<dependents></dependents> sap.ui.core.Control, since 1.19 -->
+<!-- 					</RichTooltip> -->
+				</tooltip>
+				<content>
+					<Label text="Formula:" class="formulalabelclass" />
+					<TextArea xmlns="sap.m" id="FormulaTextArea" value="{formulaData>/Formula}"
+						width="100%" enabled="true" visible="true" valueState="None" name="Formula"
+						placeholder="" editable="true" rows="2" cols="20" height=""
+						tooltip="Formula" maxLength="200" wrapping="Soft" change=""
+						liveChange="" class="formulatextarea" scrollable="false">
+					</TextArea>
+					<l:Splitter height="auto" width="100%" resize="false"
+						class="textsplitter">
+
+						<Text xmlns="sap.m" id="Coloumnid" text="Column"
+							textDirection="Inherit" visible="true" wrapping="true" textAlign="Begin"
+							width="100%" maxLines="1" class="texts">
+							<layoutData>
+								<l:SplitterLayoutData size="50%"
+									resizeable="false" />
+							</layoutData>
+						</Text>
+						<Text xmlns="sap.m" id="Formulaid" text="Formula"
+							textDirection="Inherit" visible="true" wrapping="true" textAlign="Begin"
+							width="100%" maxLines="1" class="texts">
+							<layoutData>
+								<l:SplitterLayoutData size="auto"
+									resizeable="false" />
+							</layoutData>
+						</Text>
+
+					</l:Splitter>
+
+
+					<l:Splitter height="auto" width="100%" resize="false">
+						<Toolbar>
+							<SearchField liveChange="onColumnSearch" width="100%"
+								id="columnDetailsSearchId" class="searchfeildclass" />
+							<layoutData>
+								<l:SplitterLayoutData size="50%"
+									resizeable="false" />
+							</layoutData>
+						</Toolbar>
+
+						<Toolbar>
+							<SearchField liveChange="onFormulaSearch" width="100%"
+								id="formulaSearchId" class="searchfeildclass" />
+							<layoutData>
+								<l:SplitterLayoutData size="auto"
+									resizeable="false" />
+							</layoutData>
+						</Toolbar>
+
+					</l:Splitter>
+
+					<!-- column details list box -->
+					<l:Splitter height="170px" width="100%">
+						<List class="dimension" id="columnList" items="{columnData>/columns}"
+							mode="{device>/listMode}" height="100%" noDataText="No Data"
+							select="onColumnItemPress" growing="true" growingScrollToLoad="true">
+							<items>
+								<ObjectListItem type="Inactive" visible="true"
+									unread="false" selected="false" title="{columnData>name}"
+									press="" detailPress="" class="configureobjectlistitemclass">
+								</ObjectListItem>
+							</items>
+							<layoutData>
+								<l:SplitterLayoutData size="50%"
+									resizeable="false" />
+							</layoutData>
+						</List>
+						<List class="dimension" id="idList2" items="{/FORMULAMASTER}"
+							width="100%" mode="{device>/listMode}" height="100%" press="columnListPress"
+							noDataText="No Data" select="onSelect" growing="true"
+							growingScrollToLoad="true" selectionChange="onFormulaChange">
+							<infoToolbar>
+								<Toolbar visible="false" id="idInfoToolbar2">
+									<Label id="idFilterLabel2" />
+								</Toolbar>
+							</infoToolbar>
+							<items>
+								<ObjectListItem xmlns="sap.m" type="Inactive"
+									visible="true" unread="false" selected="false" title="{FORMULANAME}"
+									press="" detailPress="" class="configureobjectlistitemclass">
+								</ObjectListItem>
+							</items>
+							<layoutData>
+								<l:SplitterLayoutData size="auto"
+									resizeable="false" />
+							</layoutData>
+						</List>
+					</l:Splitter>
+
+				</content>
+			</Panel>
+
+
+			<!-- <List id="idList1" items="{}" selectionChange="onSelectionChange" 
+				press= "columnListPress" -->
+			<!-- includeItemInSelection="true"> -->
+			<!-- <infoToolbar> -->
+			<!-- <Toolbar visible="false" id="idInfoToolbar1"> -->
+			<!-- <Label id="idFilterLabel1" /> -->
+			<!-- </Toolbar> -->
+			<!-- </infoToolbar> -->
+			<!-- <items> -->
+
+			<!-- </items> -->
+			<!-- <layoutData> -->
+			<!-- <l:SplitterLayoutData size="300px" -->
+			<!-- resizeable="false" /> -->
+			<!-- </layoutData> -->
+			<!-- </List> -->
+
+			<!-- formula list box -->
+
+			<Button text="Revert" class="revertButton" id="abortBtn"
+				visible="false" press="onClear" ></Button>
+
+			<Button text="Add" id="addbtn" type="Emphasized" press="onAdd"
+				class="addbtton" ></Button>
+
+			<!-- configuration table -->
+			<Table id="configurationTable" items="{path:'productData>/Detail/DataArray'}"
+				selectionMode="sap.ui.table.SelectionMode.Single" navigationMode="sap.ui.table.NavigationMode.Paginator"
+				editable="true" class="productconfitableclass" height="50%">
+				<headerToolbar>
+					<Toolbar class="configuretoolbar">
+						<Icon xmlns="sap.ui.core" src="sap-icon://database" size="2em"
+							hoverColor="" activeColor="" width="" height="" backgroundColor=""
+							hoverBackgroundColor="" activeBackgroundColor="" visible="true"
+							decorative="true" press="">
+							<tooltip></tooltip> <!-- sap.ui.core.TooltipBase -->
+							<dependents></dependents> <!-- sap.ui.core.Control, since 1.19 -->
+						</Icon>
+						<Label text="{i18n>Added Configurations}" class="AddedConfigLabel" ></Label>
+						<ToolbarSpacer />
+
+					</Toolbar>
+				</headerToolbar>
+				<columns>
+					<Column>
+						<header>
+							<Label text="Configuration" class="configurelabelclass" ></Label>
+						</header>
+					</Column>
+					<Column minScreenWidth="Tablet" demandPopin="true" hAlign="Left">
+						<header>
+							<Label text="Type" class="configurelabelclass" ></Label>
+						</header>
+					</Column>
+					<Column minScreenWidth="Tablet" demandPopin="true" hAlign="Left"
+						width="30%">
+						<header>
+							<Label text="Formula" class="configurelabelclass" ></Label>
+						</header>
+					</Column>
+					<Column minScreenWidth="Tablet" demandPopin="true" hAlign="Left">
+						<header>
+							<Label text="Label" class="configurelabelclass" ></Label>
+						</header>
+					</Column>
+					<!-- Edit -->
+					<Column minScreenWidth="Tablet" demandPopin="true" hAlign="Left"
+						width="5%">
+						<header>
+							<Label text="" class="configurelabelclass" ></Label>
+						</header>
+					</Column>
+					<!-- Delete -->
+					<Column minScreenWidth="Tablet" demandPopin="true" hAlign="Left"
+						width="5%">
+						<header>
+							<Label text="" class="configurelabelclass" ></Label>
+						</header>
+					</Column>
+					<!-- <Column demandPopin="true" hAlign="Right"> -->
+					<!-- <header> -->
+					<!-- <Label text="IsAttribute" /> -->
+					<!-- </header> -->
+					<!-- </Column> -->
+					<!-- <Column demandPopin="true" hAlign="Center"> <header> <Label text="" 
+						/> </header> </Column> <Column demandPopin="true" hAlign="Center"> <header> 
+						<Label text="" /> </header> </Column> -->
+				</columns>
+				<ColumnListItem type="Active" press="">
+					<cells>
+						<ObjectIdentifier title="" text="{Formula}"
+							class="configurelabelclass" ></ObjectIdentifier>
+						<Text text="{CustomKeyName}" class="configurelabelclass" ></Text>
+						<Text text="{CustomKeyDataTypeID}" class="configurelabelclass" ></Text>
+						<Text text="{Formula}" class="configurelabelclass" ></Text>
+						<Text text="{Formula}" class="configurelabelclass" ></Text>
+						<!-- <Icon xmlns="sap.ui.core" id="kjj" src="sap-icon://delete" -->
+						<!-- size="1em" color="#ccc" hoverColor="" activeColor="" width="" -->
+						<!-- height="" backgroundColor="" hoverBackgroundColor="" -->
+						<!-- activeBackgroundColor="" visible="true" decorative="true" press=""> -->
+						<!-- <tooltip></tooltip> sap.ui.core.TooltipBase -->
+						<!-- <dependents></dependents> sap.ui.core.Control, since 1.19 -->
+						<!-- </Icon> -->
+						<!-- <Icon xmlns="sap.ui.core" id="fdfddfd" src="sap-icon://edit" -->
+						<!-- size="1em" color="" hoverColor="#ccc" activeColor="" width="" -->
+						<!-- height="" backgroundColor="" hoverBackgroundColor="" -->
+						<!-- activeBackgroundColor="" visible="true" decorative="true" press=""> -->
+						<!-- <tooltip></tooltip> sap.ui.core.TooltipBase -->
+						<!-- <dependents></dependents> sap.ui.core.Control, since 1.19 -->
+						<!-- </Icon> -->
+
+						<!-- <Text text="{ path:'DeliveryDate', formatter:'app.sap.bi.cmc.monitoring.util.formatter.Date' 
+							}"/> -->
+
+					</cells>
+				</ColumnListItem>
+			</Table>
+
+			<Button text="Cancel" press="onCancel" class="clearButton" ></Button>
+			<Button text="Proceed" type="Emphasized" press="onProceed"
+				class="donebutton" ></Button>
+				
+
+		</content>
+	</Page>
+</core:View>

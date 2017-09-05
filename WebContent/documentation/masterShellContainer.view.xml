@@ -1,0 +1,190 @@
+<core:View xmlns:core="sap.ui.core" xmlns:mvc="sap.ui.core.mvc"
+	xmlns:l="sap.ui.layout" xmlns="sap.m" xmlns:u="sap.ui.unified"
+	controllerName="sap.ui.usage.analytics.documentation.masterShellContainer"
+	xmlns:html="http://www.w3.org/1999/xhtml">
+
+
+	<u:Shell id="myShell" headerVisible="false">
+		<Bar xmlns="sap.m" id="headerbar" enableFlexBox="false"
+			translucent="false" design="Auto" visible="true">
+			<tooltip></tooltip> <!-- sap.ui.core.TooltipBase -->
+			<dependents></dependents> <!-- sap.ui.core.Control, since 1.19 -->
+			<contentLeft>
+				<Image xmlns="sap.ui.commons" class="sap-logo" src="./image/sap-logo.png" />
+				<Text xmlns="sap.m" class="app-title" text="Usage Tracking"
+					textDirection="Inherit" visible="true" wrapping="true" textAlign="Begin"
+					width="200px" maxLines="1" />
+			</contentLeft> <!-- sap.ui.core.Control -->
+			<contentMiddle>
+			</contentMiddle> <!-- sap.ui.core.Control -->
+		</Bar>
+
+		<Bar xmlns="sap.m" id="contentBar" enableFlexBox="false"
+			translucent="false" design="Auto" visible="true">
+			<contentLeft>
+				<Text text="Help Center" />
+			</contentLeft> <!-- sap.ui.core.Control -->
+			<contentMiddle>
+				<Text id="headTitle" text="Overview" />
+			</contentMiddle> <!-- sap.ui.core.Control -->
+			<contentRight>
+				<SearchField id="idHelpsearch" height="80%" />
+			</contentRight>
+		</Bar>
+
+		<u:SplitContainer id="idSplitContainer" orientation="Horizontal"
+			showSecondaryContent="true" secondaryContentSize="22%">
+			<u:secondaryContent>
+				<Panel id="idPanel1" class="panelColor">
+					<headerToolbar>
+						<Toolbar>
+							<Link id="Overview" text="Overview" press="loadView" />
+						</Toolbar>
+					</headerToolbar>
+				</Panel>
+				<Panel id="idPanel2" expandable="true" expanded="false" class="panelColor">
+					<headerToolbar>
+						<Toolbar>
+							<Text text="Developer Guide" />
+						</Toolbar>
+					</headerToolbar>
+					<content>
+						<Panel class="panelColor">
+							<headerToolbar>
+								<Toolbar>
+									<Link id="devinstall" text="Overview" press="loadView" />
+								</Toolbar>
+							</headerToolbar>
+						</Panel>
+						<Panel class="panelColor">
+							<headerToolbar>
+								<Toolbar>
+									<Link id="Register" text="Registering your Product" press="loadView" />
+								</Toolbar>
+							</headerToolbar>
+						</Panel>
+						<Panel class="panelColor">
+							<headerToolbar>
+								<Toolbar>
+									<Link id="AddCustomConfig" text="Adding Custom Configurations"
+										press="loadView" />
+								</Toolbar>
+							</headerToolbar>
+						</Panel>
+						<Panel class="panelColor">
+							<headerToolbar>
+								<Toolbar>
+									<Link id="Modelling" text="Modeling the view" press="loadView" />
+								</Toolbar>
+							</headerToolbar>
+						</Panel>
+						<Panel class="panelColor">
+							<headerToolbar>
+								<Toolbar>
+									<Link id="enabling" text="Enabling Data Exchange for Data Collection"
+										press="loadView" />
+								</Toolbar>
+							</headerToolbar>
+						</Panel>
+						<Panel class="panelColor">
+							<headerToolbar>
+								<Toolbar>
+									<Link id="visualize"
+										text="Visualizing the Collected Data in SAP Lumira Dashboard"
+										press="loadView" />
+								</Toolbar>
+							</headerToolbar>
+						</Panel>
+						<Panel class="panelColor">
+							<headerToolbar>
+								<Toolbar>
+									<Link id="delete" text="Deleting a Product" press="loadView" />
+								</Toolbar>
+							</headerToolbar>
+						</Panel>
+					</content>
+				</Panel>
+				<Panel id="idPanel3" expandable="true" expanded="false" class="panelColor">
+					<headerToolbar>
+						<Toolbar>
+							<Text text="SDK API Reference" />
+						</Toolbar>
+					</headerToolbar>
+					<content>
+						<Panel class="panelColor">
+							<headerToolbar>
+								<Toolbar>
+									<Link id="APIreference" text="Introduction to Usage Tracking"
+										press="loadView" />
+								</Toolbar>
+							</headerToolbar>
+						</Panel>
+						<Panel class="panelColor">
+							<headerToolbar>
+								<Toolbar>
+									<Link id="TechReq" text="System Requirements" press="loadView" />
+								</Toolbar>
+							</headerToolbar>
+						</Panel>
+						<Panel class="panelColor">
+							<headerToolbar>
+								<Toolbar>
+									<Link id="TrakingUsage" text="Tracking Application Usage"
+										press="loadView" />
+								</Toolbar>
+							</headerToolbar>
+						</Panel>
+						<Panel class="panelColor">
+							<headerToolbar>
+								<Toolbar>
+									<Link id="HTTPClient" text="Structure of a HTTP Request by Client SDK"
+										press="loadView" />
+								</Toolbar>
+							</headerToolbar>
+						</Panel>
+						<Panel class="panelColor">
+							<headerToolbar>
+								<Toolbar>
+									<Link id="TrakingEvents" text="Tracking Events" press="loadView" />
+								</Toolbar>
+							</headerToolbar>
+						</Panel>
+						<Panel class="panelColor">
+							<headerToolbar>
+								<Toolbar>
+									<Link id="PPInfo" text="Setting up Privacy and Personal Information"
+										press="loadView" />
+								</Toolbar>
+							</headerToolbar>
+						</Panel>
+						<Panel class="panelColor">
+							<headerToolbar>
+								<Toolbar>
+									<Link id="APIFaq" text="Frequently Asked Question (FAQ's)"
+										press="loadView" />
+								</Toolbar>
+							</headerToolbar>
+						</Panel>
+					</content>
+				</Panel>
+				<Panel id="idPanel4" class="panelColor">
+					<headerToolbar>
+						<Toolbar>
+							<Link id="TroubleShoot" text="Trouble Shooting" press="loadView" />
+						</Toolbar>
+					</headerToolbar>
+				</Panel>
+				<Panel id="idPanel5" class="panelColor">
+					<headerToolbar>
+						<Toolbar>
+							<Link id="TBView" text="Demo Apps" press="loadView" />
+						</Toolbar>
+					</headerToolbar>
+				</Panel>
+			</u:secondaryContent>
+
+		</u:SplitContainer>
+	</u:Shell>
+
+
+</core:View>

@@ -1,0 +1,38 @@
+<core:FragmentDefinition
+  xmlns="sap.m"
+  xmlns:core="sap.ui.core"
+  xmlns:u="sap.ui.unified">
+    <u:Menu>
+    
+    
+      <u:MenuItem 
+        text="Settings" 
+        icon="sap-icon://settings"
+        select="handleMenuItemPress" />
+        
+        
+        <u:MenuItem 
+        text="Download SDK" 
+        icon="sap-icon://download"
+        select="downloadSdk" />
+        
+        
+        <u:MenuItem 
+        text="Demo Apps" 
+        icon="sap-icon://attachment-video"
+        select="openHelpTab" />
+        
+        
+        <u:MenuItem 
+        text="Help" 
+        icon="sap-icon://sys-help-2"
+        select="openHelpTab" />
+          
+        <u:MenuItem 
+        text="Logout" 
+        icon="sap-icon://log"
+        select="logout" />
+    
+    </u:Menu>
+
+</core:FragmentDefinition>

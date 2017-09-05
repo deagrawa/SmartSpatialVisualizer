@@ -1,0 +1,23 @@
+<core:FragmentDefinition xmlns="sap.m"
+	xmlns:core="sap.ui.core"
+	xmlns:app="http://schemas.sap.com/sapui5/extension/sap.ui.core.CustomData/1">
+
+	<Dialog xmlns="sap.ui.commons" id="sbDialog" width="" height=""
+		scrollLeft="0" scrollTop="0" title=""
+		applyContentPadding="true" showCloseButton="true" resizable="true"
+		minWidth="80%" minHeight="80%" maxWidth="" maxHeight=""
+		contentBorderDesign="None" modal="true" class="sapUiPopupWithPadding">
+		<tooltip></tooltip> <!-- sap.ui.core.TooltipBase -->
+		<dependents></dependents> <!-- sap.ui.core.Control, since 1.19 -->
+		<buttons></buttons> <!-- sap.ui.core.Control -->
+		<content>
+			<HTML xmlns="sap.ui.core" id="html"
+				content="&lt;iframe id='storyFrame' src=''  style='height: 100%' width='99%'&gt;&lt;/iframe&gt;"
+				preferDOM="true" sanitizeContent="false" afterRendering="">
+				<tooltip></tooltip> <!-- sap.ui.core.TooltipBase -->
+				<dependents></dependents> <!-- sap.ui.core.Control, since 1.19 -->
+			</HTML>
+		</content> <!-- sap.ui.core.Control -->
+	</Dialog>
+
+</core:FragmentDefinition>

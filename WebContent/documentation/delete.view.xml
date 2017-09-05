@@ -1,0 +1,20 @@
+<mvc:View xmlns:l="sap.ui.layout" xmlns:core="sap.ui.core"
+	xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m" xmlns:html="http://www.w3.org/1999/xhtml">
+	<Panel>
+		<Text
+			text="You use this procedure to delete a product. When you delete a product from Usage Tracking tool, all the event data that are associated with product is deleted, and cannot be retrieved."></Text>
+		<html:ol>
+			<html:li>
+				<Text text="On the landing page, choose Summary"></Text>
+			</html:li>
+			<html:li>
+				<Text
+					text=" In the left pane, Choose the product that you want to delete"></Text>
+			</html:li>
+			<html:li>
+				<Text text=" Choose delete."></Text>
+			</html:li>
+		</html:ol>
+	</Panel>
+
+</mvc:View>

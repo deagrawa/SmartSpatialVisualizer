@@ -1,0 +1,313 @@
+<mvc:View controllerName="sap.ui.usage.analytics.view.productHierarchy"
+	xmlns:mvc="sap.ui.core.mvc" xmlns:core="sap.ui.core" xmlns:l="sap.ui.layout"
+	xmlns:f="sap.ui.layout.form" xmlns="sap.m">
+	<Page showNavButton="true" navButtonPress="onNavBack"
+		id="UsgaeHPage" showHeader="true" class="sapUiFioriObjectPageUTheirarchy">
+		<content>
+			<!-- <Icon xmlns="sap.ui.core" class="productBackBtn" src="sap-icon://nav-back"
+				size="1.5em" color="#666" hoverColor="" activeColor="" width="1.5em"
+				height="1.5em" backgroundColor="" hoverBackgroundColor=""
+				activeBackgroundColor="" visible="true" decorative="true" press="onNavBack">
+			</Icon> -->
+			<!-- <ObjectHeader title="{productname}" class="productnameclass"> </ObjectHeader> -->
+			<l:Grid defaultSpan="L12 M12 S12" width="100%">
+				<l:content>
+					<f:SimpleForm id="idjhha" maxContainerCols="2"
+						editable="true" layout="ResponsiveGridLayout" title="Model Views for Visualization"
+						labelSpanL="3" labelSpanM="3" emptySpanL="4" emptySpanM="4"
+						columnsL="1" columnsM="1" class="editableForm">
+						<f:content>
+							<!-- Basic info -->
+							<Label text="Name of  Product" class="hierarchylabelclass1"
+								id="productNameLabelHId" ></Label>
+							<Text text=" : {newProduct>/PRODUCTNAME}" class="textfeildclass"
+								id="productNameTextHId" ></Text>
+
+							<Label text="Product ID" class="hierarchylabelclass1" id="productIdLabelHId"></Label>
+							<Text text=": {newProduct>/APPLICATIONID}" class="textfeildclass"
+								id="productIdTextHId" ></Text>
+
+							<!-- <Label text="Product Portfolio" class="hierarchylabelclass1" 
+								/> <Text text=": {newProduct>/portfoliolevel1}//{newProduct>/portfoliolevel2}//{newProduct>/portfoliolevel3}" 
+								class="textfeildclassportfolio" /> <Label text="Administrator" class="hierarchylabelclass1" 
+								/> <Text text=": {newProduct>/responsible}" class="textfeildclass" /> <Label 
+								text="Administrator(Substitute)" class="hierarchylabelclass1" /> <Text text=": 
+								{newProduct>/responsible_s}" class="textfeildclass" /> -->
+
+						</f:content>
+					</f:SimpleForm>
+					<!-- <Button text="{i18n>addProductButtonCancel}" press="onCancel"/> -->
+				</l:content>
+			</l:Grid>
+			<Toolbar class="addedhierarchytoolbarclass">
+				<Icon xmlns="sap.ui.core" src="sap-icon://database" size="2em"
+					hoverColor="" activeColor="" width="" height="" backgroundColor=""
+					hoverBackgroundColor="" activeBackgroundColor="" visible="true"
+					decorative="true" press="">
+					<tooltip></tooltip>
+					<dependents></dependents>
+				</Icon>
+				<Label text="Define Hierachies" class="AddedConfi" ></Label>
+				<ToolbarSpacer />
+
+			</Toolbar>
+
+			<!-- <l:Splitter height="auto" width="100%" resize="false"> -->
+			<l:Splitter height="auto" width="100%" resize="false"
+				class="hierarchysplitterclass">
+				<Table width="98%" class="ftable" id="lineItemListHierarchy"
+					items="{path:'newProduct>/DataArray'}" selectionMode="sap.ui.table.SelectionMode.Single"
+					navigationMode="sap.ui.table.NavigationMode.Paginator" growing="true"
+					growingScrollToLoad="true">
+					<headerToolbar>
+						<Toolbar class="hierarchyclasstoolbar">
+
+							<Label text="{i18n>Added Configuration}" id="addconfiid"
+								class="addedconfigurationclass" ></Label>
+							<ToolbarSpacer />
+
+						</Toolbar>
+					</headerToolbar>
+					<columns>
+						<Column minScreenWidth="Tablet" demandPopin="true" hAlign="Left"
+							width="30%">
+							<header>
+								<Label text="Configuration Name" class="hierarchylabelclass1" ></Label>
+							</header>
+						</Column>
+						<Column minScreenWidth="Tablet" demandPopin="true" hAlign="Left">
+							<header>
+								<Label text="Data Type" class="hierarchylabelclass1" ></Label>
+							</header>
+						</Column>
+						<Column minScreenWidth="Tablet" demandPopin="true" hAlign="Left"
+							width="30%">
+							<header>
+								<Label text="Formula" class="hierarchylabelclass1" ></Label>
+							</header>
+						</Column>
+						<Column minScreenWidth="Tablet" demandPopin="true" hAlign="Left">
+							<header>
+								<Label text="Label" class="hierarchylabelclass1"  ></Label>
+							</header>
+						</Column>
+						<!-- <Column minScreenWidth="Tablet" demandPopin="true" hAlign="Right"> 
+							<header> <Label text="" /> </header> </Column> <Column demandPopin="true" 
+							hAlign="Center"> <header> <Label text="" /> </header> </Column> <Column demandPopin="true" 
+							hAlign="Center"> <header> <Label text="" /> </header> </Column> -->
+					</columns>
+					<ColumnListItem type="Active" press="OnRowChanged">
+						<cells>
+							<ObjectIdentifier title=""
+								text="{newProduct>CustomKeyName}" class="hierarchylabelclass1" ></ObjectIdentifier>
+							<Text text=" {newProduct>CustomKeyDataTypeID}" class="hierarchylabelclass1" ></Text>
+							<Text text="{newProduct>Formula}" class="hierarchylabelclass1" ></Text>
+							<Text text="{newProduct>CustomKeyDisplayLabel}" class="inputfeildclass" ></Text>
+							<!-- - <Icon xmlns="sap.ui.core" id="Heirarchydeleteicon" src="sap-icon://delete" 
+								size="1em" color="#ccc" hoverColor="" activeColor="" width="" height="" backgroundColor="" 
+								hoverBackgroundColor="" activeBackgroundColor="" visible="true" decorative="true" 
+								press="onDeletePress"> </Icon> <Icon xmlns="sap.ui.core" id="editheirarchyicon" 
+								src="sap-icon://edit" size="1em" color="" hoverColor="#ccc" activeColor="" 
+								width="" height="" backgroundColor="" hoverBackgroundColor="" activeBackgroundColor="" 
+								visible="true" decorative="true" press="onEditPress"> </Icon> -->
+
+							<!-- <Text text="{ path:'DeliveryDate', formatter:'app.sap.bi.cmc.monitoring.util.formatter.Date' 
+								}"/> -->
+
+						</cells>
+					</ColumnListItem>
+					<layoutData>
+						<l:SplitterLayoutData size="50%" resizeable="false" ></l:SplitterLayoutData>
+					</layoutData>
+
+				</Table>
+
+				<Panel xmlns="sap.m" id="panelhierarchy" visible="true"
+					headerText="" width="100%" height="auto" expandable="false"
+					expanded="false" expand="">
+					<content>
+						<Panel expandable="true" expanded="false" id="heirarchypanelid"
+							class="heirarchypanelclasss" headerText="Hierarchies" width="100%">
+							 <headerToolbar> <Toolbar height="3rem" class="hierarchiestoolbarclass"> 
+								<Text text=" Added Hierarchies" class="hierarchytextclass" design="Bold" ></Text> </Toolbar> 
+								</headerToolbar> 
+							<content>
+								<l:Grid defaultSpan="L6 M6 S6" width="100%" id="heirarchygridid"
+									class="heirarchygridclass" height="auto">
+									<l:content>
+										<Label text="Hierarchy name" class="hierarchylabelclass"
+											tooltip="Enter Hierarchy Name" ></Label>
+										<Input value="{hData>/HName}" class="hierarchylevelinputclass"
+											tooltip="Enter Hierarchy Name" maxLength="50"></Input>
+										<!-- <Label text="Hierarchy type" class="hierarchylabelclass" /> 
+											<Input value="{hData>/HType}" class="hierarchylevelinputclass" /> -->
+<!-- 										<Label text="1st Level" class="hierarchylabelclass" -->
+<!-- 											tooltip="1st Hierarchy Level" /> -->
+<!-- 										<ComboBox xmlns="sap.m" id="cBoxId1" width="100%" -->
+<!-- 											selectionChange="comboSelectionChange" items="{path:'newProduct>/DataArray'}" -->
+<!-- 											tooltip="1st Hierarchy Level" value="{hData>/HLevel1}" class="hierarchycombolass"> -->
+<!-- 											<core:Item key="{path:'newProduct>CustomKeyName'}" -->
+<!-- 												text="{path:'newProduct>CustomKeyName'}"></core:Item> -->
+<!-- 											<core:Item key="{path:'masterData>DATATYPEID'}" text="{path:'masterData>DATATYPEID'}"></core:Item> -->
+<!-- 										</ComboBox> -->
+<!-- 										<Label text="2nd Level" class="hierarchylabelclass" -->
+<!-- 											tooltip="2nd Hierarchy Level" /> -->
+<!-- 										<ComboBox xmlns="sap.m" id="cBoxId2" width="100%" -->
+<!-- 											selectionChange="comboSelectionChange" items="{path:'newProduct>/DataArray'}" -->
+										<!-- tooltip="2nd Hierarchy Level" value="{hData>/HLevel2}" class="hierarchycombolass 
+											"> -->
+<!-- 											<core:Item key="{path:'newProduct>CustomKeyName'}" -->
+<!-- 												text="{path:'newProduct>CustomKeyName'}"></core:Item> -->
+<!-- 											<core:Item key="{path:'masterData>DATATYPEID'}" text="{path:'masterData>DATATYPEID'}"></core:Item> -->
+<!-- 										</ComboBox> -->
+										<!-- <Label text="3rd level " /> <ComboBox xmlns="sap.m" id="cBoxId3" 
+											width="100%" items="" value="{hData>/HLevel3}"> <core:Item key="{path:'masterData>DATATYPEID'}" 
+											text="{path:'masterData>DATATYPEID'}"></core:Item> </ComboBox> -->
+
+									</l:content>
+								</l:Grid>
+							</content>
+							<Toolbar class="hierarchysysaddtoolbarclass">
+								<Icon xmlns="sap.ui.core" src="sap-icon://sys-add" size="1.8rem"
+									color="" hoverColor="#ccc" activeColor="" width="" height=""
+									backgroundColor="" hoverBackgroundColor=""
+									activeBackgroundColor="" visible="true" decorative="true"
+									press="onEditPress">
+									<tooltip></tooltip> <!-- sap.ui.core.TooltipBase -->
+									<dependents></dependents> <!-- sap.ui.core.Control, since 1.19 -->
+								</Icon>
+								<Label text="Add Another Level " ></Label>
+								<ToolbarSpacer />
+
+							</Toolbar>
+
+							<Button text="{i18n>CLEAR}" id="dcbutton" press="onClear"
+								class="heirarchyclearButton" ></Button>
+							<Button text="{i18n>ADD}" id="dcAddbtn" class="dvaddbutton "
+								type="Emphasized" press="onAdd" ></Button>
+
+						</Panel>
+						<Table width="98%" id="listtable" class="modifiedtableclass"
+					items="{path:'addedHData>/DataArray'}" selectionMode="sap.ui.table.SelectionMode.Single"
+					navigationMode="sap.ui.table.NavigationMode.Paginator" growing="true"
+					growingScrollToLoad="true">
+					
+					<columns>
+								<Column minScreenWidth="Tablet" demandPopin="true"
+									hAlign="Left" width="30%">
+							<header>
+								<Label text="Hierarchy Name"  ></Label>
+							</header>
+						</Column>
+								<Column minScreenWidth="Tablet" demandPopin="true"
+									hAlign="Left" width="40%">
+							<header>
+								<Label text="Hierarchy levels" ></Label>
+							</header>
+						</Column>
+						
+						<Column minScreenWidth="Tablet" demandPopin="true" hAlign="Left" width="5%">
+							<header>
+								<Label text="" ></Label>
+							</header>
+						</Column>
+						
+						
+					</columns>
+					<ColumnListItem type="Active" press="OnRowChanged">
+						<cells>
+									<ObjectIdentifier title="" text="" ></ObjectIdentifier>
+							<Text text=" "  ></Text>
+							<Text text="" ></Text>
+							<Text text=" "></Text>
+									<!--  <Icon xmlns="sap.ui.core" id="Heirarchydeleteicon" src="sap-icon://delete" 
+								size="1em" color="#ccc" hoverColor="" activeColor="" width="" height="" backgroundColor="" 
+								hoverBackgroundColor="" activeBackgroundColor="" visible="true" decorative="true" 
+										press="onDeletePress"> </Icon> 
+										 <Icon xmlns="sap.ui.core" id="editheirarchyicon" 
+								src="sap-icon://edit" size="1em" color="" hoverColor="#ccc" activeColor="" 
+								width="" height="" backgroundColor="" hoverBackgroundColor="" activeBackgroundColor="" 
+								visible="true" decorative="true" press="onEditPress"> </Icon> -->
+
+							<!-- <Text text="{ path:'DeliveryDate', formatter:'app.sap.bi.cmc.monitoring.util.formatter.Date' 
+								}"/> -->
+
+						</cells>
+					</ColumnListItem>
+					
+
+				</Table>
+						<!-- <Text xmlns="sap.m" id="addedhierarchy" text="Added hierarchy"
+							textDirection="Inherit" visible="true" wrapping="true" textAlign="Begin"
+							width="100%" maxLines="1" class="addedhierarchylistlabelclass" tooltip="No 
+							Hierarchies can be added for one configuration" /> <List xmlns="sap.m" id="heirarchylistid" 
+							visible="true" class="addedhierarchylistclass" width="100%" includeItemInSelection="false" 
+							growing="true" growingScrollToLoad="true" select="onSelect" rememberSelections="true" 
+							backgroundDesign="Solid" itemPress="" tooltip="No Hierarchies can be added 
+							for one configuration" items="{path:'addedHData>/DataArray'}"> <items> <StandardListItem 
+							type="{device>/listItemType}" press="onSelect" title=" {addedHData>HName} 
+							// {addedHData>HType}" description="Levels :{addedHData>HLevel}"> </StandardListItem> 
+							</items> </List> -->
+					</content>
+					<layoutData>
+						<l:SplitterLayoutData size="auto" resizeable="false" ></l:SplitterLayoutData>
+					</layoutData>
+				</Panel>
+
+				<!-- <Panel xmlns="sap.m" id="hierarchypanelid2" class="addedhierarchypanelclass" 
+					visible="true" width="100%" height="auto" expandable="false" expanded="false" 
+					expand=""> <headerToolbar> <Toolbar height="3rem" class="hierarchiestoolbarclass"> 
+					<Text text=" Added Hierarchies" class="hierarchytextclass" design="Bold" 
+					/> </Toolbar> </headerToolbar> <content> <Text xmlns="sap.m" id="addedhierarchy" 
+					text="Added hierarchy" textDirection="Inherit" visible="true" wrapping="true" 
+					textAlign="Begin" width="100%" maxLines="1" class="addedhierarchylistlabelclass"> 
+					<tooltip></tooltip> sap.ui.core.TooltipBase <dependents></dependents> sap.ui.core.Control, 
+					since 1.19 </Text> <List xmlns="sap.m" id="heirarchylistid" visible="true" 
+					class="addedhierarchylistclass" width="100%" includeItemInSelection="false" 
+					growing="true" growingScrollToLoad="true" select="onSelect" rememberSelections="true" 
+					backgroundDesign="Solid" itemPress="" items="{path:'addedHData>/DataArray'}"> 
+					<items> <StandardListItem type="{device>/listItemType}" press="onSelect" 
+					title=" {addedHData>HName} // {addedHData>HType}" description="Levels :{addedHData>HLevel} 
+					"> </StandardListItem> </items> </List> <Button text="CANCEL" id="dcbutton1" 
+					press="onCancel" class="heirarchyclearButton1" /> <Button text="DONE" type="Emphasized" 
+					press="onDone" class="donebutton" /> </content> <content></content> sap.ui.core.Control 
+					<headerToolbar></headerToolbar> sap.m.Toolbar, since 1.16 <infoToolbar></infoToolbar> 
+					sap.m.Toolbar, since 1.16 <layoutData> <l:SplitterLayoutData size="auto" 
+					resizeable="false" /> </layoutData> </Panel> -->
+			</l:Splitter>
+			<!-- <HBox> -->
+			<!-- <Button text="CANCEL" id="dcbutton1" press="onCancel" class="heirarchyclearButton1" 
+				/> <Button text="DONE" type="Emphasized" press="onDone" class="donebutton" 
+				/> -->
+			<Button text="CANCEL" id="dcbutton1" press="onCancel" width="13%"
+				class="hierarchypageclearbutton" ></Button>
+			<Button text="DONE" type="Emphasized" press="onDone"
+				class="hierarchypagedonebutton" width="13%" ></Button>
+
+
+			<!-- </HBox> -->
+
+			<!-- <Panel xmlns="sap.m" id="dpanel" class="dpan" visible="true" -->
+			<!-- headerText="" width="444px" height="auto" expandable="false" expanded="false" -->
+			<!-- expand=""> -->
+			<!-- <content> -->
+			<!-- <List id="heirarchylistid" class="heirarchylist" mode="{device>/listMode}" -->
+			<!-- select="onSelect" growing="true" growingScrollToLoad="false" -->
+			<!-- items="{path:'newProduct>/HData'}"> -->
+			<!-- <items> -->
+			<!-- <ObjectListItem type="{device>/listItemType}" press="onSelect" -->
+			<!-- title="Hierarchy Name:{newProduct>HName} Heirarcy Level: {newProduct>HLevel}"> -->
+			<!-- </ObjectListItem> -->
+			<!-- </items> -->
+			<!-- </List> -->
+			<!-- <Button text="{i18n>Done}" type="Emphasized" press="onDone" -->
+			<!-- class="donebutton" /> -->
+			<!-- </content> sap.ui.core.Control -->
+			<!-- <headerToolbar></headerToolbar> sap.m.Toolbar, since 1.16 -->
+			<!-- <infoToolbar></infoToolbar> sap.m.Toolbar, since 1.16 -->
+			<!-- </Panel> -->
+
+		</content>
+
+	</Page>
+</mvc:View>

@@ -1,0 +1,38 @@
+<mvc:View xmlns:l="sap.ui.layout" xmlns:core="sap.ui.core"
+	xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m" xmlns:html="http://www.w3.org/1999/xhtml"
+	controllerName="sap.ui.usage.analytics.documentation.HTTPClient">
+	<Panel>
+		<headerToolbar>
+			<Toolbar>
+				<Text text="Structure of an HTTP Request by Client SDK"></Text>
+			</Toolbar>
+		</headerToolbar>
+		<content>
+			<l:VerticalLayout>
+				<Text
+					text="The Client SDK sends an http request as a JSON string through POST request. Client SDK can send single or multiple objects in one https request."></Text>
+				<Text
+					text="The following example provides the structure of a single event object sent to the Usage Tracking tool: "></Text>
+				<html:br></html:br>
+				<Text id="jsSnippetTextcodeTE" text="test"></Text>
+				<html:br></html:br>
+				<Text text="Note:"></Text>
+				<Text text="In the above example, you can do the following:"></Text>
+				<html:ul>
+					<html:li>
+						<Text
+							text="Separate the common properties (listed in the first part of an event array) of the event from the unique properties of the event (listed in the subsequent parts of an event array). The common properties are associated with every object in the eventlist and merged with unique properties in the Usage Tracking tool."></Text>
+					</html:li>
+					<html:li>
+						<Text
+							text="Send events as a flat structure, where the unique properties of the events are not separated from the common properties."></Text>
+					</html:li>
+					<html:li>
+						<Text
+							text="Deprecate sending of following properties such as, ‘operatingsystems’, ‘osversion’, ‘browsername’ and ‘browserversion’  from the payload and derive them from the ‘User-Agent’ http request header. "></Text>
+					</html:li>
+				</html:ul>
+			</l:VerticalLayout>
+		</content>
+	</Panel>
+</mvc:View>

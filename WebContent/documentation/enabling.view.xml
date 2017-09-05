@@ -1,0 +1,10 @@
+<mvc:View xmlns:l="sap.ui.layout" xmlns:core="sap.ui.core"
+	xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m" xmlns:html="http://www.w3.org/1999/xhtml">
+	
+	<Panel>
+	<Text text="Use the JS SDK to get the implementation enabled for the application in order to use it for analyzing the collected data and displaying it on the Lumira dashboard."></Text>
+	<html:br></html:br>
+	<Text text="For more information on JS SDK, see SDK API Reference section."></Text>
+	</Panel>
+	
+	</mvc:View>

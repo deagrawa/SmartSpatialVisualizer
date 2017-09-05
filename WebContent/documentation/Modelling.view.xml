@@ -1,0 +1,120 @@
+<mvc:View xmlns:l="sap.ui.layout" xmlns:mvc="sap.ui.core.mvc"
+	xmlns="sap.m" xmlns:html="http://www.w3.org/1999/xhtml">
+
+	<Panel>
+		<headerToolbar>
+			<Toolbar>
+				<Text text="Modeling the View"></Text>
+			</Toolbar>
+		</headerToolbar>
+		<content>
+			<l:VerticalLayout>
+				<Text text="Use case" class="boldFontClass"></Text>
+				<Text
+					text="You use this procedure to model the views in hierarchies to be display in the Lumira dashboard during visualization. "></Text>
+				<html:br></html:br>
+				<Text
+					text="For example, consider the data about revenue generated from software licenses at different locations (see table below)."></Text>
+				<html:br></html:br>
+				<Table id="idtable1" insert="false" backgroundDesign="Translucent">
+					<columns>
+						<Column>
+							<Text text="Country"></Text>
+						</Column>
+						<Column>
+							<Text text="State"></Text>
+						</Column>
+						<Column>
+							<Text text="City"></Text>
+						</Column>
+						<Column>
+							<Text text="Software License"></Text>
+						</Column>
+					</columns>
+					<ColumnListItem>
+						<cells>
+							<Text text="India"></Text>
+							<Text text="Karnataka"></Text>
+							<Text text="Bangalore"></Text>
+							<Text text="989"></Text>
+						</cells>
+					</ColumnListItem>
+					<ColumnListItem>
+						<cells>
+							<Text text="India"></Text>
+							<Text text="Maharashtra"></Text>
+							<Text text="Pune"></Text>
+							<Text text="900"></Text>
+						</cells>
+					</ColumnListItem>
+					<ColumnListItem>
+						<cells>
+							<Text text="US"></Text>
+							<Text text="Alaska"></Text>
+							<Text text="New York"></Text>
+							<Text text="677"></Text>
+						</cells>
+					</ColumnListItem>
+					<ColumnListItem>
+						<cells>
+							<Text text="Germany"></Text>
+							<Text text="Bavaria"></Text>
+							<Text text="Munich"></Text>
+							<Text text="65"></Text>
+						</cells>
+					</ColumnListItem>
+				</Table>
+				<html:br></html:br>
+				<Text
+					text="If you want to view the revenue generated in a state and then further drill down to view the revenue generated in a specific city, define the hierarchy levels as follows:"></Text>
+				<Text text="Level 1: Country"></Text>
+				<Text text="Level 2: State"></Text>
+				<Text text="Level 3: City"></Text>
+				<html:br></html:br>
+				<Text text="Prerequisite" class="boldFontClass"></Text>
+				<Text text="You have created minimum 2 columns in the ADD Configuration page."></Text>
+				<html:br></html:br>
+				<Text text="Procedure" class="boldFontClass"></Text>
+				<html:ol>
+					<html:li>
+						<Text text="In the landing page, choose Add New Product."></Text>
+					</html:li>
+					<html:li>
+						<Text text="In the Product Onboarding Details pane, provide the product details."></Text>
+					</html:li>
+					<html:li>
+						<Text text="Select Custom Configuration "></Text>
+					</html:li>
+					<html:li>
+						<Text text="Choose Proceed."></Text>
+					</html:li>
+					<html:li>
+						<Text text="Provide the hierarchy details."></Text>
+					</html:li>
+					<html:li>
+						<Text text="Select the relevant first level and second level data from the dropdown list."></Text>
+					</html:li>
+					<Text text="Note: You must have two levels of information to create hierarchy (I.e. parent-child)."></Text>
+					<html:li>
+						<Text text="If you want to add another level, then choose this + icon."></Text>
+					</html:li>
+					<html:li>
+						<Text text="Choose ADD."></Text>
+					</html:li>
+					<html:li>
+						<Text text="Choose Done."></Text>
+					</html:li>
+				</html:ol>
+				<Text text="Note:"/>
+				<html:ul>
+					<html:li>
+						<Text text="You must have two levels of information to create hierarchies (i.e. parent-child)"/>
+					</html:li>
+					<html:li>
+						<Text text="You can create hierarchies only using columns of type attribute."/>
+					</html:li>
+				</html:ul>
+			</l:VerticalLayout>
+		</content>
+	</Panel>
+</mvc:View> 
