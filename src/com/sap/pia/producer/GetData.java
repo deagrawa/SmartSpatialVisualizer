@@ -80,8 +80,8 @@ public class GetData
 			
 			connection= appDataDao.getConnection();
 			ees= metaDataObj.getEdmEntitySet(entitySetName);
-
-			String sql= "select * from " + dataBase + "." + entitySetName;
+			
+			String sql= "select * from " + "\""+ dataBase + "\""+ ".\"" + entitySetName + "\"";
 
 			if(queryInfo.filter != null)
 			{
