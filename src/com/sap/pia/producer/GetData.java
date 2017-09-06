@@ -170,7 +170,7 @@ public class GetData
 		try
 		{
 			connection= appDataDao.getConnection();
-			String sql= "select COUNT(*) COUNT from " + dataBase + "." + entitySetName;
+			String sql= "select COUNT(*) COUNT from " + "\""+ dataBase + "\""+ ".\"" + entitySetName + "\"";
 
 			if(queryInfo.filter != null)
 			{
@@ -250,7 +250,7 @@ public class GetData
 		EdmEntitySet ees= metaDataObj.getEdmEntitySet(entitySetName);
 		String keyField= ees.getType().getKeys().get(0);
 		String keyValue= entityKey.asSingleValue().toString();
-		String sql= "select * from " + dataBase + "." + entitySetName + " WHERE " + keyField + "=" + "'" + keyValue + "'";
+		String sql= "select * from " + "\""+ dataBase + "\""+ ".\"" + entitySetName + "\"" + " WHERE " + keyField + "=" + "'" + keyValue + "'";
 		LOGGER.info("Query SQL: " + sql);
 		List<OEntity> entities= null;
 		Statement st= null;
